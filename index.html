@@ -3,289 +3,617 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Made2Sell - Inventory for Craft Fair Sellers</title>
+    <title data-en="Made2Sell — Run your craft business from your phone" data-pl="Made2Sell — Prowadź swój rękodzielniczy biznes z telefonu">Made2Sell — Run your craft business from your phone</title>
+    <meta name="description" data-en="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android." data-pl="Made2Sell pomaga twórcom-hobbystom śledzić zapasy, znać koszt i zysk wyrobów oraz pewnie sprzedawać na targach — offline, na Androidzie." content="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234b7a43'/%3E%3Cpath d='M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z' fill='%23cfe7c8'/%3E%3Cpath d='M32 40a18 18 0 0 1 36 0' fill='none' stroke='%23cfe7c8' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --green-900: #24451f;
+            --green-800: #2e5d2a;
+            --green-700: #3a6f34;
+            --green-600: #4b7a43;
+            --green-500: #5f9557;
+            --green-300: #a9d3a0;
+            --green-200: #cfe7c8;
+            --green-100: #e3f0dd;
+            --green-050: #eef6ea;
+            --cream: #f4f8f0;
+            --paper: #ffffff;
+            --ink: #23301f;
+            --ink-soft: #52604d;
+            --line: #dfe8d9;
+            --red: #c0392b;
+            --shadow: 0 10px 30px rgba(40, 70, 35, 0.10);
+            --shadow-sm: 0 4px 14px rgba(40, 70, 35, 0.08);
+            --radius: 18px;
+            --maxw: 1080px;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
+            line-height: 1.62;
+            color: var(--ink);
+            background: var(--cream);
+            -webkit-font-smoothing: antialiased;
         }
 
+        a { color: var(--green-700); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+
+        /* ---------- Header ---------- */
         header {
-            background: white;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(244, 248, 240, 0.86);
+            backdrop-filter: saturate(180%) blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+        .nav {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.7rem 1.25rem;
+            max-width: var(--maxw);
+            margin: 0 auto;
         }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .lang-toggle {
-            background: #f0f0f0;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: background 0.3s;
-        }
-
-        .lang-toggle:hover {
-            background: #e0e0e0;
-        }
-
+        .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.2rem; color: var(--green-800); letter-spacing: -0.02em; }
+        .brand .mark { width: 30px; height: 30px; border-radius: 9px; flex: none; }
         .badge {
             display: inline-block;
-            background: #e74c3c;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
+            background: var(--green-200);
+            color: var(--green-800);
+            padding: 0.15rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .nav-right { display: flex; align-items: center; gap: 0.5rem; }
+        .nav-links { display: flex; gap: 1.1rem; margin-right: 0.4rem; }
+        .nav-links a { color: var(--ink-soft); font-weight: 600; font-size: 0.95rem; }
+        .lang-toggle {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--green-800);
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .lang-toggle:hover { background: var(--green-050); border-color: var(--green-300); }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.4rem;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: transform 0.12s ease, box-shadow 0.2s, background 0.2s;
+        }
+        .btn:hover { text-decoration: none; transform: translateY(-1px); }
+        .btn-primary { background: var(--green-600); color: #fff; box-shadow: var(--shadow-sm); }
+        .btn-primary:hover { background: var(--green-700); }
+        .btn-ghost { background: var(--paper); color: var(--green-800); border-color: var(--line); }
+        .btn-ghost:hover { background: var(--green-050); border-color: var(--green-300); }
+
+        /* ---------- Hero ---------- */
+        .hero { padding: 3.4rem 0 2rem; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        .eyebrow {
+            display: inline-block;
+            color: var(--green-700);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 0.9rem;
+        }
+        h1 {
+            font-size: clamp(2.1rem, 5.2vw, 3.3rem);
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            color: var(--green-900);
+            margin-bottom: 1rem;
+        }
+        .lede { font-size: 1.18rem; color: var(--ink-soft); margin-bottom: 1.6rem; max-width: 34ch; }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
+        .platform-note { margin-top: 1.1rem; font-size: 0.9rem; color: var(--ink-soft); display: flex; align-items: center; gap: 0.45rem; }
+
+        /* phone frame */
+        .phone {
+            width: 300px;
+            max-width: 78vw;
+            margin: 0 auto;
+            border: 10px solid #1c2a18;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #1c2a18;
+        }
+        .phone img { display: block; width: 100%; height: auto; }
+        .hero-phone { position: relative; }
+        .hero-phone .phone { transform: rotate(1.5deg); }
+
+        /* ---------- Sections ---------- */
+        section.block { padding: 3rem 0; }
+        .section-head { text-align: center; max-width: 44ch; margin: 0 auto 2.4rem; }
+        .section-head .eyebrow { display: block; }
+        h2 { font-size: clamp(1.7rem, 3.6vw, 2.3rem); letter-spacing: -0.02em; color: var(--green-900); line-height: 1.15; }
+        .section-head p { color: var(--ink-soft); margin-top: 0.7rem; font-size: 1.08rem; }
+
+        /* value pillars */
+        .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+        .pillar {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 1.6rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .pillar .ic {
+            width: 46px; height: 46px; border-radius: 12px;
+            background: var(--green-100); color: var(--green-700);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 0.9rem;
+        }
+        .pillar h3 { font-size: 1.15rem; color: var(--green-800); margin-bottom: 0.35rem; }
+        .pillar p { color: var(--ink-soft); font-size: 0.98rem; }
+
+        /* feature rows */
+        .features { display: flex; flex-direction: column; gap: 3.2rem; }
+        .feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.6rem;
+            align-items: center;
+        }
+        .feature.reverse .feature-media { order: 2; }
+        .feature-media { display: flex; justify-content: center; }
+        .feature-text h3 { font-size: 1.55rem; color: var(--green-900); letter-spacing: -0.02em; margin-bottom: 0.7rem; line-height: 1.2; }
+        .feature-text p { color: var(--ink-soft); font-size: 1.06rem; margin-bottom: 1rem; }
+        .kicker { color: var(--green-700); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .chip {
+            background: var(--green-050);
+            border: 1px solid var(--line);
+            color: var(--green-800);
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
             font-size: 0.85rem;
             font-weight: 600;
-            margin-left: 0.5rem;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+        /* benefits strip */
+        .benefits { background: var(--green-900); color: #eaf3e5; border-radius: 24px; padding: 2.4rem 2rem; }
+        .benefits h2 { color: #fff; text-align: center; margin-bottom: 1.6rem; }
+        .benefit-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.4rem; text-align: center; }
+        .benefit .b-ic { font-size: 1.6rem; margin-bottom: 0.5rem; }
+        .benefit strong { display: block; color: #fff; font-size: 1rem; }
+        .benefit span { color: #b9d3b0; font-size: 0.85rem; }
 
-        section {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+        /* pricing */
+        .pricing { max-width: 640px; margin: 0 auto; background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 2.4rem; text-align: center; box-shadow: var(--shadow); }
+        .price-tag { font-size: 3rem; font-weight: 800; color: var(--green-700); letter-spacing: -0.03em; line-height: 1; }
+        .price-sub { color: var(--ink-soft); margin: 0.4rem 0 1.4rem; font-size: 1.05rem; }
+        .price-list { list-style: none; text-align: left; max-width: 420px; margin: 0 auto; }
+        .price-list li { padding: 0.6rem 0 0.6rem 2rem; position: relative; border-top: 1px solid var(--line); color: var(--ink); }
+        .price-list li:first-child { border-top: none; }
+        .price-list li.later { color: var(--ink-soft); }
+        .price-list li::before { content: "✓"; position: absolute; left: 0.3rem; color: var(--green-600); font-weight: 800; }
+        .price-list li.later::before { content: "◷"; color: var(--green-500); font-weight: 700; }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
+        /* FAQ */
+        .faq { max-width: 760px; margin: 0 auto; }
+        details {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 0.4rem 1.2rem;
+            margin-bottom: 0.8rem;
+            box-shadow: var(--shadow-sm);
         }
+        summary { cursor: pointer; font-weight: 700; color: var(--green-800); padding: 0.85rem 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "+"; font-size: 1.3rem; color: var(--green-500); font-weight: 400; }
+        details[open] summary::after { content: "–"; }
+        details p { color: var(--ink-soft); padding: 0 0 1rem; }
 
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #34495e;
-        }
+        /* final CTA */
+        .final-cta { text-align: center; background: linear-gradient(160deg, var(--green-100), var(--green-050)); border: 1px solid var(--green-200); border-radius: 24px; padding: 3rem 2rem; }
+        .final-cta h2 { margin-bottom: 0.6rem; }
+        .final-cta p { color: var(--ink-soft); max-width: 44ch; margin: 0 auto 1.5rem; font-size: 1.08rem; }
 
-        p {
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-            color: #555;
-        }
-
-        .features {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .features li {
-            padding: 0.75rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #27ae60;
-            font-weight: bold;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .gallery img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            object-fit: cover;
-            max-height: 300px;
-        }
-
+        /* alert */
         .alert {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            border-radius: 4px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            color: #856404;
+            background: #fff8e6;
+            border: 1px solid #f2d98a;
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem;
+            color: #7a5b12;
+            font-size: 0.95rem;
         }
 
-        .hidden {
-            display: none;
+        footer { text-align: center; padding: 2.6rem 1.25rem 3rem; color: var(--ink-soft); font-size: 0.92rem; border-top: 1px solid var(--line); margin-top: 3rem; }
+        footer .brand { justify-content: center; margin-bottom: 0.6rem; }
+
+        [hidden] { display: none !important; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 860px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .lede { max-width: none; }
+            .cta-row, .platform-note { justify-content: center; }
+            .hero-phone { order: -1; }
+            .pillars { grid-template-columns: 1fr; }
+            .feature { grid-template-columns: 1fr; gap: 1.4rem; }
+            .feature.reverse .feature-media { order: -1; }
+            .feature-media { order: -1; }
+            .feature-text { text-align: center; }
+            .chips { justify-content: center; }
+            .benefit-grid { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+            .nav-links { display: none; }
+        }
+        @media (max-width: 460px) {
+            .benefit-grid { grid-template-columns: 1fr; }
+            .pricing { padding: 1.8rem 1.3rem; }
         }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 1rem;
+        /* ---------- Dark mode ---------- */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --cream: #131a10;
+                --paper: #1b2417;
+                --ink: #e7f0e2;
+                --ink-soft: #a7b8a0;
+                --line: #2c3a26;
+                --green-050: #1f2b1a;
+                --green-100: #26351f;
+                --green-900: #dbeed3;
+                --green-800: #bfe0b3;
+                --green-700: #9fd08f;
+                --shadow: 0 10px 30px rgba(0,0,0,0.4);
+                --shadow-sm: 0 4px 14px rgba(0,0,0,0.3);
             }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            h2 {
-                font-size: 1.25rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-
-            .gallery {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            }
+            header { background: rgba(19, 26, 16, 0.85); }
+            .btn-primary { background: var(--green-600); color: #0f160c; }
+            .btn-primary:hover { background: var(--green-500); }
+            .benefits { background: #0f160c; }
+            .alert { background: #2c2410; border-color: #5a4a17; color: #e8d18f; }
+            .final-cta { background: linear-gradient(160deg, #22301b, #1a2415); }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">Made2Sell<span class="badge">Closed Alpha</span></div>
-        <button class="lang-toggle" onclick="toggleLanguage()">
-            <span id="langBtn">Polski</span>
-        </button>
+        <div class="nav">
+            <div class="brand">
+                <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#4b7a43"/><path d="M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z" fill="#cfe7c8"/><path d="M32 40a18 18 0 0 1 36 0" fill="none" stroke="#cfe7c8" stroke-width="7" stroke-linecap="round"/></svg>
+                <span>Made2Sell</span>
+                <span class="badge" data-en="Closed alpha" data-pl="Zamknięta alfa">Closed alpha</span>
+            </div>
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="#features" data-en="Features" data-pl="Funkcje">Features</a>
+                    <a href="#pricing" data-en="Pricing" data-pl="Cennik">Pricing</a>
+                    <a href="#faq" data-en="FAQ" data-pl="FAQ">FAQ</a>
+                </nav>
+                <button class="lang-toggle" onclick="toggleLanguage()"><span id="langBtn">Polski</span></button>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- Hero Section -->
-        <section id="hero-en" class="hero">
-            <h1>Made2Sell - Craft Fair Inventory Made Simple</h1>
-            <p>Track inventory and sales at craft fairs without the paper chaos. Built for hobby crafters who want to focus on selling, not bookkeeping.</p>
-            <p><strong>Closed alpha testing.</strong> We're working with a small group of testers to refine the app before broader release.</p>
-            <div class="alert"><strong>Android only:</strong> Currently available for Android devices. iOS version coming later.</div>
-        </section>
-
-        <section id="hero-pl" class="hero hidden">
-            <h1>Made2Sell - Zarządzaj Zapasami na Targach Rzemieślniczych</h1>
-            <p>Śledź zapasy i sprzedaż na targach bez papierkowych bałaganów. Zbudowane dla hobbystów, którzy chcą się skoncentrować na sprzedaży, a nie na biurokracji.</p>
-            <p><strong>Testowanie w fazie alfa.</strong> Pracujemy z małą grupą testerów, aby ulepszać aplikację przed większym wydaniem.</p>
-            <div class="alert"><strong>Tylko Android:</strong> Obecnie dostępne na urządzeniach Android. Wersja na iOS pojawi się później.</div>
-        </section>
-
-        <!-- Screenshots -->
-        <section id="screenshots-en">
-            <h2>See it in Action</h2>
-            <p>Track sales at your fair, manage inventory, and view detailed analytics — all from your phone.</p>
-            <div class="gallery">
-                <img src="./images/01_dashboard.png" alt="Dashboard view showing balance and sales">
-                <img src="./images/08_sale_mode.png" alt="Sale mode for quick checkout">
-                <img src="./images/03_products.png" alt="Product inventory management">
+    <!-- ---------- Hero ---------- -->
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-text">
+                <span class="eyebrow" data-en="For hobby crafters & makers" data-pl="Dla twórców i rękodzielników">For hobby crafters &amp; makers</span>
+                <h1 data-en="Your craft business, in your pocket." data-pl="Twój rękodzielniczy biznes w kieszeni.">Your craft business, in your pocket.</h1>
+                <p class="lede" data-en="Made2Sell helps you track stock, know the true cost and profit of everything you make, and sell with confidence at fairs — all offline, all on your phone." data-pl="Made2Sell pomaga śledzić zapasy, znać rzeczywisty koszt i zysk każdego wyrobu oraz pewnie sprzedawać na targach — wszystko offline, na Twoim telefonie.">Made2Sell helps you track stock, know the true cost and profit of everything you make, and sell with confidence at fairs — all offline, all on your phone.</p>
+                <div class="cta-row">
+                    <a class="btn btn-primary" href="mailto:9y9jahnpe@mozmail.com?subject=Made2Sell%20testing" data-en="Get notified" data-pl="Powiadom mnie">Get notified</a>
+                    <a class="btn btn-ghost" href="#features" data-en="See the features" data-pl="Zobacz funkcje">See the features</a>
+                </div>
+                <div class="platform-note">
+                    <span aria-hidden="true">🤖</span>
+                    <span data-en="Android phone & tablet · iOS planned later" data-pl="Telefon i tablet z Androidem · iOS w planach">Android phone &amp; tablet · iOS planned later</span>
+                </div>
             </div>
-        </section>
-
-        <section id="screenshots-pl" class="hidden">
-            <h2>Zobacz to w Akcji</h2>
-            <p>Sledz sprzedaz na targach, zarzadzaj zapasami i przeglądaj szczegółowe analizy — wszystko ze swojego telefonu.</p>
-            <div class="gallery">
-                <img src="./images/01_dashboard.png" alt="Widok pulpitu z saldem i sprzedazą">
-                <img src="./images/08_sale_mode.png" alt="Tryb sprzedazy do szybkiej kasy">
-                <img src="./images/03_products.png" alt="Zarzadzanie zapasami produktow">
+            <div class="hero-phone">
+                <div class="phone"><img class="shot" data-shot="01_dashboard.png" src="images/en/01_dashboard.png" alt="Made2Sell dashboard showing monthly balance, income, expenses and profit"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Features -->
-        <section id="features-en">
-            <h2>What You'll Get</h2>
-            <ul class="features">
-                <li>Quick sale logging at the fair (no internet needed)</li>
-                <li>Real-time inventory tracking</li>
-                <li>See which items sold best</li>
-                <li>Works on Android phone or tablet</li>
-                <li>Your data stays private</li>
-            </ul>
-            <p><em>We're continuously refining the app based on tester feedback.</em></p>
-        </section>
+    <!-- ---------- Value pillars ---------- -->
+    <section class="block">
+        <div class="wrap">
+            <div class="pillars">
+                <div class="pillar">
+                    <div class="ic" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3 data-en="Know your real profit" data-pl="Poznaj swój prawdziwy zysk">Know your real profit</h3>
+                    <p data-en="Cost every product from materials and labour. See the margin on each item — and the net profit of every fair." data-pl="Wyceniaj wyroby na podstawie materiałów i pracy. Zobacz marżę każdego produktu i zysk netto każdego targu.">Cost every product from materials and labour. See the margin on each item — and the net profit of every fair.</p>
+                </div>
+                <div class="pillar">
+                    <div class="ic" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
+                    </div>
+                    <h3 data-en="Built for fairs" data-pl="Stworzone na targi">Built for fairs</h3>
+                    <p data-en="Plan what to bring, pack against targets, sell from a fast till, then review how the day really went." data-pl="Zaplanuj, co zabrać, spakuj według celów, sprzedawaj przy szybkiej kasie i podsumuj, jak naprawdę poszło.">Plan what to bring, pack against targets, sell from a fast till, then review how the day really went.</p>
+                </div>
+                <div class="pillar">
+                    <div class="ic" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 data-en="Offline & private" data-pl="Offline i prywatnie">Offline &amp; private</h3>
+                    <p data-en="No account, no ads, no signal needed. Your data stays on your device — back it up to a file whenever you like." data-pl="Bez konta, bez reklam, bez zasięgu. Twoje dane zostają na urządzeniu — kopię zapasową zrobisz do pliku, kiedy chcesz.">No account, no ads, no signal needed. Your data stays on your device — back it up to a file whenever you like.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="features-pl" class="hidden">
-            <h2>Co Otrzymasz</h2>
-            <ul class="features">
-                <li>Szybkie rejestrowanie sprzedaży na targu (bez internetu)</li>
-                <li>Śledzenie zapasów w czasie rzeczywistym</li>
-                <li>Zobaczysz, które przedmioty sprzedały się najlepiej</li>
-                <li>Działa na telefonie lub tablecie z Androidem</li>
-                <li>Twoje dane są prywatne</li>
-            </ul>
-            <p><em>Ciągle ulepszamy aplikację na podstawie opinii testerów.</em></p>
-        </section>
+    <!-- ---------- Feature tour ---------- -->
+    <section class="block" id="features">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow" data-en="A guided tour" data-pl="Przewodnik">A guided tour</span>
+                <h2 data-en="Everything you need to sell what you make" data-pl="Wszystko, czego potrzebujesz, by sprzedawać swoje wyroby">Everything you need to sell what you make</h2>
+                <p data-en="These are real screens from the app. Here's what each part does." data-pl="To prawdziwe ekrany aplikacji. Oto, co robi każda część.">These are real screens from the app. Here's what each part does.</p>
+            </div>
 
-        <!-- Status -->
-        <section id="status-en">
-            <h2>About the Closed Alpha</h2>
-            <p>We're currently in closed alpha testing, meaning we're working with a limited group of testers to find bugs and gather feedback. The app is under active development and may have rough edges.</p>
-            <p>If you're interested in testing Made2Sell, check back soon — we'll be opening up testing opportunities as development progresses.</p>
-        </section>
+            <div class="features">
 
-        <section id="status-pl" class="hidden">
-            <h2>O Fazie Alfa</h2>
-            <p>Obecnie jeśmy w fazie zamkniętej testowania alfa, co oznacza, że pracujemy z ograniczoną grupą testerów, aby znaleźć błędy i zebranie opinie. Aplikacja jest w aktywnym rozwoju i może mieć niedoskonałości.</p>
-            <p>Jeśli jesteś zainteresowany testowaniem Made2Sell, wróć wkrótce — otwořymy możliwości testowania w miarę postępu development.</p>
-        </section>
+                <!-- Dashboard -->
+                <div class="feature">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="01_dashboard.png" src="images/en/01_dashboard.png" alt="Dashboard"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Dashboard" data-pl="Pulpit">Dashboard</span>
+                        <h3 data-en="See how the month is going at a glance" data-pl="Zobacz, jak idzie miesiąc — w mgnieniu oka">See how the month is going at a glance</h3>
+                        <p data-en="Balance, income, expenses and profit for this month, last month or any custom range — plus your top products and a production timer to time your makes." data-pl="Saldo, przychód, wydatki i zysk za bieżący miesiąc, poprzedni lub dowolny zakres — a do tego najlepsze produkty i minutnik produkcji do mierzenia czasu pracy.">Balance, income, expenses and profit for this month, last month or any custom range — plus your top products and a production timer to time your makes.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="Monthly balance" data-pl="Saldo miesiąca">Monthly balance</span>
+                            <span class="chip" data-en="Profit tracking" data-pl="Śledzenie zysku">Profit tracking</span>
+                            <span class="chip" data-en="Production timer" data-pl="Minutnik produkcji">Production timer</span>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- FAQ -->
-        <section id="faq-en">
-            <h2>FAQ</h2>
-            <h3>When can I use Made2Sell?</h3>
-            <p>Made2Sell is currently in closed alpha. We'll announce broader testing opportunities as development progresses.</p>
+                <!-- Charts -->
+                <div class="feature reverse">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="02_charts.png" src="images/en/02_charts.png" alt="Financial trend chart"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Trends" data-pl="Trendy">Trends</span>
+                        <h3 data-en="Watch your business grow" data-pl="Obserwuj, jak rośnie Twój biznes">Watch your business grow</h3>
+                        <p data-en="A six-month income-versus-expenses trend turns a pile of sales into a picture you can actually read — so you know which months pay off." data-pl="Sześciomiesięczny trend przychodów i wydatków zamienia stertę sprzedaży w czytelny obraz — wiesz, które miesiące się opłacają.">A six-month income-versus-expenses trend turns a pile of sales into a picture you can actually read — so you know which months pay off.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="Income vs. expenses" data-pl="Przychód vs. wydatki">Income vs. expenses</span>
+                            <span class="chip" data-en="6-month view" data-pl="Widok 6 miesięcy">6-month view</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>Which platforms are supported?</h3>
-            <p>Currently Android only. iOS support is planned for a later release.</p>
+                <!-- Products -->
+                <div class="feature">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="03_products.png" src="images/en/03_products.png" alt="Product catalogue"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Products" data-pl="Produkty">Products</span>
+                        <h3 data-en="A catalogue that knows its numbers" data-pl="Katalog, który zna swoje liczby">A catalogue that knows its numbers</h3>
+                        <p data-en="Every product shows price, cost, margin and stock at a glance. Add photos, tags, variants and sizes — or create a product straight from a photo." data-pl="Każdy produkt pokazuje cenę, koszt, marżę i stan magazynowy. Dodawaj zdjęcia, tagi, warianty i rozmiary — albo utwórz produkt prosto ze zdjęcia.">Every product shows price, cost, margin and stock at a glance. Add photos, tags, variants and sizes — or create a product straight from a photo.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="Price · cost · margin" data-pl="Cena · koszt · marża">Price · cost · margin</span>
+                            <span class="chip" data-en="Variants & sizes" data-pl="Warianty i rozmiary">Variants &amp; sizes</span>
+                            <span class="chip" data-en="Search & sort" data-pl="Szukanie i sortowanie">Search &amp; sort</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>What if I find bugs?</h3>
-            <p>Bugs are expected in alpha. Our testers report issues directly to help us improve the app.</p>
+                <!-- Product costing -->
+                <div class="feature reverse">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="04_product_detail.png" src="images/en/04_product_detail.png" alt="Product cost breakdown"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Pricing" data-pl="Wycena">Pricing</span>
+                        <h3 data-en="Price with confidence, not guesswork" data-pl="Wyceniaj pewnie, bez zgadywania">Price with confidence, not guesswork</h3>
+                        <p data-en="Break each product's cost into materials and labour, see its margin and profit per unit, and get a suggested price you can apply in one tap." data-pl="Rozbij koszt każdego wyrobu na materiały i pracę, zobacz marżę i zysk na sztuce oraz otrzymaj sugerowaną cenę, którą zastosujesz jednym dotknięciem.">Break each product's cost into materials and labour, see its margin and profit per unit, and get a suggested price you can apply in one tap.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="Materials + labour" data-pl="Materiały + praca">Materials + labour</span>
+                            <span class="chip" data-en="Suggested price" data-pl="Sugerowana cena">Suggested price</span>
+                            <span class="chip" data-en="Multiple photos" data-pl="Wiele zdjęć">Multiple photos</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>Will it cost money?</h3>
-            <p>Made2Sell will be free or low-cost when it launches. Early testers will receive special recognition and benefits.</p>
-        </section>
+                <!-- Materials -->
+                <div class="feature">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="05_materials.png" src="images/en/05_materials.png" alt="Materials inventory"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Materials" data-pl="Materiały">Materials</span>
+                        <h3 data-en="Track what you make things from" data-pl="Śledź to, z czego tworzysz">Track what you make things from</h3>
+                        <p data-en="Keep raw materials in stock with your own custom fields. Link them to products, so making one automatically draws down the other — and buying supplies tops it back up." data-pl="Trzymaj surowce na stanie z własnymi polami. Powiąż je z produktami, aby wytworzenie jednego automatycznie zmniejszało stan drugiego — a zakup zaopatrzenia go uzupełniał.">Keep raw materials in stock with your own custom fields. Link them to products, so making one automatically draws down the other — and buying supplies tops it back up.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="Custom fields" data-pl="Własne pola">Custom fields</span>
+                            <span class="chip" data-en="Live stock levels" data-pl="Stany na żywo">Live stock levels</span>
+                            <span class="chip" data-en="Linked to products" data-pl="Powiązane z produktami">Linked to products</span>
+                        </div>
+                    </div>
+                </div>
 
-        <section id="faq-pl" class="hidden">
-            <h2>Często Zadawane Pytania</h2>
-            <h3>Kiedy mogę używać Made2Sell?</h3>
-            <p>Made2Sell jest obecnie w fazie zamkniętej testowania alfa. Ogłosimy szersze możliwości testowania w miarę postępu.</p>
+                <!-- Fairs -->
+                <div class="feature reverse">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="07_fair_detail.png" src="images/en/07_fair_detail.png" alt="Fair results: revenue, cost of goods and net profit"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Fairs" data-pl="Targi">Fairs</span>
+                        <h3 data-en="Plan → Pack → Sell → Results" data-pl="Plan → Pakowanie → Sprzedaż → Wynik">Plan → Pack → Sell → Results</h3>
+                        <p data-en="Every market, start to finish: build a prep list of what to make, pack against your targets, sell live on the day, then see revenue, cost of goods and net profit — plus planned vs. packed vs. sold for each product." data-pl="Każdy targ od początku do końca: ułóż listę wyrobów do zrobienia, spakuj według celów, sprzedawaj na żywo, a potem zobacz przychód, koszt towaru i zysk netto — oraz zaplanowane vs. spakowane vs. sprzedane dla każdego produktu.">Every market, start to finish: build a prep list of what to make, pack against your targets, sell live on the day, then see revenue, cost of goods and net profit — plus planned vs. packed vs. sold for each product.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="Prep lists" data-pl="Listy przygotowań">Prep lists</span>
+                            <span class="chip" data-en="Net profit per fair" data-pl="Zysk netto z targu">Net profit per fair</span>
+                            <span class="chip" data-en="Planned vs. sold" data-pl="Plan vs. sprzedaż">Planned vs. sold</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>Które platformy są obsługiwane?</h3>
-            <p>Obecnie tylko Android. Obsługa iOS jest planowana na późniejsze wydanie.</p>
+                <!-- Sale mode -->
+                <div class="feature">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="08_sale_mode.png" src="images/en/08_sale_mode.png" alt="Sale mode till"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Sale mode" data-pl="Tryb sprzedaży">Sale mode</span>
+                        <h3 data-en="A fast till for your stall" data-pl="Szybka kasa na Twoje stoisko">A fast till for your stall</h3>
+                        <p data-en="Tap products to build a sale, adjust quantities, apply per-item or whole-order discounts, and assign a customer. Stock and takings update instantly — no internet required." data-pl="Dotykaj produktów, by złożyć sprzedaż, zmieniaj ilości, dodawaj rabaty na pozycje lub całe zamówienie i przypisz klienta. Stany i utarg aktualizują się natychmiast — bez internetu.">Tap products to build a sale, adjust quantities, apply per-item or whole-order discounts, and assign a customer. Stock and takings update instantly — no internet required.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="One-tap items" data-pl="Pozycje jednym dotknięciem">One-tap items</span>
+                            <span class="chip" data-en="Discounts" data-pl="Rabaty">Discounts</span>
+                            <span class="chip" data-en="Works offline" data-pl="Działa offline">Works offline</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>Co jeśli znajdę błędy?</h3>
-            <p>Błędy są oczekiwane w alfa. Nasi testerzy raportują problemy bezpośrednio, aby nam pomóc w ulepszeniu aplikacji.</p>
+                <!-- Orders & customers -->
+                <div class="feature reverse">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="09_orders.png" src="images/en/09_orders.png" alt="Custom orders list"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Orders & customers" data-pl="Zamówienia i klienci">Orders &amp; customers</span>
+                        <h3 data-en="Custom orders, tracked end to end" data-pl="Zamówienia na miarę, śledzone od A do Z">Custom orders, tracked end to end</h3>
+                        <p data-en="Take bespoke orders through every stage — pending, advance paid, in progress, sent, completed — record advance payments and notes, and keep a customer list that remembers who ordered what." data-pl="Prowadź zamówienia na miarę przez każdy etap — oczekujące, zaliczka wpłacona, w toku, wysłane, zakończone — zapisuj zaliczki i notatki oraz prowadź listę klientów, która pamięta, kto co zamówił.">Take bespoke orders through every stage — pending, advance paid, in progress, sent, completed — record advance payments and notes, and keep a customer list that remembers who ordered what.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="Order lifecycle" data-pl="Cykl życia zamówienia">Order lifecycle</span>
+                            <span class="chip" data-en="Advance payments" data-pl="Zaliczki">Advance payments</span>
+                            <span class="chip" data-en="Customer list" data-pl="Lista klientów">Customer list</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>Czy to będzie kosztować?</h3>
-            <p>Made2Sell będzie bezpłatna lub taniej gdy się uruchomi. Wcześni testerzy otrzymają specjalne uznanie i korzyści.</p>
-        </section>
-    </div>
+                <!-- Expenses -->
+                <div class="feature">
+                    <div class="feature-media"><div class="phone"><img class="shot" data-shot="10_expenses.png" src="images/en/10_expenses.png" alt="Expenses list"></div></div>
+                    <div class="feature-text">
+                        <span class="kicker" data-en="Expenses" data-pl="Wydatki">Expenses</span>
+                        <h3 data-en="Every cost in one place" data-pl="Wszystkie koszty w jednym miejscu">Every cost in one place</h3>
+                        <p data-en="Log supplies, marketplace fees and restocks with a monthly total. Link a purchase to a material and it tops your stock back up automatically." data-pl="Zapisuj zaopatrzenie, opłaty marketplace i uzupełnienia z sumą miesięczną. Powiąż zakup z materiałem, a stan uzupełni się automatycznie.">Log supplies, marketplace fees and restocks with a monthly total. Link a purchase to a material and it tops your stock back up automatically.</p>
+                        <div class="chips">
+                            <span class="chip" data-en="Monthly totals" data-pl="Sumy miesięczne">Monthly totals</span>
+                            <span class="chip" data-en="Restocks materials" data-pl="Uzupełnia materiały">Restocks materials</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------- Benefits strip ---------- -->
+    <section class="block">
+        <div class="wrap">
+            <div class="benefits">
+                <h2 data-en="Made for makers, not accountants" data-pl="Dla twórców, nie księgowych">Made for makers, not accountants</h2>
+                <div class="benefit-grid">
+                    <div class="benefit"><div class="b-ic" aria-hidden="true">📴</div><strong data-en="Works offline" data-pl="Działa offline">Works offline</strong><span data-en="No signal needed" data-pl="Bez zasięgu">No signal needed</span></div>
+                    <div class="benefit"><div class="b-ic" aria-hidden="true">🔒</div><strong data-en="Private by design" data-pl="Prywatne z założenia">Private by design</strong><span data-en="No account, data on device" data-pl="Bez konta, dane na urządzeniu">No account, data on device</span></div>
+                    <div class="benefit"><div class="b-ic" aria-hidden="true">🚫</div><strong data-en="No ads" data-pl="Bez reklam">No ads</strong><span data-en="Never, not once" data-pl="Nigdy, ani razu">Never, not once</span></div>
+                    <div class="benefit"><div class="b-ic" aria-hidden="true">💾</div><strong data-en="Your data, portable" data-pl="Twoje dane, przenośne">Your data, portable</strong><span data-en="Back up & restore to a file" data-pl="Kopia i przywracanie z pliku">Back up &amp; restore to a file</span></div>
+                    <div class="benefit"><div class="b-ic" aria-hidden="true">🌍</div><strong data-en="English & Polish" data-pl="Angielski i polski">English &amp; Polish</strong><span data-en="Phone & tablet" data-pl="Telefon i tablet">Phone &amp; tablet</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------- Pricing ---------- -->
+    <section class="block" id="pricing">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow" data-en="Pricing" data-pl="Cennik">Pricing</span>
+                <h2 data-en="Free. No ads. No catch." data-pl="Za darmo. Bez reklam. Bez haczyków.">Free. No ads. No catch.</h2>
+            </div>
+            <div class="pricing">
+                <div class="price-tag" data-en="Free" data-pl="Za darmo">Free</div>
+                <p class="price-sub" data-en="The app you see here is free to use, with no advertising." data-pl="Aplikacja, którą tu widzisz, jest darmowa w użyciu i bez reklam.">The app you see here is free to use, with no advertising.</p>
+                <ul class="price-list">
+                    <li data-en="Every feature above, completely free" data-pl="Wszystkie powyższe funkcje, całkowicie za darmo">Every feature above, completely free</li>
+                    <li data-en="No ads — not now, not later" data-pl="Bez reklam — ani teraz, ani później">No ads — not now, not later</li>
+                    <li class="later" data-en="Donations welcome to keep it going (coming later)" data-pl="Wsparcie mile widziane, by aplikacja trwała (wkrótce)">Donations welcome to keep it going (coming later)</li>
+                    <li class="later" data-en="Optional paid integrations with online retailers may come in future — the core app stays free" data-pl="Opcjonalne płatne integracje ze sklepami internetowymi mogą pojawić się w przyszłości — sama aplikacja pozostaje darmowa">Optional paid integrations with online retailers may come in future — the core app stays free</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------- FAQ ---------- -->
+    <section class="block" id="faq">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow" data-en="Questions" data-pl="Pytania">Questions</span>
+                <h2 data-en="Frequently asked" data-pl="Często zadawane">Frequently asked</h2>
+            </div>
+            <div class="faq">
+                <details open>
+                    <summary data-en="When can I use Made2Sell?" data-pl="Kiedy mogę korzystać z Made2Sell?">When can I use Made2Sell?</summary>
+                    <p data-en="Made2Sell is in closed alpha — the screens above are the real, working app. We're refining it with a small group of testers and will open up broader testing as it matures. Email us to be notified." data-pl="Made2Sell jest w zamkniętej alfie — ekrany powyżej to prawdziwa, działająca aplikacja. Dopracowujemy ją z małą grupą testerów i otworzymy szersze testy, gdy dojrzeje. Napisz do nas, aby otrzymać powiadomienie.">Made2Sell is in closed alpha — the screens above are the real, working app. We're refining it with a small group of testers and will open up broader testing as it matures. Email us to be notified.</p>
+                </details>
+                <details>
+                    <summary data-en="Which platforms are supported?" data-pl="Jakie platformy są obsługiwane?">Which platforms are supported?</summary>
+                    <p data-en="Android phones and tablets today. An iOS version is planned for later." data-pl="Telefony i tablety z Androidem. Wersja na iOS jest planowana na później.">Android phones and tablets today. An iOS version is planned for later.</p>
+                </details>
+                <details>
+                    <summary data-en="Does it need an internet connection?" data-pl="Czy wymaga połączenia z internetem?">Does it need an internet connection?</summary>
+                    <p data-en="No. Everything works offline — perfect for a busy market stall — and your data stays on your device." data-pl="Nie. Wszystko działa offline — idealnie na ruchliwe stoisko — a Twoje dane zostają na urządzeniu.">No. Everything works offline — perfect for a busy market stall — and your data stays on your device.</p>
+                </details>
+                <details>
+                    <summary data-en="What does it cost?" data-pl="Ile to kosztuje?">What does it cost?</summary>
+                    <p data-en="It's free, with no ads. Donations will be welcome in future to help keep it going, and there may one day be optional paid integrations with online retailers — but the core app stays free." data-pl="Jest darmowa i bez reklam. W przyszłości mile widziane będzie wsparcie, a kiedyś mogą pojawić się opcjonalne płatne integracje ze sklepami internetowymi — ale sama aplikacja pozostaje darmowa.">It's free, with no ads. Donations will be welcome in future to help keep it going, and there may one day be optional paid integrations with online retailers — but the core app stays free.</p>
+                </details>
+                <details>
+                    <summary data-en="Is my data private?" data-pl="Czy moje dane są prywatne?">Is my data private?</summary>
+                    <p data-en="Yes. There's no account and nothing is uploaded — your data lives on your phone. You can back it up and restore it from a file whenever you like." data-pl="Tak. Nie ma konta i nic nie jest wysyłane — dane są na Twoim telefonie. Możesz zrobić kopię i przywrócić ją z pliku, kiedy chcesz.">Yes. There's no account and nothing is uploaded — your data lives on your phone. You can back it up and restore it from a file whenever you like.</p>
+                </details>
+                <details>
+                    <summary data-en="What if I find bugs?" data-pl="Co jeśli znajdę błędy?">What if I find bugs?</summary>
+                    <p data-en="Bugs are expected in an alpha — that's what testing is for. Testers report issues directly and help shape what gets fixed next." data-pl="Błędy są normalne w alfie — po to są testy. Testerzy zgłaszają problemy bezpośrednio i pomagają decydować, co naprawić w następnej kolejności.">Bugs are expected in an alpha — that's what testing is for. Testers report issues directly and help shape what gets fixed next.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------- Final CTA ---------- -->
+    <section class="block">
+        <div class="wrap">
+            <div class="final-cta">
+                <span class="eyebrow" data-en="Closed alpha" data-pl="Zamknięta alfa">Closed alpha</span>
+                <h2 data-en="Want to help shape it?" data-pl="Chcesz pomóc ją kształtować?">Want to help shape it?</h2>
+                <p data-en="We're testing with a small group of makers. Drop us a line to join the next round — and be first to know when it opens up." data-pl="Testujemy z małą grupą twórców. Napisz do nas, aby dołączyć do kolejnej tury — i dowiedzieć się pierwszym, gdy ruszą szersze testy.">We're testing with a small group of makers. Drop us a line to join the next round — and be first to know when it opens up.</p>
+                <a class="btn btn-primary" href="mailto:9y9jahnpe@mozmail.com?subject=Made2Sell%20testing" data-en="Email us to join testing" data-pl="Napisz, aby dołączyć do testów">Email us to join testing</a>
+                <div class="alert" style="max-width:32rem;margin:1.5rem auto 0;" data-en="Android only for now. iOS support is planned for a later release." data-pl="Na razie tylko Android. Obsługa iOS jest planowana na późniejsze wydanie.">Android only for now. iOS support is planned for a later release.</div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>Made2Sell — For Craft Fair Sellers | <span id="footer-en">Contact: 9y9jahnpe@mozmail.com</span><span id="footer-pl" class="hidden">Kontakt: 9y9jahnpe@mozmail.com</span></p>
+        <div class="brand">
+            <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#4b7a43"/><path d="M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z" fill="#cfe7c8"/><path d="M32 40a18 18 0 0 1 36 0" fill="none" stroke="#cfe7c8" stroke-width="7" stroke-linecap="round"/></svg>
+            <span>Made2Sell</span>
+        </div>
+        <p><span data-en="For craft fair sellers & hobby makers" data-pl="Dla sprzedawców na targach i twórców-hobbystów">For craft fair sellers &amp; hobby makers</span> · <a href="mailto:9y9jahnpe@mozmail.com">9y9jahnpe@mozmail.com</a></p>
     </footer>
 
     <script>
@@ -293,25 +621,32 @@
 
         function toggleLanguage() {
             currentLang = currentLang === 'en' ? 'pl' : 'en';
-            updateLanguage();
+            applyLanguage();
         }
 
-        function updateLanguage() {
-            // Toggle visibility
-            document.querySelectorAll('[id$="-en"]').forEach(el => {
-                el.classList.toggle('hidden', currentLang !== 'en');
-            });
-            document.querySelectorAll('[id$="-pl"]').forEach(el => {
-                el.classList.toggle('hidden', currentLang !== 'pl');
+        function applyLanguage() {
+            document.documentElement.lang = currentLang;
+
+            // Swap all translatable text nodes.
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const val = el.getAttribute('data-' + currentLang);
+                if (val === null) return;
+                if (el.tagName === 'TITLE') {
+                    el.textContent = val;
+                } else if (el.tagName === 'META') {
+                    el.setAttribute('content', val);
+                } else {
+                    el.textContent = val;
+                }
             });
 
-            // Update button
-            const langBtn = document.getElementById('langBtn');
-            langBtn.textContent = currentLang === 'en' ? 'Polski' : 'English';
+            // Swap screenshots to the matching language set.
+            document.querySelectorAll('img.shot').forEach(img => {
+                img.src = 'images/' + currentLang + '/' + img.getAttribute('data-shot');
+            });
 
-            // Update footer
-            document.getElementById('footer-en').classList.toggle('hidden', currentLang !== 'en');
-            document.getElementById('footer-pl').classList.toggle('hidden', currentLang !== 'pl');
+            // Update the toggle label (shows the language you can switch TO).
+            document.getElementById('langBtn').textContent = currentLang === 'en' ? 'Polski' : 'English';
         }
     </script>
 </body>

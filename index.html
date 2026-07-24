@@ -110,23 +110,19 @@
             font-weight: bold;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 1rem;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
         }
 
-        .cta-button:hover {
-            background: #2980b9;
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            object-fit: cover;
+            max-height: 300px;
         }
 
         .alert {
@@ -140,31 +136,6 @@
 
         .hidden {
             display: none;
-        }
-
-        .form-group {
-            margin: 1.5rem 0;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
         }
 
         footer {
@@ -191,6 +162,10 @@
             section {
                 padding: 1.5rem;
             }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
         }
     </style>
 </head>
@@ -216,6 +191,27 @@
             <p>Śledź zapasy i sprzedaż na targach bez papierkowych bałaganów. Zbudowane dla hobbystów, którzy chcą się skoncentrować na sprzedaży, a nie na biurokracji.</p>
             <p><strong>Testowanie w fazie alfa.</strong> Pracujemy z małą grupą testerów, aby ulepszać aplikację przed większym wydaniem.</p>
             <div class="alert"><strong>Tylko Android:</strong> Obecnie dostępne na urządzeniach Android. Wersja na iOS pojawi się później.</div>
+        </section>
+
+        <!-- Screenshots -->
+        <section id="screenshots-en">
+            <h2>See it in Action</h2>
+            <p>Track sales at your fair, manage inventory, and view detailed analytics — all from your phone.</p>
+            <div class="gallery">
+                <img src="https://raw.githubusercontent.com/agrabski/easycommerce.flutter/main/store_assets/screenshots/phone/en/01_dashboard.png" alt="Dashboard view showing balance and sales">
+                <img src="https://raw.githubusercontent.com/agrabski/easycommerce.flutter/main/store_assets/screenshots/phone/en/08_sale_mode.png" alt="Sale mode for quick checkout">
+                <img src="https://raw.githubusercontent.com/agrabski/easycommerce.flutter/main/store_assets/screenshots/phone/en/03_products.png" alt="Product inventory management">
+            </div>
+        </section>
+
+        <section id="screenshots-pl" class="hidden">
+            <h2>Zobacz to w Akcji</h2>
+            <p>Sledź sprzedaż na targach, zarządzaj zapasami i przeglądaj szczegółowe analizy — wszystko ze swojego telefonu.</p>
+            <div class="gallery">
+                <img src="https://raw.githubusercontent.com/agrabski/easycommerce.flutter/main/store_assets/screenshots/phone/en/01_dashboard.png" alt="Widok pulpitu z saldem i sprzedażą">
+                <img src="https://raw.githubusercontent.com/agrabski/easycommerce.flutter/main/store_assets/screenshots/phone/en/08_sale_mode.png" alt="Tryb sprzedaży do szybkiej kasy">
+                <img src="https://raw.githubusercontent.com/agrabski/easycommerce.flutter/main/store_assets/screenshots/phone/en/03_products.png" alt="Zarządzanie zapasami produktów">
+            </div>
         </section>
 
         <!-- Features -->

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made2Sell - Inventory for Craft Fair Sellers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .lang-toggle {
+            background: #f0f0f0;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .lang-toggle:hover {
+            background: #e0e0e0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #34495e;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .features li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #2980b9;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .form-group {
+            margin: 1.5rem 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Made2Sell</div>
+        <button class="lang-toggle" onclick="toggleLanguage()">
+            <span id="langBtn">Polski</span>
+        </button>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="hero-en" class="hero">
+            <h1>Made2Sell - Craft Fair Inventory Made Simple</h1>
+            <p>Track inventory and sales at craft fairs without the paper chaos. Built for hobby crafters who want to focus on selling, not bookkeeping.</p>
+            <p><strong>We're looking for alpha testers.</strong> Help us build the perfect tool for your craft fair journey.</p>
+        </section>
+
+        <section id="hero-pl" class="hero hidden">
+            <h1>Made2Sell - Zarządzaj Zapasami na Targach Rzemieślniczych</h1>
+            <p>Śledź zapasy i sprzedaż na targach bez papierkowych bałaganów. Zbudowane dla hobbystów, którzy chcą się skoncentrować na sprzedaży, a nie na biurokracji.</p>
+            <p><strong>Szukamy testerów alfa.</strong> Pomóż nam zbudować idealne narzędzie dla Twojej podróży na targi.</p>
+        </section>
+
+        <!-- Features -->
+        <section id="features-en">
+            <h2>What You'll Get</h2>
+            <ul class="features">
+                <li>Quick sale logging at the fair (no internet needed)</li>
+                <li>Real-time inventory tracking</li>
+                <li>See which items sold best</li>
+                <li>Works on phone or tablet</li>
+                <li>Your data stays private</li>
+            </ul>
+            <p><em>Alpha testers will help shape the app before the official launch.</em></p>
+        </section>
+
+        <section id="features-pl" class="hidden">
+            <h2>Co Otrzymasz</h2>
+            <ul class="features">
+                <li>Szybkie rejestrowanie sprzedaży na targu (bez internetu)</li>
+                <li>Śledzenie zapasów w czasie rzeczywistym</li>
+                <li>Zobaczysz, które przedmioty sprzedały się najlepiej</li>
+                <li>Działa na telefonie lub tablecie</li>
+                <li>Twoje dane są prywatne</li>
+            </ul>
+            <p><em>Testerzy alfa będą pomagać kształtować aplikację przed oficjalnym uruchomieniem.</em></p>
+        </section>
+
+        <!-- Sign Up -->
+        <section id="signup-en">
+            <h2>Become an Alpha Tester</h2>
+            <p>Sign up and we'll send you early access to the app. Testing happens on your phone — just use it at your next fair and tell us what works and what doesn't.</p>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="craft">What do you craft or sell?</label>
+                    <input type="text" id="craft" name="craft" placeholder="e.g., jewelry, pottery, woodworking..." required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Any questions or feedback?</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Sign Me Up</button>
+            </form>
+        </section>
+
+        <section id="signup-pl" class="hidden">
+            <h2>Zostań Testerem Alfa</h2>
+            <p>Zarejestruj się, a my wyślemy Ci wczesny dostęp do aplikacji. Testowanie odbywa się na Twoim telefonie — po prostu używaj jej na następnych targach i powiedz nam, co działa, a co nie.</p>
+
+            <form id="signupFormPl">
+                <div class="form-group">
+                    <label for="namePl">Imię</label>
+                    <input type="text" id="namePl" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailPl">E-mail</label>
+                    <input type="email" id="emailPl" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="craftPl">Co tworzyć lub sprzedajesz?</label>
+                    <input type="text" id="craftPl" name="craft" placeholder="np. biżuterię, ceramikę, wyroby drewniane..." required>
+                </div>
+                <div class="form-group">
+                    <label for="messagePl">Pytania lub sugestie?</label>
+                    <textarea id="messagePl" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Zarejestruj Mnie</button>
+            </form>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq-en">
+            <h2>FAQ</h2>
+            <h3>When can I start using it?</h3>
+            <p>We're sending TestFlight links (iOS) and Google Play beta links (Android) to testers this week.</p>
+
+            <h3>What if I find bugs?</h3>
+            <p>Bugs are expected in alpha. Just let us know via email or a quick message. Your feedback shapes the app.</p>
+
+            <h3>Will it cost money?</h3>
+            <p>Made2Sell will be free or low-cost when it launches. Alpha testers get free access for life as thanks.</p>
+        </section>
+
+        <section id="faq-pl" class="hidden">
+            <h2>Często Zadawane Pytania</h2>
+            <h3>Kiedy mogę zacząć z tego korzystać?</h3>
+            <p>Wysyłamy linki TestFlight (iOS) i linki beta Google Play (Android) dla testerów w tym tygodniu.</p>
+
+            <h3>Co jeśli znajdę błędy?</h3>
+            <p>Błędy są oczekiwane w alfa. Po prostu daj nam znać mejlem lub krótką wiadomością. Twoja opinia kształtuje aplikację.</p>
+
+            <h3>Czy to będzie kosztować?</h3>
+            <p>Made2Sell będzie bezpłatna lub taniej gdy się uruchomi. Testerzy alfa otrzymują darmowy dostęp na całe życie jako podziękowanie.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Made2Sell — For Craft Fair Sellers | <span id="footer-en">Contact: 9y9jahnpe@mozmail.com</span><span id="footer-pl" class="hidden">Kontakt: 9y9jahnpe@mozmail.com</span></p>
+    </footer>
+
+    <script>
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'pl' : 'en';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            // Toggle visibility
+            document.querySelectorAll('[id$="-en"]').forEach(el => {
+                el.classList.toggle('hidden', currentLang !== 'en');
+            });
+            document.querySelectorAll('[id$="-pl"]').forEach(el => {
+                el.classList.toggle('hidden', currentLang !== 'pl');
+            });
+
+            // Update button
+            const langBtn = document.getElementById('langBtn');
+            langBtn.textContent = currentLang === 'en' ? 'Polski' : 'English';
+
+            // Update footer
+            document.getElementById('footer-en').classList.toggle('hidden', currentLang !== 'en');
+            document.getElementById('footer-pl').classList.toggle('hidden', currentLang !== 'pl');
+        }
+
+        // Form submission
+        document.getElementById('signupForm').addEventListener('submit', handleSubmit);
+        document.getElementById('signupFormPl').addEventListener('submit', handleSubmit);
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            // Since this is a static site, we'll use a mailto or show a success message
+            const subject = encodeURIComponent('Made2Sell Alpha Tester Signup');
+            const body = encodeURIComponent(
+                `Name: ${data.name}\n` +
+                `Email: ${data.email}\n` +
+                `Craft/Product: ${data.craft}\n` +
+                `Message: ${data.message}`
+            );
+
+            // Open mailto link
+            window.location.href = `mailto:9y9jahnpe@mozmail.com?subject=${subject}&body=${body}`;
+
+            // Show confirmation
+            alert(currentLang === 'en'
+                ? 'Thank you! Your email client will open. Send the message to complete signup.'
+                : 'Dziękuję! Twój klient poczty się otworzy. Wyślij wiadomość, aby ukończyć rejestrację.');
+        }
+    </script>
+</body>
+</html>

@@ -48,6 +48,17 @@
             background: #e0e0e0;
         }
 
+        .badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
         .container {
             max-width: 800px;
             margin: 2rem auto;
@@ -118,6 +129,15 @@
             background: #2980b9;
         }
 
+        .alert {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            color: #856404;
+        }
+
         .hidden {
             display: none;
         }
@@ -176,7 +196,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Made2Sell</div>
+        <div class="logo">Made2Sell<span class="badge">Closed Alpha</span></div>
         <button class="lang-toggle" onclick="toggleLanguage()">
             <span id="langBtn">Polski</span>
         </button>
@@ -187,13 +207,15 @@
         <section id="hero-en" class="hero">
             <h1>Made2Sell - Craft Fair Inventory Made Simple</h1>
             <p>Track inventory and sales at craft fairs without the paper chaos. Built for hobby crafters who want to focus on selling, not bookkeeping.</p>
-            <p><strong>We're looking for alpha testers.</strong> Help us build the perfect tool for your craft fair journey.</p>
+            <p><strong>Closed alpha testing.</strong> We're working with a small group of testers to refine the app before broader release.</p>
+            <div class="alert"><strong>Android only:</strong> Currently available for Android devices. iOS version coming later.</div>
         </section>
 
         <section id="hero-pl" class="hero hidden">
             <h1>Made2Sell - Zarządzaj Zapasami na Targach Rzemieślniczych</h1>
             <p>Śledź zapasy i sprzedaż na targach bez papierkowych bałaganów. Zbudowane dla hobbystów, którzy chcą się skoncentrować na sprzedaży, a nie na biurokracji.</p>
-            <p><strong>Szukamy testerów alfa.</strong> Pomóż nam zbudować idealne narzędzie dla Twojej podróży na targi.</p>
+            <p><strong>Testowanie w fazie alfa.</strong> Pracujemy z małą grupą testerów, aby ulepszać aplikację przed większym wydaniem.</p>
+            <div class="alert"><strong>Tylko Android:</strong> Obecnie dostępne na urządzeniach Android. Wersja na iOS pojawi się później.</div>
         </section>
 
         <!-- Features -->
@@ -203,10 +225,10 @@
                 <li>Quick sale logging at the fair (no internet needed)</li>
                 <li>Real-time inventory tracking</li>
                 <li>See which items sold best</li>
-                <li>Works on phone or tablet</li>
+                <li>Works on Android phone or tablet</li>
                 <li>Your data stays private</li>
             </ul>
-            <p><em>Alpha testers will help shape the app before the official launch.</em></p>
+            <p><em>We're continuously refining the app based on tester feedback.</em></p>
         </section>
 
         <section id="features-pl" class="hidden">
@@ -215,86 +237,54 @@
                 <li>Szybkie rejestrowanie sprzedaży na targu (bez internetu)</li>
                 <li>Śledzenie zapasów w czasie rzeczywistym</li>
                 <li>Zobaczysz, które przedmioty sprzedały się najlepiej</li>
-                <li>Działa na telefonie lub tablecie</li>
+                <li>Działa na telefonie lub tablecie z Androidem</li>
                 <li>Twoje dane są prywatne</li>
             </ul>
-            <p><em>Testerzy alfa będą pomagać kształtować aplikację przed oficjalnym uruchomieniem.</em></p>
+            <p><em>Ciągle ulepszamy aplikację na podstawie opinii testerów.</em></p>
         </section>
 
-        <!-- Sign Up -->
-        <section id="signup-en">
-            <h2>Become an Alpha Tester</h2>
-            <p>Sign up and we'll send you early access to the app. Testing happens on your phone — just use it at your next fair and tell us what works and what doesn't.</p>
-
-            <form id="signupForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="craft">What do you craft or sell?</label>
-                    <input type="text" id="craft" name="craft" placeholder="e.g., jewelry, pottery, woodworking..." required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Any questions or feedback?</label>
-                    <textarea id="message" name="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="cta-button">Sign Me Up</button>
-            </form>
+        <!-- Status -->
+        <section id="status-en">
+            <h2>About the Closed Alpha</h2>
+            <p>We're currently in closed alpha testing, meaning we're working with a limited group of testers to find bugs and gather feedback. The app is under active development and may have rough edges.</p>
+            <p>If you're interested in testing Made2Sell, check back soon — we'll be opening up testing opportunities as development progresses.</p>
         </section>
 
-        <section id="signup-pl" class="hidden">
-            <h2>Zostań Testerem Alfa</h2>
-            <p>Zarejestruj się, a my wyślemy Ci wczesny dostęp do aplikacji. Testowanie odbywa się na Twoim telefonie — po prostu używaj jej na następnych targach i powiedz nam, co działa, a co nie.</p>
-
-            <form id="signupFormPl">
-                <div class="form-group">
-                    <label for="namePl">Imię</label>
-                    <input type="text" id="namePl" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="emailPl">E-mail</label>
-                    <input type="email" id="emailPl" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="craftPl">Co tworzyć lub sprzedajesz?</label>
-                    <input type="text" id="craftPl" name="craft" placeholder="np. biżuterię, ceramikę, wyroby drewniane..." required>
-                </div>
-                <div class="form-group">
-                    <label for="messagePl">Pytania lub sugestie?</label>
-                    <textarea id="messagePl" name="message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="cta-button">Zarejestruj Mnie</button>
-            </form>
+        <section id="status-pl" class="hidden">
+            <h2>O Fazie Alfa</h2>
+            <p>Obecnie jeśmy w fazie zamkniętej testowania alfa, co oznacza, że pracujemy z ograniczoną grupą testerów, aby znaleźć błędy i zebranie opinie. Aplikacja jest w aktywnym rozwoju i może mieć niedoskonałości.</p>
+            <p>Jeśli jesteś zainteresowany testowaniem Made2Sell, wróć wkrótce — otwořymy możliwości testowania w miarę postępu development.</p>
         </section>
 
         <!-- FAQ -->
         <section id="faq-en">
             <h2>FAQ</h2>
-            <h3>When can I start using it?</h3>
-            <p>We're sending TestFlight links (iOS) and Google Play beta links (Android) to testers this week.</p>
+            <h3>When can I use Made2Sell?</h3>
+            <p>Made2Sell is currently in closed alpha. We'll announce broader testing opportunities as development progresses.</p>
+
+            <h3>Which platforms are supported?</h3>
+            <p>Currently Android only. iOS support is planned for a later release.</p>
 
             <h3>What if I find bugs?</h3>
-            <p>Bugs are expected in alpha. Just let us know via email or a quick message. Your feedback shapes the app.</p>
+            <p>Bugs are expected in alpha. Our testers report issues directly to help us improve the app.</p>
 
             <h3>Will it cost money?</h3>
-            <p>Made2Sell will be free or low-cost when it launches. Alpha testers get free access for life as thanks.</p>
+            <p>Made2Sell will be free or low-cost when it launches. Early testers will receive special recognition and benefits.</p>
         </section>
 
         <section id="faq-pl" class="hidden">
             <h2>Często Zadawane Pytania</h2>
-            <h3>Kiedy mogę zacząć z tego korzystać?</h3>
-            <p>Wysyłamy linki TestFlight (iOS) i linki beta Google Play (Android) dla testerów w tym tygodniu.</p>
+            <h3>Kiedy mogę używać Made2Sell?</h3>
+            <p>Made2Sell jest obecnie w fazie zamkniętej testowania alfa. Ogłosimy szersze możliwości testowania w miarę postępu.</p>
+
+            <h3>Które platformy są obsługiwane?</h3>
+            <p>Obecnie tylko Android. Obsługa iOS jest planowana na późniejsze wydanie.</p>
 
             <h3>Co jeśli znajdę błędy?</h3>
-            <p>Błędy są oczekiwane w alfa. Po prostu daj nam znać mejlem lub krótką wiadomością. Twoja opinia kształtuje aplikację.</p>
+            <p>Błędy są oczekiwane w alfa. Nasi testerzy raportują problemy bezpośrednio, aby nam pomóc w ulepszeniu aplikacji.</p>
 
             <h3>Czy to będzie kosztować?</h3>
-            <p>Made2Sell będzie bezpłatna lub taniej gdy się uruchomi. Testerzy alfa otrzymują darmowy dostęp na całe życie jako podziękowanie.</p>
+            <p>Made2Sell będzie bezpłatna lub taniej gdy się uruchomi. Wcześni testerzy otrzymają specjalne uznanie i korzyści.</p>
         </section>
     </div>
 
@@ -326,33 +316,6 @@
             // Update footer
             document.getElementById('footer-en').classList.toggle('hidden', currentLang !== 'en');
             document.getElementById('footer-pl').classList.toggle('hidden', currentLang !== 'pl');
-        }
-
-        // Form submission
-        document.getElementById('signupForm').addEventListener('submit', handleSubmit);
-        document.getElementById('signupFormPl').addEventListener('submit', handleSubmit);
-
-        function handleSubmit(e) {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-
-            // Since this is a static site, we'll use a mailto or show a success message
-            const subject = encodeURIComponent('Made2Sell Alpha Tester Signup');
-            const body = encodeURIComponent(
-                `Name: ${data.name}\n` +
-                `Email: ${data.email}\n` +
-                `Craft/Product: ${data.craft}\n` +
-                `Message: ${data.message}`
-            );
-
-            // Open mailto link
-            window.location.href = `mailto:9y9jahnpe@mozmail.com?subject=${subject}&body=${body}`;
-
-            // Show confirmation
-            alert(currentLang === 'en'
-                ? 'Thank you! Your email client will open. Send the message to complete signup.'
-                : 'Dziękuję! Twój klient poczty się otworzy. Wyślij wiadomość, aby ukończyć rejestrację.');
         }
     </script>
 </body>

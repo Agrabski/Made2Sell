@@ -6,9 +6,10 @@ hobby crafters and craft-fair sellers (the app is built from the
 
 The page gives a concrete value proposition and a screenshot-driven tour of every
 major feature: the dashboard and financial trends, product costing (materials +
-labour, margin, suggested price), materials with recipe-based stock, the
-plan → pack → sell → results fair workflow, the fast sale-mode till, custom orders
-and customers, and expenses.
+labour, margin, suggested price), materials with recipe-based stock and custom
+types, the plan → pack → sell → results fair workflow, the fast sale-mode till,
+custom orders and customers, expenses, product-performance reports, and the
+seller profile / settings (branding, themes, language, local backup).
 
 ## Features
 

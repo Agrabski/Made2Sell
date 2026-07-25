@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-en="Made2Sell — Run your craft business from your phone" data-pl="Made2Sell — Prowadź rękodzielniczy biznes prosto z telefonu">Made2Sell — Run your craft business from your phone</title>
     <meta name="description" data-en="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android." data-pl="Made2Sell pomaga rękodzielnikom kontrolować zapasy, poznać rzeczywisty koszt i zysk każdego wyrobu oraz pewnie sprzedawać na targach — offline, na Androidzie." content="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android.">
+
+    <!-- Canonical + language alternates -->
+    <link rel="canonical" href="https://agrabski.github.io/made2sell/">
+    <link rel="alternate" hreflang="en" href="https://agrabski.github.io/made2sell/?lang=en">
+    <link rel="alternate" hreflang="pl" href="https://agrabski.github.io/made2sell/?lang=pl">
+    <link rel="alternate" hreflang="x-default" href="https://agrabski.github.io/made2sell/">
+
+    <!-- Open Graph (Facebook, Messenger, WhatsApp, LinkedIn…) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Made2Sell">
+    <meta property="og:url" content="https://agrabski.github.io/made2sell/">
+    <meta property="og:title" data-en="Made2Sell — your craft business, in your pocket" data-pl="Made2Sell — Twój rękodzielniczy biznes w kieszeni" content="Made2Sell — your craft business, in your pocket">
+    <meta property="og:description" data-en="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads." data-pl="Kontroluj zapasy, poznaj rzeczywisty koszt i zysk każdego wyrobu i pewnie sprzedawaj na targach. Offline, bez konta, bez reklam." content="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads.">
+    <meta property="og:image" data-en="https://agrabski.github.io/made2sell/images/og/card-en.png" data-pl="https://agrabski.github.io/made2sell/images/og/card-pl.png" content="https://agrabski.github.io/made2sell/images/og/card-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" data-en="Made2Sell — your craft business, in your pocket. The app's dashboard shown on a phone." data-pl="Made2Sell — Twój rękodzielniczy biznes w kieszeni. Pulpit aplikacji na ekranie telefonu." content="Made2Sell — your craft business, in your pocket. The app's dashboard shown on a phone.">
+    <meta property="og:locale" data-en="en_GB" data-pl="pl_PL" content="en_GB">
+    <meta property="og:locale:alternate" data-en="pl_PL" data-pl="en_GB" content="pl_PL">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-en="Made2Sell — your craft business, in your pocket" data-pl="Made2Sell — Twój rękodzielniczy biznes w kieszeni" content="Made2Sell — your craft business, in your pocket">
+    <meta name="twitter:description" data-en="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads." data-pl="Kontroluj zapasy, poznaj rzeczywisty koszt i zysk każdego wyrobu i pewnie sprzedawaj na targach. Offline, bez konta, bez reklam." content="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads.">
+    <meta name="twitter:image" data-en="https://agrabski.github.io/made2sell/images/og/card-en.png" data-pl="https://agrabski.github.io/made2sell/images/og/card-pl.png" content="https://agrabski.github.io/made2sell/images/og/card-en.png">
+
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234b7a43'/%3E%3Cpath d='M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z' fill='%23cfe7c8'/%3E%3Cpath d='M32 40a18 18 0 0 1 36 0' fill='none' stroke='%23cfe7c8' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
     <style>
         :root {
@@ -230,6 +256,46 @@
         .price-list li::before { content: "✓"; position: absolute; left: 0.3rem; color: var(--green-600); font-weight: 800; }
         .price-list li.later::before { content: "◷"; color: var(--green-500); font-weight: 700; }
 
+        /* comparison table */
+        .compare-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); }
+        table.compare {
+            width: 100%;
+            min-width: 620px;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        table.compare th, table.compare td {
+            padding: 0.85rem 1rem;
+            text-align: left;
+            border-top: 1px solid var(--line);
+            font-size: 0.95rem;
+            vertical-align: top;
+        }
+        table.compare thead th { border-top: none; background: var(--green-050); color: var(--green-800); font-size: 0.9rem; }
+        table.compare thead th.own { background: var(--green-100); }
+        table.compare tbody td.own { background: var(--green-050); font-weight: 600; }
+        /* Keep the row label readable while the table scrolls sideways on narrow screens. */
+        table.compare th[scope="row"],
+        table.compare thead th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+            border-right: 1px solid var(--line);
+        }
+        table.compare th[scope="row"] { font-weight: 600; color: var(--ink); width: 34%; background: var(--paper); }
+        table.compare thead th:first-child { background: var(--green-050); }
+        table.compare td { color: var(--ink-soft); }
+        .c-yes::before { content: "✓ "; color: var(--green-600); font-weight: 800; }
+        .c-part::before { content: "~ "; color: #b8860b; font-weight: 800; }
+        .c-no::before { content: "✗ "; color: var(--red); font-weight: 800; }
+        .compare-note { text-align: center; color: var(--ink-soft); font-size: 0.92rem; margin-top: 1.1rem; max-width: 56ch; margin-left: auto; margin-right: auto; }
+        .scroll-hint { display: none; text-align: center; color: var(--ink-soft); font-size: 0.85rem; margin-bottom: 0.6rem; }
+
         /* FAQ */
         .faq { max-width: 760px; margin: 0 auto; }
         details {
@@ -285,6 +351,25 @@
             .benefit-grid { grid-template-columns: 1fr; }
             .pricing { padding: 1.8rem 1.3rem; }
         }
+        @media (max-width: 700px) {
+            .scroll-hint { display: block; }
+        }
+
+        /* ---------- Reduced motion ---------- */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .btn:hover { transform: none; }
+            .hero-phone .phone,
+            .duo .phone:first-child,
+            .duo .phone:last-child { transform: none; }
+            .duo .phone:last-child { margin-left: 0; }
+        }
 
         /* ---------- Dark mode ---------- */
         @media (prefers-color-scheme: dark) {
@@ -308,6 +393,10 @@
             .benefits { background: #0f160c; }
             .alert { background: #2c2410; border-color: #5a4a17; color: #e8d18f; }
             .final-cta { background: linear-gradient(160deg, #22301b, #1a2415); }
+            /* The light-mode marker colours are too dim against the dark table. */
+            .c-yes::before { color: var(--green-300); }
+            .c-part::before { color: #e0b64a; }
+            .c-no::before { color: #e57567; }
         }
     </style>
 </head>
@@ -322,10 +411,11 @@
             <div class="nav-right">
                 <nav class="nav-links">
                     <a href="#features" data-en="Features" data-pl="Funkcje">Features</a>
+                    <a href="#compare" data-en="Compare" data-pl="Porównanie">Compare</a>
                     <a href="#pricing" data-en="Pricing" data-pl="Cennik">Pricing</a>
                     <a href="#faq" data-en="FAQ" data-pl="FAQ">FAQ</a>
                 </nav>
-                <button class="lang-toggle" onclick="toggleLanguage()"><span id="langBtn">Polski</span></button>
+                <button class="lang-toggle" id="langToggle" type="button" onclick="toggleLanguage()" lang="pl" aria-label="Zmień język na polski"><span id="langBtn">Polski</span></button>
             </div>
         </div>
     </header>
@@ -575,6 +665,96 @@
         </div>
     </section>
 
+    <!-- ---------- Comparison ---------- -->
+    <section class="block" id="compare">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow" data-en="Compare" data-pl="Porównanie">Compare</span>
+                <h2 data-en="Better than a spreadsheet?" data-pl="Lepsze niż arkusz kalkulacyjny?">Better than a spreadsheet?</h2>
+                <p data-en="Most makers start with a spreadsheet and a card reader. Here's honestly where each one wins — including where Made2Sell doesn't." data-pl="Większość twórców zaczyna od arkusza i terminala. Oto uczciwie, gdzie każde rozwiązanie wygrywa — łącznie z tym, gdzie Made2Sell przegrywa.">Most makers start with a spreadsheet and a card reader. Here's honestly where each one wins — including where Made2Sell doesn't.</p>
+            </div>
+
+            <p class="scroll-hint" data-en="Swipe the table sideways to compare →" data-pl="Przesuń tabelę w bok, aby porównać →">Swipe the table sideways to compare →</p>
+
+            <div class="compare-scroll">
+                <table class="compare">
+                    <thead>
+                        <tr>
+                            <th scope="col"><span data-en="What you need" data-pl="Czego potrzebujesz">What you need</span></th>
+                            <th scope="col" class="own">Made2Sell</th>
+                            <th scope="col" data-en="A spreadsheet" data-pl="Arkusz kalkulacyjny">A spreadsheet</th>
+                            <th scope="col" data-en="A card-reader app" data-pl="Aplikacja terminala">A card-reader app</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" data-en="Cost of each product, from materials and labour" data-pl="Koszt każdego wyrobu z materiałów i pracy">Cost of each product, from materials and labour</th>
+                            <td class="own c-yes" data-en="Built in" data-pl="Wbudowane">Built in</td>
+                            <td class="c-part" data-en="You build the formulas" data-pl="Sam budujesz formuły">You build the formulas</td>
+                            <td class="c-no" data-en="Not its job" data-pl="Nie do tego służy">Not its job</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="Stock that updates itself when you sell" data-pl="Stan magazynowy, który sam się aktualizuje przy sprzedaży">Stock that updates itself when you sell</th>
+                            <td class="own c-yes" data-en="Automatic" data-pl="Automatycznie">Automatic</td>
+                            <td class="c-part" data-en="Manual edits" data-pl="Ręczne poprawki">Manual edits</td>
+                            <td class="c-part" data-en="Finished products only" data-pl="Tylko gotowe produkty">Finished products only</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="Raw materials, with recipes that draw down stock" data-pl="Surowce z recepturami, które zdejmują stan">Raw materials, with recipes that draw down stock</th>
+                            <td class="own c-yes" data-en="Built in" data-pl="Wbudowane">Built in</td>
+                            <td class="c-part" data-en="Hand-rolled, and fragile" data-pl="Robione ręcznie i awaryjne">Hand-rolled, and fragile</td>
+                            <td class="c-no" data-en="No" data-pl="Nie">No</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="Craft-fair workflow: plan → pack → sell → results" data-pl="Obieg targowy: plan → pakowanie → sprzedaż → wynik">Craft-fair workflow: plan → pack → sell → results</th>
+                            <td class="own c-yes" data-en="The whole loop" data-pl="Cały cykl">The whole loop</td>
+                            <td class="c-no" data-en="Not really" data-pl="Raczej nie">Not really</td>
+                            <td class="c-no" data-en="No" data-pl="Nie">No</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="Net profit of one single fair" data-pl="Zysk netto z pojedynczego targu">Net profit of one single fair</th>
+                            <td class="own c-yes" data-en="One tap" data-pl="Jednym dotknięciem">One tap</td>
+                            <td class="c-part" data-en="Only if you built it" data-pl="Tylko jeśli sam to zbudujesz">Only if you built it</td>
+                            <td class="c-part" data-en="Takings, but not costs" data-pl="Utarg, ale bez kosztów">Takings, but not costs</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="Works with no signal at all" data-pl="Działa całkowicie bez zasięgu">Works with no signal at all</th>
+                            <td class="own c-yes" data-en="Fully offline" data-pl="W pełni offline">Fully offline</td>
+                            <td class="c-part" data-en="Awkward on a phone" data-pl="Niewygodne na telefonie">Awkward on a phone</td>
+                            <td class="c-part" data-en="Limited" data-pl="Ograniczone">Limited</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="Usable one-handed at a busy stall" data-pl="Obsługa jedną ręką na ruchliwym stoisku">Usable one-handed at a busy stall</th>
+                            <td class="own c-yes" data-en="Made for it" data-pl="Stworzone do tego">Made for it</td>
+                            <td class="c-no" data-en="Painful" data-pl="Męczarnia">Painful</td>
+                            <td class="c-yes" data-en="Yes" data-pl="Tak">Yes</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="Takes card payments" data-pl="Przyjmuje płatności kartą">Takes card payments</th>
+                            <td class="own c-no" data-en="No — keep your reader" data-pl="Nie — zostań przy terminalu">No — keep your reader</td>
+                            <td class="c-no" data-en="No" data-pl="Nie">No</td>
+                            <td class="c-yes" data-en="That's the whole point" data-pl="Do tego właśnie służy">That's the whole point</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="What it costs you" data-pl="Ile Cię kosztuje">What it costs you</th>
+                            <td class="own c-yes" data-en="Free, no ads" data-pl="Za darmo, bez reklam">Free, no ads</td>
+                            <td class="c-yes" data-en="Free" data-pl="Za darmo">Free</td>
+                            <td class="c-part" data-en="A cut of every sale" data-pl="Prowizja od każdej sprzedaży">A cut of every sale</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" data-en="Where your data lives" data-pl="Gdzie są Twoje dane">Where your data lives</th>
+                            <td class="own c-yes" data-en="On your phone, no account" data-pl="Na Twoim telefonie, bez konta">On your phone, no account</td>
+                            <td class="c-part" data-en="Someone else's cloud" data-pl="W czyjejś chmurze">Someone else's cloud</td>
+                            <td class="c-no" data-en="On their servers" data-pl="Na ich serwerach">On their servers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="compare-note" data-en="Made2Sell doesn't take payments — it keeps the books. Use it next to whichever card reader you already have." data-pl="Made2Sell nie przyjmuje płatności — prowadzi rozliczenia. Używaj go obok terminala, który już masz.">Made2Sell doesn't take payments — it keeps the books. Use it next to whichever card reader you already have.</p>
+        </div>
+    </section>
+
     <!-- ---------- Pricing ---------- -->
     <section class="block" id="pricing">
         <div class="wrap">
@@ -657,10 +837,46 @@
     </footer>
 
     <script>
-        let currentLang = 'en';
+        const SUPPORTED = ['en', 'pl'];
+        const STORAGE_KEY = 'made2sell.lang';
+
+        // Reading/writing localStorage throws in some privacy modes — never let that
+        // break the page, the language just falls back to detection.
+        function readStored() {
+            try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+        }
+        function writeStored(lang) {
+            try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
+        }
+
+        // Priority: explicit ?lang= in the URL, then a previous choice, then the
+        // browser's own languages, then English.
+        function detectLanguage() {
+            const fromUrl = new URLSearchParams(location.search).get('lang');
+            if (SUPPORTED.includes(fromUrl)) return fromUrl;
+
+            const stored = readStored();
+            if (SUPPORTED.includes(stored)) return stored;
+
+            const prefs = navigator.languages || [navigator.language || ''];
+            for (const pref of prefs) {
+                const base = pref.toLowerCase().split('-')[0];
+                if (SUPPORTED.includes(base)) return base;
+            }
+            return 'en';
+        }
+
+        let currentLang = detectLanguage();
 
         function toggleLanguage() {
             currentLang = currentLang === 'en' ? 'pl' : 'en';
+            writeStored(currentLang);
+
+            // Keep ?lang= in sync so the URL stays shareable in the chosen language.
+            const url = new URL(location.href);
+            url.searchParams.set('lang', currentLang);
+            history.replaceState(null, '', url);
+
             applyLanguage();
         }
 
@@ -685,9 +901,16 @@
                 img.src = 'images/' + currentLang + '/' + img.getAttribute('data-shot');
             });
 
-            // Update the toggle label (shows the language you can switch TO).
-            document.getElementById('langBtn').textContent = currentLang === 'en' ? 'Polski' : 'English';
+            // Update the toggle (it names the language you can switch TO, so it is
+            // always written in that language).
+            const toggle = document.getElementById('langToggle');
+            const other = currentLang === 'en' ? 'pl' : 'en';
+            document.getElementById('langBtn').textContent = other === 'pl' ? 'Polski' : 'English';
+            toggle.lang = other;
+            toggle.setAttribute('aria-label', other === 'pl' ? 'Zmień język na polski' : 'Switch language to English');
         }
+
+        applyLanguage();
     </script>
 </body>
 </html>

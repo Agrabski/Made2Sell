@@ -29,7 +29,7 @@ across both language folders so the toggle can swap them by path prefix.
 
 ## Hosting
 
-Hosted on GitHub Pages at `https://agrabski.github.io/made2sell`.
+Hosted on GitHub Pages at `https://agrabski.github.io/Made2Sell`.
 
 ## Local Development
 

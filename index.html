@@ -7,18 +7,18 @@
     <meta name="description" data-en="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android." data-pl="Made2Sell pomaga rękodzielnikom kontrolować zapasy, poznać rzeczywisty koszt i zysk każdego wyrobu oraz pewnie sprzedawać na targach — offline, na Androidzie." content="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android.">
 
     <!-- Canonical + language alternates -->
-    <link rel="canonical" href="https://agrabski.github.io/made2sell/">
-    <link rel="alternate" hreflang="en" href="https://agrabski.github.io/made2sell/?lang=en">
-    <link rel="alternate" hreflang="pl" href="https://agrabski.github.io/made2sell/?lang=pl">
-    <link rel="alternate" hreflang="x-default" href="https://agrabski.github.io/made2sell/">
+    <link rel="canonical" href="https://agrabski.github.io/Made2Sell">
+    <link rel="alternate" hreflang="en" href="https://agrabski.github.io/Made2Sell?lang=en">
+    <link rel="alternate" hreflang="pl" href="https://agrabski.github.io/Made2Sell?lang=pl">
+    <link rel="alternate" hreflang="x-default" href="https://agrabski.github.io/Made2Sell">
 
     <!-- Open Graph (Facebook, Messenger, WhatsApp, LinkedIn…) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Made2Sell">
-    <meta property="og:url" content="https://agrabski.github.io/made2sell/">
+    <meta property="og:url" content="https://agrabski.github.io/Made2Sell">
     <meta property="og:title" data-en="Made2Sell — your craft business, in your pocket" data-pl="Made2Sell — Twój rękodzielniczy biznes w kieszeni" content="Made2Sell — your craft business, in your pocket">
     <meta property="og:description" data-en="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads." data-pl="Kontroluj zapasy, poznaj rzeczywisty koszt i zysk każdego wyrobu i pewnie sprzedawaj na targach. Offline, bez konta, bez reklam." content="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads.">
-    <meta property="og:image" data-en="https://agrabski.github.io/made2sell/images/og/card-en.png" data-pl="https://agrabski.github.io/made2sell/images/og/card-pl.png" content="https://agrabski.github.io/made2sell/images/og/card-en.png">
+    <meta property="og:image" data-en="https://agrabski.github.io/Made2Sell/images/og/card-en.png" data-pl="https://agrabski.github.io/Made2Sell/images/og/card-pl.png" content="https://agrabski.github.io/Made2Sell/images/og/card-en.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" data-en="Made2Sell — your craft business, in your pocket. The app's dashboard shown on a phone." data-pl="Made2Sell — Twój rękodzielniczy biznes w kieszeni. Pulpit aplikacji na ekranie telefonu." content="Made2Sell — your craft business, in your pocket. The app's dashboard shown on a phone.">
@@ -29,7 +29,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" data-en="Made2Sell — your craft business, in your pocket" data-pl="Made2Sell — Twój rękodzielniczy biznes w kieszeni" content="Made2Sell — your craft business, in your pocket">
     <meta name="twitter:description" data-en="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads." data-pl="Kontroluj zapasy, poznaj rzeczywisty koszt i zysk każdego wyrobu i pewnie sprzedawaj na targach. Offline, bez konta, bez reklam." content="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads.">
-    <meta name="twitter:image" data-en="https://agrabski.github.io/made2sell/images/og/card-en.png" data-pl="https://agrabski.github.io/made2sell/images/og/card-pl.png" content="https://agrabski.github.io/made2sell/images/og/card-en.png">
+    <meta name="twitter:image" data-en="https://agrabski.github.io/Made2Sell/images/og/card-en.png" data-pl="https://agrabski.github.io/Made2Sell/images/og/card-pl.png" content="https://agrabski.github.io/Made2Sell/images/og/card-en.png">
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234b7a43'/%3E%3Cpath d='M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z' fill='%23cfe7c8'/%3E%3Cpath d='M32 40a18 18 0 0 1 36 0' fill='none' stroke='%23cfe7c8' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
     <style>
@@ -256,6 +256,53 @@
         .price-list li::before { content: "✓"; position: absolute; left: 0.3rem; color: var(--green-600); font-weight: 800; }
         .price-list li.later::before { content: "◷"; color: var(--green-500); font-weight: 700; }
 
+        /* fair-week timeline */
+        .timeline { max-width: 760px; margin: 0 auto; }
+        .tl-step { display: grid; grid-template-columns: 150px 1fr; gap: 1.5rem; }
+        .tl-when {
+            text-align: right;
+            color: var(--green-700);
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding-top: 0.2rem;
+            line-height: 1.4;
+        }
+        .tl-body {
+            position: relative;
+            border-left: 2px solid var(--line);
+            padding: 0 0 2.1rem 1.9rem;
+        }
+        .tl-step:last-child .tl-body { border-left-color: transparent; padding-bottom: 0; }
+        .tl-body::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 0.3rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--green-600);
+            border: 3px solid var(--cream);
+            box-sizing: border-box;
+        }
+        .tl-body h3 { font-size: 1.2rem; color: var(--green-900); letter-spacing: -0.01em; margin-bottom: 0.3rem; line-height: 1.25; }
+        .tl-you { color: var(--ink-soft); font-size: 1rem; }
+        .tl-app {
+            margin-top: 0.7rem;
+            background: var(--green-050);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 0.65rem 0.9rem 0.65rem 2.7rem;
+            color: var(--green-800);
+            font-size: 0.95rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234b7a43'/%3E%3Cpath d='M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z' fill='%23cfe7c8'/%3E%3Cpath d='M32 40a18 18 0 0 1 36 0' fill='none' stroke='%23cfe7c8' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 0.85rem 0.78rem;
+            background-size: 18px 18px;
+        }
+
         /* comparison table */
         .compare-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); }
         table.compare {
@@ -346,6 +393,8 @@
             .chips { justify-content: center; }
             .benefit-grid { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
             .nav-links { display: none; }
+            .tl-step { grid-template-columns: 1fr; gap: 0.3rem; }
+            .tl-when { text-align: left; padding-left: 1.9rem; }
         }
         @media (max-width: 460px) {
             .benefit-grid { grid-template-columns: 1fr; }
@@ -642,6 +691,75 @@
                             <span class="chip" data-en="Themes & language" data-pl="Motywy i język">Themes &amp; language</span>
                             <span class="chip" data-en="File & Google Drive backup" data-pl="Kopia do pliku i Google Drive">File &amp; Google Drive backup</span>
                         </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------- Fair week timeline ---------- -->
+    <section class="block" id="fair-week">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow" data-en="A week at a fair" data-pl="Tydzień z targami">A week at a fair</span>
+                <h2 data-en="What a fair actually looks like" data-pl="Jak naprawdę wygląda targ">What a fair actually looks like</h2>
+                <p data-en="Every market runs the same loop. Made2Sell follows it from the first prep list to the final profit." data-pl="Każdy targ to ten sam cykl. Made2Sell prowadzi Cię od pierwszej listy przygotowań po końcowy zysk.">Every market runs the same loop. Made2Sell follows it from the first prep list to the final profit.</p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="tl-step">
+                    <div class="tl-when" data-en="Two weeks before" data-pl="Dwa tygodnie wcześniej">Two weeks before</div>
+                    <div class="tl-body">
+                        <h3 data-en="Plan the stall" data-pl="Zaplanuj stoisko">Plan the stall</h3>
+                        <p class="tl-you" data-en="You add the fair and build a prep list — 20 candles, 15 soaps, 10 of the new bath bombs." data-pl="Dodajesz targ i układasz listę przygotowań — 20 świec, 15 mydeł, 10 nowych kul do kąpieli.">You add the fair and build a prep list — 20 candles, 15 soaps, 10 of the new bath bombs.</p>
+                        <p class="tl-app" data-en="Works out the materials you'll need, and tells you what you're short of before you order." data-pl="Wylicza potrzebne materiały i pokazuje, czego Ci brakuje, zanim złożysz zamówienie.">Works out the materials you'll need, and tells you what you're short of before you order.</p>
+                    </div>
+                </div>
+
+                <div class="tl-step">
+                    <div class="tl-when" data-en="The week before" data-pl="Tydzień wcześniej">The week before</div>
+                    <div class="tl-body">
+                        <h3 data-en="Produce the stock" data-pl="Wyprodukuj zapas">Produce the stock</h3>
+                        <p class="tl-you" data-en="You work down the list batch by batch — a tray of soap on Monday, candles across Wednesday evening." data-pl="Realizujesz listę partia po partii — taca mydeł w poniedziałek, świece w środowy wieczór.">You work down the list batch by batch — a tray of soap on Monday, candles across Wednesday evening.</p>
+                        <p class="tl-app" data-en="The production timer records how long a batch really takes, and materials come off your stock as you make. That's where your true labour cost comes from." data-pl="Minutnik produkcji zapisuje, ile naprawdę trwa partia, a materiały schodzą ze stanu w miarę pracy. Stąd bierze się Twój rzeczywisty koszt pracy.">The production timer records how long a batch really takes, and materials come off your stock as you make. That's where your true labour cost comes from.</p>
+                    </div>
+                </div>
+
+                <div class="tl-step">
+                    <div class="tl-when" data-en="Friday night" data-pl="W piątek wieczorem">Friday night</div>
+                    <div class="tl-body">
+                        <h3 data-en="Pack the crate" data-pl="Spakuj skrzynię">Pack the crate</h3>
+                        <p class="tl-you" data-en="You tick things off against your targets as they go into the box." data-pl="Odhaczasz produkty według założeń, wkładając je do pudła.">You tick things off against your targets as they go into the box.</p>
+                        <p class="tl-app" data-en="Planned vs. packed, product by product — so you drive off knowing exactly what's in the van." data-pl="Plan kontra spakowane, produkt po produkcie — wyjeżdżasz, wiedząc dokładnie, co masz w aucie.">Planned vs. packed, product by product — so you drive off knowing exactly what's in the van.</p>
+                    </div>
+                </div>
+
+                <div class="tl-step">
+                    <div class="tl-when" data-en="Saturday, 9am" data-pl="W sobotę o 9:00">Saturday, 9am</div>
+                    <div class="tl-body">
+                        <h3 data-en="Sell all day" data-pl="Sprzedawaj cały dzień">Sell all day</h3>
+                        <p class="tl-you" data-en="Tap, tap, done. Someone pays, you're already serving the next person." data-pl="Stuk, stuk, gotowe. Ktoś płaci, a Ty obsługujesz już kolejną osobę.">Tap, tap, done. Someone pays, you're already serving the next person.</p>
+                        <p class="tl-app" data-en="Sale mode updates stock and takings on every sale — in a field, in a hall, with no signal at all." data-pl="Tryb sprzedaży aktualizuje stan i utarg przy każdej transakcji — na polu, w hali, całkiem bez zasięgu.">Sale mode updates stock and takings on every sale — in a field, in a hall, with no signal at all.</p>
+                    </div>
+                </div>
+
+                <div class="tl-step">
+                    <div class="tl-when" data-en="Saturday, 6pm" data-pl="W sobotę o 18:00">Saturday, 6pm</div>
+                    <div class="tl-body">
+                        <h3 data-en="See how it really went" data-pl="Zobacz, jak naprawdę poszło">See how it really went</h3>
+                        <p class="tl-you" data-en="You're still folding up the table." data-pl="Jeszcze składasz stolik.">You're still folding up the table.</p>
+                        <p class="tl-app" data-en="Revenue, cost of goods, the stall fee and your net profit — before the crate is back in the car." data-pl="Przychód, koszt towaru, opłata za stoisko i zysk netto — zanim skrzynia wróci do auta.">Revenue, cost of goods, the stall fee and your net profit — before the crate is back in the car.</p>
+                    </div>
+                </div>
+
+                <div class="tl-step">
+                    <div class="tl-when" data-en="Next time" data-pl="Następnym razem">Next time</div>
+                    <div class="tl-body">
+                        <h3 data-en="Do it better" data-pl="Zrób to lepiej">Do it better</h3>
+                        <p class="tl-you" data-en="The bath bombs sold out by noon. The soap barely moved." data-pl="Kule do kąpieli rozeszły się do południa. Mydło prawie nie schodziło.">The bath bombs sold out by noon. The soap barely moved.</p>
+                        <p class="tl-app" data-en="Planned vs. packed vs. sold for every product — so the next prep list almost writes itself." data-pl="Plan, spakowane i sprzedane dla każdego produktu — następna lista przygotowań układa się niemal sama.">Planned vs. packed vs. sold for every product — so the next prep list almost writes itself.</p>
                     </div>
                 </div>
 

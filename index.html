@@ -1,1034 +1,1804 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-en="Made2Sell — Run your craft business from your phone" data-pl="Made2Sell — Prowadź sprzedaż rękodzieła prosto z telefonu">Made2Sell — Run your craft business from your phone</title>
-    <meta name="description" data-en="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android." data-pl="Made2Sell pomaga rękodzielnikom pilnować stanów, poznać prawdziwy koszt i zysk każdego produktu oraz pewnie sprzedawać na targach — offline, na Androidzie." content="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android.">
 
-    <!-- Canonical + language alternates -->
-    <link rel="canonical" href="https://agrabski.github.io/Made2Sell">
-    <link rel="alternate" hreflang="en" href="https://agrabski.github.io/Made2Sell?lang=en">
-    <link rel="alternate" hreflang="pl" href="https://agrabski.github.io/Made2Sell?lang=pl">
-    <link rel="alternate" hreflang="x-default" href="https://agrabski.github.io/Made2Sell">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+        <title
+            data-en="Made2Sell — Run your craft business from your phone"
+            data-pl="Made2Sell — Prowadź sprzedaż rękodzieła prosto z telefonu"
+        >Made2Sell — Run your craft business from your phone</title>
+        <meta
+            name="description"
+            data-en="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android."
+            data-pl="Made2Sell pomaga rękodzielnikom pilnować stanów, poznać prawdziwy koszt i zysk każdego produktu oraz pewnie sprzedawać na targach — offline, na Androidzie."
+            content="Made2Sell helps hobby makers track stock, know the true cost and profit of everything they make, and sell with confidence at craft fairs — offline, on Android."
+        >
 
-    <!-- Open Graph (Facebook, Messenger, WhatsApp, LinkedIn…) -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Made2Sell">
-    <meta property="og:url" content="https://agrabski.github.io/Made2Sell">
-    <meta property="og:title" data-en="Made2Sell — your craft business, in your pocket" data-pl="Made2Sell — Twój biznes rękodzielniczy w kieszeni" content="Made2Sell — your craft business, in your pocket">
-    <meta property="og:description" data-en="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads." data-pl="Pilnuj stanów, poznaj prawdziwy koszt i zysk każdego produktu, pewnie sprzedawaj na targach. Offline, bez konta, bez reklam." content="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads.">
-    <meta property="og:image" data-en="https://agrabski.github.io/Made2Sell/images/og/card-en.png" data-pl="https://agrabski.github.io/Made2Sell/images/og/card-pl.png" content="https://agrabski.github.io/Made2Sell/images/og/card-en.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" data-en="Made2Sell — your craft business, in your pocket. The app's dashboard shown on a phone." data-pl="Made2Sell — Twój biznes rękodzielniczy w kieszeni. Pulpit aplikacji na ekranie telefonu." content="Made2Sell — your craft business, in your pocket. The app's dashboard shown on a phone.">
-    <meta property="og:locale" data-en="en_GB" data-pl="pl_PL" content="en_GB">
-    <meta property="og:locale:alternate" data-en="pl_PL" data-pl="en_GB" content="pl_PL">
+        <!-- Canonical + language alternates -->
+        <link
+            rel="canonical"
+            href="https://agrabski.github.io/Made2Sell"
+        >
+        <link
+            rel="alternate"
+            hreflang="en"
+            href="https://agrabski.github.io/Made2Sell?lang=en"
+        >
+        <link
+            rel="alternate"
+            hreflang="pl"
+            href="https://agrabski.github.io/Made2Sell?lang=pl"
+        >
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href="https://agrabski.github.io/Made2Sell"
+        >
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" data-en="Made2Sell — your craft business, in your pocket" data-pl="Made2Sell — Twój biznes rękodzielniczy w kieszeni" content="Made2Sell — your craft business, in your pocket">
-    <meta name="twitter:description" data-en="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads." data-pl="Pilnuj stanów, poznaj prawdziwy koszt i zysk każdego produktu, pewnie sprzedawaj na targach. Offline, bez konta, bez reklam." content="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads.">
-    <meta name="twitter:image" data-en="https://agrabski.github.io/Made2Sell/images/og/card-en.png" data-pl="https://agrabski.github.io/Made2Sell/images/og/card-pl.png" content="https://agrabski.github.io/Made2Sell/images/og/card-en.png">
+        <!-- Open Graph (Facebook, Messenger, WhatsApp, LinkedIn…) -->
+        <meta
+            property="og:type"
+            content="website"
+        >
+        <meta
+            property="og:site_name"
+            content="Made2Sell"
+        >
+        <meta
+            property="og:url"
+            content="https://agrabski.github.io/Made2Sell"
+        >
+        <meta
+            property="og:title"
+            data-en="Made2Sell — your craft business, in your pocket"
+            data-pl="Made2Sell — Twój biznes rękodzielniczy w kieszeni"
+            content="Made2Sell — your craft business, in your pocket"
+        >
+        <meta
+            property="og:description"
+            data-en="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads."
+            data-pl="Pilnuj stanów, poznaj prawdziwy koszt i zysk każdego produktu, pewnie sprzedawaj na targach. Offline, bez konta, bez reklam."
+            content="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads."
+        >
+        <meta
+            property="og:image"
+            data-en="https://agrabski.github.io/Made2Sell/images/og/card-en.png"
+            data-pl="https://agrabski.github.io/Made2Sell/images/og/card-pl.png"
+            content="https://agrabski.github.io/Made2Sell/images/og/card-en.png"
+        >
+        <meta
+            property="og:image:width"
+            content="1200"
+        >
+        <meta
+            property="og:image:height"
+            content="630"
+        >
+        <meta
+            property="og:image:alt"
+            data-en="Made2Sell — your craft business, in your pocket. The app's dashboard shown on a phone."
+            data-pl="Made2Sell — Twój biznes rękodzielniczy w kieszeni. Pulpit aplikacji na ekranie telefonu."
+            content="Made2Sell — your craft business, in your pocket. The app's dashboard shown on a phone."
+        >
+        <meta
+            property="og:locale"
+            data-en="en_GB"
+            data-pl="pl_PL"
+            content="en_GB"
+        >
+        <meta
+            property="og:locale:alternate"
+            data-en="pl_PL"
+            data-pl="en_GB"
+            content="pl_PL"
+        >
 
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234b7a43'/%3E%3Cpath d='M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z' fill='%23cfe7c8'/%3E%3Cpath d='M32 40a18 18 0 0 1 36 0' fill='none' stroke='%23cfe7c8' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
-    <style>
-        :root {
-            --green-900: #24451f;
-            --green-800: #2e5d2a;
-            --green-700: #3a6f34;
-            --green-600: #4b7a43;
-            --green-500: #5f9557;
-            --green-300: #a9d3a0;
-            --green-200: #cfe7c8;
-            --green-100: #e3f0dd;
-            --green-050: #eef6ea;
-            --cream: #f4f8f0;
-            --paper: #ffffff;
-            --ink: #23301f;
-            --ink-soft: #52604d;
-            --line: #dfe8d9;
-            --red: #c0392b;
-            --shadow: 0 10px 30px rgba(40, 70, 35, 0.10);
-            --shadow-sm: 0 4px 14px rgba(40, 70, 35, 0.08);
-            --radius: 18px;
-            --maxw: 1080px;
-        }
+        <!-- Twitter / X -->
+        <meta
+            name="twitter:card"
+            content="summary_large_image"
+        >
+        <meta
+            name="twitter:title"
+            data-en="Made2Sell — your craft business, in your pocket"
+            data-pl="Made2Sell — Twój biznes rękodzielniczy w kieszeni"
+            content="Made2Sell — your craft business, in your pocket"
+        >
+        <meta
+            name="twitter:description"
+            data-en="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads."
+            data-pl="Pilnuj stanów, poznaj prawdziwy koszt i zysk każdego produktu, pewnie sprzedawaj na targach. Offline, bez konta, bez reklam."
+            content="Track stock, know the true cost and profit of everything you make, and sell with confidence at craft fairs. Offline, no account, no ads."
+        >
+        <meta
+            name="twitter:image"
+            data-en="https://agrabski.github.io/Made2Sell/images/og/card-en.png"
+            data-pl="https://agrabski.github.io/Made2Sell/images/og/card-pl.png"
+            content="https://agrabski.github.io/Made2Sell/images/og/card-en.png"
+        >
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        <link
+            rel="icon"
+            href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234b7a43'/%3E%3Cpath d='M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z' fill='%23cfe7c8'/%3E%3Cpath d='M32 40a18 18 0 0 1 36 0' fill='none' stroke='%23cfe7c8' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E"
+        >
+        <link
+            href="./style.css"
+            rel="stylesheet"
+        >
+    </head>
 
-        html { scroll-behavior: smooth; }
+    <body>
+        <header>
+            <div class="nav">
+                <div class="brand">
+                    <svg
+                        class="mark"
+                        viewBox="0 0 100 100"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            width="100"
+                            height="100"
+                            rx="24"
+                            fill="#4b7a43"
+                        />
+                        <path
+                            d="M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z"
+                            fill="#cfe7c8"
+                        />
+                        <path
+                            d="M32 40a18 18 0 0 1 36 0"
+                            fill="none"
+                            stroke="#cfe7c8"
+                            stroke-width="7"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                    <span>Made2Sell</span>
+                    <span
+                        class="badge"
+                        data-en="Closed alpha"
+                        data-pl="Zamknięta alfa"
+                    >Closed alpha</span>
+                </div>
+                <div class="nav-right">
+                    <nav class="nav-links">
+                        <a
+                            href="#features"
+                            data-en="Features"
+                            data-pl="Funkcje"
+                        >Features</a>
+                        <a
+                            href="#compare"
+                            data-en="Compare"
+                            data-pl="Porównanie"
+                        >Compare</a>
+                        <a
+                            href="#pricing"
+                            data-en="Pricing"
+                            data-pl="Cennik"
+                        >Pricing</a>
+                        <a
+                            href="#faq"
+                            data-en="FAQ"
+                            data-pl="FAQ"
+                        >FAQ</a>
+                    </nav>
+                    <button
+                        class="lang-toggle"
+                        id="langToggle"
+                        type="button"
+                        onclick="toggleLanguage()"
+                        lang="pl"
+                        aria-label="Zmień język na polski"
+                    ><span id="langBtn">Polski</span></button>
+                </div>
+            </div>
+        </header>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.62;
-            color: var(--ink);
-            background: var(--cream);
-            -webkit-font-smoothing: antialiased;
-        }
+        <!-- ---------- Hero ---------- -->
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-text">
+                    <span
+                        class="eyebrow"
+                        data-en="For hobby crafters & makers"
+                        data-pl="Dla twórców i rękodzielników"
+                    >For hobby crafters &amp; makers</span>
+                    <h1
+                        data-en="Your craft business, in your pocket."
+                        data-pl="Sprzedaż Twojego rękodzieła w kieszeni."
+                    >Your craft business, in your pocket.</h1>
+                    <p
+                        class="lede"
+                        data-en="Made2Sell helps you track stock, know the true cost and profit of everything you make, and sell with confidence at fairs — all offline, all on your phone."
+                        data-pl="Dzięki Made2Sell możesz łatwo monitorwać swój stan swojego inwentarza: produkty gotowe do sprzedaży, potrzebne materiały i akcesoria. Aplikacja pomoże ci policzyć zysk na każdym z produktów oraz sprawnie przygotować się do targów. Wszystko na twoim urządzeniu, bez połączenia z internetem."
+                    >Made2Sell helps you track stock, know the true cost and profit of everything you make, and sell
+                        with confidence at fairs — all offline, all on your phone.</p>
+                    <div class="cta-row">
+                        <a
+                            class="btn btn-primary"
+                            href="mailto:made2sell@foffni.mozmail.com?subject=Made2Sell%20testing"
+                            data-en="Get notified"
+                            data-pl="Powiadom mnie"
+                        >Get notified</a>
+                        <a
+                            class="btn btn-ghost"
+                            href="#features"
+                            data-en="See the features"
+                            data-pl="Zobacz funkcje"
+                        >See the features</a>
+                    </div>
+                    <div class="platform-note">
+                        <span
+                            data-en="Android phone & tablet · iOS planned later"
+                            data-pl="Telefon i tablet z Androidem · iOS w planach"
+                        >Android phone &amp; tablet · iOS planned later</span>
+                    </div>
+                </div>
+                <div class="hero-phone">
+                    <div class="phone"><img
+                            class="shot"
+                            width="1032"
+                            height="2064"
+                            decoding="async"
+                            fetchpriority="high"
+                            data-shot="01_dashboard.webp"
+                            src="images/en/01_dashboard.webp"
+                            alt="Made2Sell dashboard showing monthly balance, income, expenses and profit"
+                        ></div>
+                </div>
+            </div>
+        </section>
 
-        a { color: var(--green-700); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        <!-- ---------- Value pillars ---------- -->
+        <section class="block">
+            <div class="wrap">
+                <div class="pillars">
+                    <div class="pillar">
+                        <div
+                            class="ic"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <line
+                                    x1="12"
+                                    y1="1"
+                                    x2="12"
+                                    y2="23"
+                                />
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                        </div>
+                        <h3
+                            data-en="Know your real profit"
+                            data-pl="Sprawdź, ile naprawdę zarabiasz"
+                        >Know your real profit</h3>
+                        <p
+                            data-en="Cost every product from materials and labour. See the margin on each item — and the net profit of every fair."
+                            data-pl="Policz koszt każdego produktu z materiałów i pracy. Zobacz marżę na każdej sztuce — i zysk netto z całego targu."
+                        >Cost every product from materials and labour. See the margin on each item — and the net profit
+                            of every fair.</p>
+                    </div>
+                    <div class="pillar">
+                        <div
+                            class="ic"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M3 9l1-5h16l1 5" />
+                                <path d="M4 9v11h16V9" />
+                                <path d="M9 20v-6h6v6" />
+                            </svg>
+                        </div>
+                        <h3
+                            data-en="Built for fairs"
+                            data-pl="Stworzone na targi"
+                        >Built for fairs</h3>
+                        <p
+                            data-en="Plan what to bring, pack against targets, sell from a fast till, then review how the day really went."
+                            data-pl="Zaplanuj, co zabrać, spakuj według planu, sprzedawaj na szybkiej kasie, a potem sprawdź, jak naprawdę poszło."
+                        >Plan what to bring, pack against targets, sell from a fast till, then review how the day really
+                            went.</p>
+                    </div>
+                    <div class="pillar">
+                        <div
+                            class="ic"
+                            aria-hidden="true"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3
+                            data-en="Offline & private"
+                            data-pl="Offline i prywatnie"
+                        >Offline &amp; private</h3>
+                        <p
+                            data-en="No account, no ads, no signal needed to run. Your data lives on your device — and you can back it up to a file or your own Google Drive, only if you want to."
+                            data-pl="Bez konta, bez reklam, działa bez zasięgu. Dane zostają na Twoim telefonie — kopię zapasową zrobisz do pliku albo na własny Google Drive, ale tylko jeśli chcesz."
+                        >No account, no ads, no signal needed to run. Your data lives on your device — and you can back
+                            it up to a file or your own Google Drive, only if you want to.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+        <!-- ---------- Feature tour ---------- -->
+        <section
+            class="block"
+            id="features"
+        >
+            <div class="wrap">
+                <div class="section-head">
+                    <span
+                        class="eyebrow"
+                        data-en="A guided tour"
+                        data-pl="Przewodnik"
+                    >A guided tour</span>
+                    <h2
+                        data-en="Everything you need to sell what you make"
+                        data-pl="Wszystko, czego potrzebujesz, żeby sprzedawać rękodzieło"
+                    >Everything you need to sell what you make</h2>
+                    <p
+                        data-en="These are real screens from the app. Here's what each part does."
+                        data-pl="To prawdziwe ekrany aplikacji. Zobacz, do czego służy każdy z nich."
+                    >These are real screens from the app. Here's what each part does.</p>
+                </div>
 
-        /* ---------- Header ---------- */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background: rgba(244, 248, 240, 0.86);
-            backdrop-filter: saturate(180%) blur(10px);
-            border-bottom: 1px solid var(--line);
-        }
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            padding: 0.7rem 1.25rem;
-            max-width: var(--maxw);
-            margin: 0 auto;
-        }
-        .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.2rem; color: var(--green-800); letter-spacing: -0.02em; }
-        .brand .mark { width: 30px; height: 30px; border-radius: 9px; flex: none; }
-        .badge {
-            display: inline-block;
-            background: var(--green-200);
-            color: var(--green-800);
-            padding: 0.15rem 0.6rem;
-            border-radius: 999px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            vertical-align: middle;
-            white-space: nowrap;
-        }
-        .nav-right { display: flex; align-items: center; gap: 0.5rem; }
-        .nav-links { display: flex; gap: 1.1rem; margin-right: 0.4rem; }
-        .nav-links a { color: var(--ink-soft); font-weight: 600; font-size: 0.95rem; }
-        .lang-toggle {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            padding: 0.4rem 0.85rem;
-            border-radius: 999px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: var(--green-800);
-            transition: background 0.2s, border-color 0.2s;
-        }
-        .lang-toggle:hover { background: var(--green-050); border-color: var(--green-300); }
+                <div class="features">
 
-        /* ---------- Buttons ---------- */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.4rem;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            border: 1px solid transparent;
-            transition: transform 0.12s ease, box-shadow 0.2s, background 0.2s;
-        }
-        .btn:hover { text-decoration: none; transform: translateY(-1px); }
-        .btn-primary { background: var(--green-600); color: #fff; box-shadow: var(--shadow-sm); }
-        .btn-primary:hover { background: var(--green-700); }
-        .btn-ghost { background: var(--paper); color: var(--green-800); border-color: var(--line); }
-        .btn-ghost:hover { background: var(--green-050); border-color: var(--green-300); }
+                    <!-- Dashboard -->
+                    <div class="feature">
+                        <div class="feature-media">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="01_dashboard.webp"
+                                    src="images/en/01_dashboard.webp"
+                                    alt="Dashboard"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Dashboard"
+                                data-pl="Pulpit"
+                            >Dashboard</span>
+                            <h3
+                                data-en="See how the month is going at a glance"
+                                data-pl="Jednym spojrzeniem sprawdzisz, jak idzie miesiąc"
+                            >See how the month is going at a glance</h3>
+                            <p
+                                data-en="Balance, income, expenses and profit for this month, last month or any custom range — plus your top products and a production timer to time your makes."
+                                data-pl="Saldo, dochód, wydatki i zysk za ten miesiąc, poprzedni albo dowolny zakres — a do tego najlepsze produkty i stoper produkcji, który mierzy czas pracy."
+                            >Balance, income, expenses and profit for this month, last month or any custom range — plus
+                                your top products and a production timer to time your makes.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Monthly balance"
+                                    data-pl="Saldo miesiąca"
+                                >Monthly balance</span>
+                                <span
+                                    class="chip"
+                                    data-en="Profit tracking"
+                                    data-pl="Zysk pod kontrolą"
+                                >Profit tracking</span>
+                                <span
+                                    class="chip"
+                                    data-en="Production timer"
+                                    data-pl="Stoper produkcji"
+                                >Production timer</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* ---------- Hero ---------- */
-        .hero { padding: 3.4rem 0 2rem; }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 2.5rem;
-            align-items: center;
-        }
-        .eyebrow {
-            display: inline-block;
-            color: var(--green-700);
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            margin-bottom: 0.9rem;
-        }
-        h1 {
-            font-size: clamp(2.1rem, 5.2vw, 3.3rem);
-            line-height: 1.08;
-            letter-spacing: -0.03em;
-            color: var(--green-900);
-            margin-bottom: 1rem;
-        }
-        .lede { font-size: 1.18rem; color: var(--ink-soft); margin-bottom: 1.6rem; max-width: 34ch; }
-        .cta-row { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
-        .platform-note { margin-top: 1.1rem; font-size: 0.9rem; color: var(--ink-soft); display: flex; align-items: center; gap: 0.45rem; }
+                    <!-- Charts -->
+                    <div class="feature reverse">
+                        <div class="feature-media">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="02_charts.webp"
+                                    src="images/en/02_charts.webp"
+                                    alt="Financial trend chart"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Trends"
+                                data-pl="Trendy"
+                            >Trends</span>
+                            <h3
+                                data-en="Watch your business grow"
+                                data-pl="Obserwuj, jak rośnie Twój biznes"
+                            >Watch your business grow</h3>
+                            <p
+                                data-en="A six-month income-versus-expenses trend turns a pile of sales into a picture you can actually read — so you know which months pay off."
+                                data-pl="Wykres dochodów i wydatków z sześciu miesięcy zamienia stertę sprzedaży w czytelny obraz — od razu widać, które miesiące naprawdę się opłacają."
+                            >A six-month income-versus-expenses trend turns a pile of sales into a picture you can
+                                actually read — so you know which months pay off.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Income vs. expenses"
+                                    data-pl="Dochód a wydatki"
+                                >Income vs. expenses</span>
+                                <span
+                                    class="chip"
+                                    data-en="6-month view"
+                                    data-pl="Widok 6 miesięcy"
+                                >6-month view</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* phone frame */
-        .phone {
-            width: 300px;
-            max-width: 78vw;
-            margin: 0 auto;
-            border: 10px solid #1c2a18;
-            border-radius: 40px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            background: #1c2a18;
-        }
-        .phone img { display: block; width: 100%; height: auto; }
-        .hero-phone { position: relative; }
-        .hero-phone .phone { transform: rotate(1.5deg); }
+                    <!-- Products -->
+                    <div class="feature">
+                        <div class="feature-media">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="03_products.webp"
+                                    src="images/en/03_products.webp"
+                                    alt="Product catalogue"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Products"
+                                data-pl="Produkty"
+                            >Products</span>
+                            <h3
+                                data-en="A catalogue that knows its numbers"
+                                data-pl="Katalog, który zna swoje liczby"
+                            >A catalogue that knows its numbers</h3>
+                            <p
+                                data-en="Every product shows price, cost, margin and stock at a glance. Add photos, tags, variants and sizes — or create a product straight from a photo."
+                                data-pl="Każdy produkt od razu pokazuje cenę, koszt, marżę i stan magazynowy. Dodawaj zdjęcia, tagi, warianty i rozmiary — albo utwórz produkt wprost ze zdjęcia."
+                            >Every product shows price, cost, margin and stock at a glance. Add photos, tags, variants
+                                and sizes — or create a product straight from a photo.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Price · cost · margin"
+                                    data-pl="Cena · koszt · marża"
+                                >Price · cost · margin</span>
+                                <span
+                                    class="chip"
+                                    data-en="Variants & sizes"
+                                    data-pl="Warianty i rozmiary"
+                                >Variants &amp; sizes</span>
+                                <span
+                                    class="chip"
+                                    data-en="Search & sort"
+                                    data-pl="Wyszukiwanie i sortowanie"
+                                >Search &amp; sort</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* paired phones for flagship features */
-        .feature-media.duo { gap: 0.6rem; }
-        .duo .phone { width: 210px; max-width: 43vw; border-width: 8px; border-radius: 32px; }
-        .duo .phone:first-child { transform: rotate(-2.5deg); }
-        .duo .phone:last-child { transform: rotate(2.5deg); margin-left: -1.2rem; }
+                    <!-- Product costing -->
+                    <div class="feature reverse">
+                        <div class="feature-media">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="04_product_detail.webp"
+                                    src="images/en/04_product_detail.webp"
+                                    alt="Product cost breakdown"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Pricing"
+                                data-pl="Wycena"
+                            >Pricing</span>
+                            <h3
+                                data-en="Price with confidence, not guesswork"
+                                data-pl="Wyceniaj pewnie, bez zgadywania"
+                            >Price with confidence, not guesswork</h3>
+                            <p
+                                data-en="Break each product's cost into materials and labour, see its margin and profit per unit, and get a suggested price you can apply in one tap."
+                                data-pl="Rozbij koszt produktu na materiały i pracę, zobacz marżę i zysk ze sztuki, a aplikacja podpowie cenę, którą ustawisz jednym dotknięciem."
+                            >Break each product's cost into materials and labour, see its margin and profit per unit,
+                                and get a suggested price you can apply in one tap.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Materials + labour"
+                                    data-pl="Materiały + praca"
+                                >Materials + labour</span>
+                                <span
+                                    class="chip"
+                                    data-en="Suggested price"
+                                    data-pl="Sugerowana cena"
+                                >Suggested price</span>
+                                <span
+                                    class="chip"
+                                    data-en="Multiple photos"
+                                    data-pl="Wiele zdjęć"
+                                >Multiple photos</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* ---------- Sections ---------- */
-        section.block { padding: 3rem 0; }
-        .section-head { text-align: center; max-width: 44ch; margin: 0 auto 2.4rem; }
-        .section-head .eyebrow { display: block; }
-        h2 { font-size: clamp(1.7rem, 3.6vw, 2.3rem); letter-spacing: -0.02em; color: var(--green-900); line-height: 1.15; }
-        .section-head p { color: var(--ink-soft); margin-top: 0.7rem; font-size: 1.08rem; }
+                    <!-- Materials -->
+                    <div class="feature">
+                        <div class="feature-media duo">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="05_materials.webp"
+                                    src="images/en/05_materials.webp"
+                                    alt="Materials inventory"
+                                ></div>
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="12_material_types.webp"
+                                    src="images/en/12_material_types.webp"
+                                    alt="Material types with custom fields"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Materials"
+                                data-pl="Materiały"
+                            >Materials</span>
+                            <h3
+                                data-en="Track what you make things from"
+                                data-pl="Śledź to, z czego tworzysz"
+                            >Track what you make things from</h3>
+                            <p
+                                data-en="Keep raw materials in stock and group them into your own types — each with the custom fields you define. Link materials to products, so making one automatically draws down the other, and buying supplies tops it back up."
+                                data-pl="Trzymaj materiały na stanie i grupuj je we własne typy — każdy z polami, które ustawisz po swojemu. Powiąż materiały z produktami: gdy coś zrobisz, materiał sam zejdzie ze stanu, a gdy dokupisz zapas, stan sam się uzupełni."
+                            >Keep raw materials in stock and group them into your own types — each with the custom
+                                fields you define. Link materials to products, so making one automatically draws down
+                                the other, and buying supplies tops it back up.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Your own material types"
+                                    data-pl="Własne typy materiałów"
+                                >Your own material types</span>
+                                <span
+                                    class="chip"
+                                    data-en="Live stock levels"
+                                    data-pl="Stany na bieżąco"
+                                >Live stock levels</span>
+                                <span
+                                    class="chip"
+                                    data-en="Linked to products"
+                                    data-pl="Powiązane z produktami"
+                                >Linked to products</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* value pillars */
-        .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-        .pillar {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            padding: 1.6rem;
-            box-shadow: var(--shadow-sm);
-        }
-        .pillar .ic {
-            width: 46px; height: 46px; border-radius: 12px;
-            background: var(--green-100); color: var(--green-700);
-            display: flex; align-items: center; justify-content: center;
-            margin-bottom: 0.9rem;
-        }
-        .pillar h3 { font-size: 1.15rem; color: var(--green-800); margin-bottom: 0.35rem; }
-        .pillar p { color: var(--ink-soft); font-size: 0.98rem; }
+                    <!-- Fairs -->
+                    <div class="feature reverse">
+                        <div class="feature-media duo">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="06_fairs.webp"
+                                    src="images/en/06_fairs.webp"
+                                    alt="Fairs list showing planning, active and closed markets"
+                                ></div>
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="07_fair_detail.webp"
+                                    src="images/en/07_fair_detail.webp"
+                                    alt="Fair results: revenue, cost of goods and net profit"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Fairs"
+                                data-pl="Targi"
+                            >Fairs</span>
+                            <h3
+                                data-en="Plan → Pack → Sell → Results"
+                                data-pl="Plan → Pakowanie → Sprzedaż → Wyniki"
+                            >Plan → Pack → Sell → Results</h3>
+                            <p
+                                data-en="Every market, start to finish: build a prep list of what to make, pack against your targets, sell live on the day, then see revenue, cost of goods and net profit — plus planned vs. packed vs. sold for each product."
+                                data-pl="Każdy targ od początku do końca: ułóż listę tego, co trzeba zrobić, spakuj według planu, sprzedawaj na stoisku, a na koniec zobacz przychód, koszt wytworzenia i zysk netto — oraz cel, spakowane i sprzedane sztuki każdego produktu."
+                            >Every market, start to finish: build a prep list of what to make, pack against your
+                                targets, sell live on the day, then see revenue, cost of goods and net profit — plus
+                                planned vs. packed vs. sold for each product.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Prep lists"
+                                    data-pl="Listy przygotowań"
+                                >Prep lists</span>
+                                <span
+                                    class="chip"
+                                    data-en="Net profit per fair"
+                                    data-pl="Zysk netto z targu"
+                                >Net profit per fair</span>
+                                <span
+                                    class="chip"
+                                    data-en="Planned vs. sold"
+                                    data-pl="Planowane a sprzedane"
+                                >Planned vs. sold</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* feature rows */
-        .features { display: flex; flex-direction: column; gap: 3.2rem; }
-        .feature {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.6rem;
-            align-items: center;
-        }
-        .feature.reverse .feature-media { order: 2; }
-        .feature-media { display: flex; justify-content: center; }
-        .feature-text h3 { font-size: 1.55rem; color: var(--green-900); letter-spacing: -0.02em; margin-bottom: 0.7rem; line-height: 1.2; }
-        .feature-text p { color: var(--ink-soft); font-size: 1.06rem; margin-bottom: 1rem; }
-        .kicker { color: var(--green-700); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
-        .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .chip {
-            background: var(--green-050);
-            border: 1px solid var(--line);
-            color: var(--green-800);
-            padding: 0.35rem 0.75rem;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
+                    <!-- Sale mode -->
+                    <div class="feature">
+                        <div class="feature-media">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="08_sale_mode.webp"
+                                    src="images/en/08_sale_mode.webp"
+                                    alt="Sale mode till"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Sale mode"
+                                data-pl="Tryb sprzedaży"
+                            >Sale mode</span>
+                            <h3
+                                data-en="A fast till for your stall"
+                                data-pl="Szybka kasa na stoisko"
+                            >A fast till for your stall</h3>
+                            <p
+                                data-en="Tap products to build a sale, adjust quantities, apply per-item or whole-order discounts, and assign a customer. Stock and takings update instantly — no internet required."
+                                data-pl="Dodawaj produkty jednym dotknięciem, zmieniaj ilości, dawaj rabat na pojedynczą pozycję albo na całe zamówienie i przypisz klienta. Stany i utarg aktualizują się od razu — bez internetu."
+                            >Tap products to build a sale, adjust quantities, apply per-item or whole-order discounts,
+                                and assign a customer. Stock and takings update instantly — no internet required.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="One-tap items"
+                                    data-pl="Pozycje jednym dotknięciem"
+                                >One-tap items</span>
+                                <span
+                                    class="chip"
+                                    data-en="Discounts"
+                                    data-pl="Rabaty"
+                                >Discounts</span>
+                                <span
+                                    class="chip"
+                                    data-en="Works offline"
+                                    data-pl="Działa offline"
+                                >Works offline</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* benefits strip */
-        .benefits { background: var(--green-900); color: #eaf3e5; border-radius: 24px; padding: 2.4rem 2rem; }
-        .benefits h2 { color: #fff; text-align: center; margin-bottom: 1.6rem; }
-        .benefit-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.4rem; text-align: center; }
-        .benefit .b-ic { font-size: 1.6rem; margin-bottom: 0.5rem; }
-        .benefit strong { display: block; color: #fff; font-size: 1rem; }
-        .benefit span { color: #b9d3b0; font-size: 0.85rem; }
+                    <!-- Orders & customers -->
+                    <div class="feature reverse">
+                        <div class="feature-media duo">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="09_orders.webp"
+                                    src="images/en/09_orders.webp"
+                                    alt="Custom orders list"
+                                ></div>
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="11_customers.webp"
+                                    src="images/en/11_customers.webp"
+                                    alt="Customer list"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Orders & customers"
+                                data-pl="Zamówienia i klienci"
+                            >Orders &amp; customers</span>
+                            <h3
+                                data-en="Custom orders, tracked end to end"
+                                data-pl="Zamówienia na miarę, śledzone od A do Z"
+                            >Custom orders, tracked end to end</h3>
+                            <p
+                                data-en="Take bespoke orders through every stage — pending, advance paid, in progress, sent, completed — record advance payments and notes, and keep a customer list that remembers who ordered what."
+                                data-pl="Prowadź zamówienia na miarę przez każdy etap — oczekujące, zaliczka wpłacona, w toku, wysłane, zakończone — zapisuj zaliczki i notatki, a lista klientów zapamięta, kto co zamawiał."
+                            >Take bespoke orders through every stage — pending, advance paid, in progress, sent,
+                                completed — record advance payments and notes, and keep a customer list that remembers
+                                who ordered what.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Order lifecycle"
+                                    data-pl="Etapy zamówienia"
+                                >Order lifecycle</span>
+                                <span
+                                    class="chip"
+                                    data-en="Advance payments"
+                                    data-pl="Zaliczki"
+                                >Advance payments</span>
+                                <span
+                                    class="chip"
+                                    data-en="Customer list"
+                                    data-pl="Lista klientów"
+                                >Customer list</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* pricing */
-        .pricing { max-width: 640px; margin: 0 auto; background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 2.4rem; text-align: center; box-shadow: var(--shadow); }
-        .price-tag { font-size: 3rem; font-weight: 800; color: var(--green-700); letter-spacing: -0.03em; line-height: 1; }
-        .price-sub { color: var(--ink-soft); margin: 0.4rem 0 1.4rem; font-size: 1.05rem; }
-        .price-list { list-style: none; text-align: left; max-width: 420px; margin: 0 auto; }
-        .price-list li { padding: 0.6rem 0 0.6rem 2rem; position: relative; border-top: 1px solid var(--line); color: var(--ink); }
-        .price-list li:first-child { border-top: none; }
-        .price-list li.later { color: var(--ink-soft); }
-        .price-list li::before { content: "✓"; position: absolute; left: 0.3rem; color: var(--green-600); font-weight: 800; }
-        .price-list li.later::before { content: "◷"; color: var(--green-500); font-weight: 700; }
+                    <!-- Expenses -->
+                    <div class="feature">
+                        <div class="feature-media">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="10_expenses.webp"
+                                    src="images/en/10_expenses.webp"
+                                    alt="Expenses list"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Expenses"
+                                data-pl="Wydatki"
+                            >Expenses</span>
+                            <h3
+                                data-en="Every cost in one place"
+                                data-pl="Wszystkie koszty w jednym miejscu"
+                            >Every cost in one place</h3>
+                            <p
+                                data-en="Log supplies, marketplace fees and restocks with a monthly total. Link a purchase to a material and it tops your stock back up automatically."
+                                data-pl="Zapisuj zakupy materiałów, prowizje platform sprzedażowych i uzupełnianie towaru — z podsumowaniem na koniec miesiąca. Powiąż zakup z materiałem, a jego stan uzupełni się sam."
+                            >Log supplies, marketplace fees and restocks with a monthly total. Link a purchase to a
+                                material and it tops your stock back up automatically.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Monthly totals"
+                                    data-pl="Sumy miesięczne"
+                                >Monthly totals</span>
+                                <span
+                                    class="chip"
+                                    data-en="Restocks materials"
+                                    data-pl="Uzupełnia materiały"
+                                >Restocks materials</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* fair-week timeline */
-        .timeline { max-width: 760px; margin: 0 auto; }
-        .tl-step { display: grid; grid-template-columns: 150px 1fr; gap: 1.5rem; }
-        .tl-when {
-            text-align: right;
-            color: var(--green-700);
-            font-weight: 700;
-            font-size: 0.8rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            padding-top: 0.2rem;
-            line-height: 1.4;
-        }
-        .tl-body {
-            position: relative;
-            border-left: 2px solid var(--line);
-            padding: 0 0 2.1rem 1.9rem;
-        }
-        .tl-step:last-child .tl-body { border-left-color: transparent; padding-bottom: 0; }
-        .tl-body::before {
-            content: "";
-            position: absolute;
-            left: -9px;
-            top: 0.3rem;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--green-600);
-            border: 3px solid var(--cream);
-            box-sizing: border-box;
-        }
-        .tl-body h3 { font-size: 1.2rem; color: var(--green-900); letter-spacing: -0.01em; margin-bottom: 0.3rem; line-height: 1.25; }
-        .tl-you { color: var(--ink-soft); font-size: 1rem; }
-        .tl-app {
-            margin-top: 0.7rem;
-            background: var(--green-050);
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 0.65rem 0.9rem 0.65rem 2.7rem;
-            color: var(--green-800);
-            font-size: 0.95rem;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234b7a43'/%3E%3Cpath d='M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z' fill='%23cfe7c8'/%3E%3Cpath d='M32 40a18 18 0 0 1 36 0' fill='none' stroke='%23cfe7c8' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: 0.85rem 0.78rem;
-            background-size: 18px 18px;
-        }
+                    <!-- Reports -->
+                    <div class="feature reverse">
+                        <div class="feature-media">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="14_reports.webp"
+                                    src="images/en/14_reports.webp"
+                                    alt="Product performance report ranking best sellers"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Reports"
+                                data-pl="Raporty"
+                            >Reports</span>
+                            <h3
+                                data-en="See exactly what sells"
+                                data-pl="Zobacz dokładnie, co się sprzedaje"
+                            >See exactly what sells</h3>
+                            <p
+                                data-en="Rank every product by revenue, units sold or profit over any period — and spot the ones that aren't moving — so you can make more of what works."
+                                data-pl="Ustaw produkty według przychodu, liczby sprzedanych sztuk albo zysku w dowolnym okresie — i wyłap te, które nie schodzą — żeby robić więcej tego, co naprawdę działa."
+                            >Rank every product by revenue, units sold or profit over any period — and spot the ones
+                                that aren't moving — so you can make more of what works.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Best & worst sellers"
+                                    data-pl="Najlepsze i najsłabsze"
+                                >Best &amp; worst sellers</span>
+                                <span
+                                    class="chip"
+                                    data-en="Revenue · units · profit"
+                                    data-pl="Przychód · sztuki · zysk"
+                                >Revenue · units · profit</span>
+                                <span
+                                    class="chip"
+                                    data-en="Any date range"
+                                    data-pl="Dowolny zakres dat"
+                                >Any date range</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* comparison table */
-        .compare-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); }
-        table.compare {
-            width: 100%;
-            min-width: 620px;
-            border-collapse: separate;
-            border-spacing: 0;
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-        }
-        table.compare th, table.compare td {
-            padding: 0.85rem 1rem;
-            text-align: left;
-            border-top: 1px solid var(--line);
-            font-size: 0.95rem;
-            vertical-align: top;
-        }
-        table.compare thead th { border-top: none; background: var(--green-050); color: var(--green-800); font-size: 0.9rem; }
-        table.compare thead th.own { background: var(--green-100); }
-        table.compare tbody td.own { background: var(--green-050); font-weight: 600; }
-        /* Keep the row label readable while the table scrolls sideways on narrow screens. */
-        table.compare th[scope="row"],
-        table.compare thead th:first-child {
-            position: sticky;
-            left: 0;
-            z-index: 1;
-            border-right: 1px solid var(--line);
-        }
-        table.compare th[scope="row"] { font-weight: 600; color: var(--ink); width: 34%; background: var(--paper); }
-        table.compare thead th:first-child { background: var(--green-050); }
-        table.compare td { color: var(--ink-soft); }
-        .c-yes::before { content: "✓ "; color: var(--green-600); font-weight: 800; }
-        .c-part::before { content: "~ "; color: #b8860b; font-weight: 800; }
-        .c-no::before { content: "✗ "; color: var(--red); font-weight: 800; }
-        .compare-note { text-align: center; color: var(--ink-soft); font-size: 0.92rem; margin-top: 1.1rem; max-width: 56ch; margin-left: auto; margin-right: auto; }
-        .scroll-hint { display: none; text-align: center; color: var(--ink-soft); font-size: 0.85rem; margin-bottom: 0.6rem; }
+                    <!-- Brand & data -->
+                    <div class="feature">
+                        <div class="feature-media duo">
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="15_profile.webp"
+                                    src="images/en/15_profile.webp"
+                                    alt="Seller profile with studio name and branding"
+                                ></div>
+                            <div class="phone"><img
+                                    class="shot"
+                                    width="1032"
+                                    height="2064"
+                                    decoding="async"
+                                    loading="lazy"
+                                    data-shot="16_settings.webp"
+                                    src="images/en/16_settings.webp"
+                                    alt="Settings: theme, language and data backup"
+                                ></div>
+                        </div>
+                        <div class="feature-text">
+                            <span
+                                class="kicker"
+                                data-en="Your brand & your data"
+                                data-pl="Twoja marka i Twoje dane"
+                            >Your brand &amp; your data</span>
+                            <h3
+                                data-en="Make it yours — and keep your data safe"
+                                data-pl="Dopasuj ją do siebie — i zadbaj o dane"
+                            >Make it yours — and keep your data safe</h3>
+                            <p
+                                data-en="Add your studio name, bio and social links, and pick a theme colour and language. Your data lives on your phone — back it up to a file, or turn on optional Google Drive backup to save a copy to your own Drive automatically, on a schedule you choose. There's no account, and nothing is ever sent to us."
+                                data-pl="Dodaj nazwę pracowni, opis i linki do mediów społecznościowych, wybierz kolor motywu i język. Dane zostają na telefonie — zrób kopię do pliku albo włącz opcjonalną kopię w Google Drive, żeby sama trafiała na Twój Dysk tak często, jak zechcesz. Nie ma konta, a do nas nic nie trafia."
+                            >Add your studio name, bio and social links, and pick a theme colour and language. Your data
+                                lives on your phone — back it up to a file, or turn on optional Google Drive backup to
+                                save a copy to your own Drive automatically, on a schedule you choose. There's no
+                                account, and nothing is ever sent to us.</p>
+                            <div class="chips">
+                                <span
+                                    class="chip"
+                                    data-en="Your branding"
+                                    data-pl="Twój branding"
+                                >Your branding</span>
+                                <span
+                                    class="chip"
+                                    data-en="Themes & language"
+                                    data-pl="Motywy i język"
+                                >Themes &amp; language</span>
+                                <span
+                                    class="chip"
+                                    data-en="File & Google Drive backup"
+                                    data-pl="Kopia do pliku i Google Drive"
+                                >File &amp; Google Drive backup</span>
+                            </div>
+                        </div>
+                    </div>
 
-        /* FAQ */
-        .faq { max-width: 760px; margin: 0 auto; }
-        details {
-            background: var(--paper);
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 0.4rem 1.2rem;
-            margin-bottom: 0.8rem;
-            box-shadow: var(--shadow-sm);
-        }
-        summary { cursor: pointer; font-weight: 700; color: var(--green-800); padding: 0.85rem 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-        summary::-webkit-details-marker { display: none; }
-        summary::after { content: "+"; font-size: 1.3rem; color: var(--green-500); font-weight: 400; }
-        details[open] summary::after { content: "–"; }
-        details p { color: var(--ink-soft); padding: 0 0 1rem; }
+                </div>
+            </div>
+        </section>
 
-        /* final CTA */
-        .final-cta { text-align: center; background: linear-gradient(160deg, var(--green-100), var(--green-050)); border: 1px solid var(--green-200); border-radius: 24px; padding: 3rem 2rem; }
-        .final-cta h2 { margin-bottom: 0.6rem; }
-        .final-cta p { color: var(--ink-soft); max-width: 44ch; margin: 0 auto 1.5rem; font-size: 1.08rem; }
+        <!-- ---------- Fair week timeline ---------- -->
+        <section
+            class="block"
+            id="fair-week"
+        >
+            <div class="wrap">
+                <div class="section-head">
+                    <span
+                        class="eyebrow"
+                        data-en="A week at a fair"
+                        data-pl="Targowy tydzień"
+                    >A week at a fair</span>
+                    <h2
+                        data-en="What a fair actually looks like"
+                        data-pl="Jak naprawdę wygląda targ"
+                    >What a fair actually looks like</h2>
+                    <p
+                        data-en="Every market runs the same loop. Made2Sell follows it from the first prep list to the final profit."
+                        data-pl="Każdy targ to ten sam cykl. Made2Sell prowadzi Cię od pierwszej listy przygotowań po końcowy zysk."
+                    >Every market runs the same loop. Made2Sell follows it from the first prep list to the final profit.
+                    </p>
+                </div>
 
-        /* alert */
-        .alert {
-            background: #fff8e6;
-            border: 1px solid #f2d98a;
-            border-radius: 12px;
-            padding: 0.9rem 1.1rem;
-            color: #7a5b12;
-            font-size: 0.95rem;
-        }
+                <div class="timeline">
 
-        footer { text-align: center; padding: 2.6rem 1.25rem 3rem; color: var(--ink-soft); font-size: 0.92rem; border-top: 1px solid var(--line); margin-top: 3rem; }
-        footer .brand { justify-content: center; margin-bottom: 0.6rem; }
+                    <div class="tl-step">
+                        <div
+                            class="tl-when"
+                            data-en="Two weeks before"
+                            data-pl="Dwa tygodnie wcześniej"
+                        >Two weeks before</div>
+                        <div class="tl-body">
+                            <h3
+                                data-en="Plan the stall"
+                                data-pl="Zaplanuj stoisko"
+                            >Plan the stall</h3>
+                            <p
+                                class="tl-you"
+                                data-en="You add the fair and build a prep list — 20 candles, 15 soaps, 10 of the new bath bombs."
+                                data-pl="Dodajesz targ i układasz listę przygotowań — 20 świec, 15 mydeł, 10 nowych kul do kąpieli."
+                            >You add the fair and build a prep list — 20 candles, 15 soaps, 10 of the new bath bombs.
+                            </p>
+                            <p
+                                class="tl-app"
+                                data-en="Works out the materials you'll need, and tells you what you're short of before you order."
+                                data-pl="Wylicza potrzebne materiały i pokazuje, czego Ci brakuje, zanim złożysz zamówienie."
+                            >Works out the materials you'll need, and tells you what you're short of before you order.
+                            </p>
+                        </div>
+                    </div>
 
-        [hidden] { display: none !important; }
+                    <div class="tl-step">
+                        <div
+                            class="tl-when"
+                            data-en="The week before"
+                            data-pl="Tydzień wcześniej"
+                        >The week before</div>
+                        <div class="tl-body">
+                            <h3
+                                data-en="Produce the stock"
+                                data-pl="Zrób towar"
+                            >Produce the stock</h3>
+                            <p
+                                class="tl-you"
+                                data-en="You work down the list batch by batch — a tray of soap on Monday, candles across Wednesday evening."
+                                data-pl="Realizujesz listę partia po partii — taca mydeł w poniedziałek, świece w środowy wieczór."
+                            >You work down the list batch by batch — a tray of soap on Monday, candles across Wednesday
+                                evening.</p>
+                            <p
+                                class="tl-app"
+                                data-en="The production timer records how long a batch really takes, and materials come off your stock as you make. That's where your true labour cost comes from."
+                                data-pl="Stoper produkcji zapisuje, ile naprawdę zajmuje jedna partia, a materiały schodzą ze stanu w trakcie pracy. Stąd bierze się prawdziwy koszt Twojej pracy."
+                            >The production timer records how long a batch really takes, and materials come off your
+                                stock as you make. That's where your true labour cost comes from.</p>
+                        </div>
+                    </div>
 
-        /* ---------- Responsive ---------- */
-        @media (max-width: 860px) {
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .lede { max-width: none; }
-            .cta-row, .platform-note { justify-content: center; }
-            .hero-phone { order: -1; }
-            .pillars { grid-template-columns: 1fr; }
-            .feature { grid-template-columns: 1fr; gap: 1.4rem; }
-            .feature.reverse .feature-media { order: -1; }
-            .feature-media { order: -1; }
-            .feature-text { text-align: center; }
-            .chips { justify-content: center; }
-            .benefit-grid { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
-            .nav-links { display: none; }
-            .tl-step { grid-template-columns: 1fr; gap: 0.3rem; }
-            .tl-when { text-align: left; padding-left: 1.9rem; }
-        }
-        @media (max-width: 460px) {
-            .benefit-grid { grid-template-columns: 1fr; }
-            .pricing { padding: 1.8rem 1.3rem; }
-        }
-        @media (max-width: 700px) {
-            .scroll-hint { display: block; }
-        }
+                    <div class="tl-step">
+                        <div
+                            class="tl-when"
+                            data-en="Friday night"
+                            data-pl="W piątek wieczorem"
+                        >Friday night</div>
+                        <div class="tl-body">
+                            <h3
+                                data-en="Pack the crate"
+                                data-pl="Spakuj skrzynię"
+                            >Pack the crate</h3>
+                            <p
+                                class="tl-you"
+                                data-en="You tick things off against your targets as they go into the box."
+                                data-pl="Odhaczasz produkty z listy, wkładając je do pudła."
+                            >You tick things off against your targets as they go into the box.</p>
+                            <p
+                                class="tl-app"
+                                data-en="Planned vs. packed, product by product — so you drive off knowing exactly what's in the van."
+                                data-pl="Planowane a spakowane, produkt po produkcie — wyjeżdżasz, wiedząc dokładnie, co masz w aucie."
+                            >Planned vs. packed, product by product — so you drive off knowing exactly what's in the
+                                van.</p>
+                        </div>
+                    </div>
 
-        /* ---------- Reduced motion ---------- */
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-            .btn:hover { transform: none; }
-            .hero-phone .phone,
-            .duo .phone:first-child,
-            .duo .phone:last-child { transform: none; }
-            .duo .phone:last-child { margin-left: 0; }
-        }
+                    <div class="tl-step">
+                        <div
+                            class="tl-when"
+                            data-en="Saturday, 9am"
+                            data-pl="W sobotę o 9:00"
+                        >Saturday, 9am</div>
+                        <div class="tl-body">
+                            <h3
+                                data-en="Sell all day"
+                                data-pl="Sprzedawaj cały dzień"
+                            >Sell all day</h3>
+                            <p
+                                class="tl-you"
+                                data-en="Tap, tap, done. Someone pays, you're already serving the next person."
+                                data-pl="Stuk, stuk, gotowe. Ktoś płaci, a Ty obsługujesz już kolejną osobę."
+                            >Tap, tap, done. Someone pays, you're already serving the next person.</p>
+                            <p
+                                class="tl-app"
+                                data-en="Sale mode updates stock and takings on every sale — in a field, in a hall, with no signal at all."
+                                data-pl="Tryb sprzedaży aktualizuje stany i utarg przy każdej sprzedaży — w plenerze, w hali, całkiem bez zasięgu."
+                            >Sale mode updates stock and takings on every sale — in a field, in a hall, with no signal
+                                at all.</p>
+                        </div>
+                    </div>
 
-        /* ---------- Dark mode ---------- */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --cream: #131a10;
-                --paper: #1b2417;
-                --ink: #e7f0e2;
-                --ink-soft: #a7b8a0;
-                --line: #2c3a26;
-                --green-050: #1f2b1a;
-                --green-100: #26351f;
-                --green-900: #dbeed3;
-                --green-800: #bfe0b3;
-                --green-700: #9fd08f;
-                --shadow: 0 10px 30px rgba(0,0,0,0.4);
-                --shadow-sm: 0 4px 14px rgba(0,0,0,0.3);
-            }
-            header { background: rgba(19, 26, 16, 0.85); }
-            .btn-primary { background: var(--green-600); color: #0f160c; }
-            .btn-primary:hover { background: var(--green-500); }
-            .benefits { background: #0f160c; }
-            .alert { background: #2c2410; border-color: #5a4a17; color: #e8d18f; }
-            .final-cta { background: linear-gradient(160deg, #22301b, #1a2415); }
-            /* The light-mode marker colours are too dim against the dark table. */
-            .c-yes::before { color: var(--green-300); }
-            .c-part::before { color: #e0b64a; }
-            .c-no::before { color: #e57567; }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="nav">
+                    <div class="tl-step">
+                        <div
+                            class="tl-when"
+                            data-en="Saturday, 6pm"
+                            data-pl="W sobotę o 18:00"
+                        >Saturday, 6pm</div>
+                        <div class="tl-body">
+                            <h3
+                                data-en="See how it really went"
+                                data-pl="Zobacz, jak naprawdę poszło"
+                            >See how it really went</h3>
+                            <p
+                                class="tl-you"
+                                data-en="You're still folding up the table."
+                                data-pl="Jeszcze składasz stolik."
+                            >You're still folding up the table.</p>
+                            <p
+                                class="tl-app"
+                                data-en="Revenue, cost of goods, the stall fee and your net profit — before the crate is back in the car."
+                                data-pl="Przychód, koszt wytworzenia, opłata za stoisko i zysk netto — zanim skrzynia wróci do auta."
+                            >Revenue, cost of goods, the stall fee and your net profit — before the crate is back in the
+                                car.</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-step">
+                        <div
+                            class="tl-when"
+                            data-en="Next time"
+                            data-pl="Następnym razem"
+                        >Next time</div>
+                        <div class="tl-body">
+                            <h3
+                                data-en="Do it better"
+                                data-pl="Zrób to lepiej"
+                            >Do it better</h3>
+                            <p
+                                class="tl-you"
+                                data-en="The bath bombs sold out by noon. The soap barely moved."
+                                data-pl="Kule do kąpieli rozeszły się do południa. Mydło prawie nie schodziło."
+                            >The bath bombs sold out by noon. The soap barely moved.</p>
+                            <p
+                                class="tl-app"
+                                data-en="Planned vs. packed vs. sold for every product — so the next prep list almost writes itself."
+                                data-pl="Cel, spakowane i sprzedane dla każdego produktu — następna lista przygotowań układa się niemal sama."
+                            >Planned vs. packed vs. sold for every product — so the next prep list almost writes itself.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- Benefits strip ---------- -->
+        <section class="block">
+            <div class="wrap">
+                <div class="benefits">
+                    <h2
+                        data-en="Made for makers, not accountants"
+                        data-pl="Dla twórców, nie księgowych"
+                    >Made for makers, not accountants</h2>
+                    <div class="benefit-grid">
+                        <div class="benefit">
+                            <div
+                                class="b-ic"
+                                aria-hidden="true"
+                            >📴</div><strong
+                                data-en="Works offline"
+                                data-pl="Działa offline"
+                            >Works offline</strong><span
+                                data-en="No signal needed"
+                                data-pl="Bez zasięgu"
+                            >No signal needed</span>
+                        </div>
+                        <div class="benefit">
+                            <div
+                                class="b-ic"
+                                aria-hidden="true"
+                            >🔒</div><strong
+                                data-en="Private by design"
+                                data-pl="Prywatne z założenia"
+                            >Private by design</strong><span
+                                data-en="No account, data on device"
+                                data-pl="Bez konta, dane na urządzeniu"
+                            >No account, data on device</span>
+                        </div>
+                        <div class="benefit">
+                            <div
+                                class="b-ic"
+                                aria-hidden="true"
+                            >🚫</div><strong
+                                data-en="No ads"
+                                data-pl="Bez reklam"
+                            >No ads</strong><span
+                                data-en="Never, not once"
+                                data-pl="Nigdy, ani razu"
+                            >Never, not once</span>
+                        </div>
+                        <div class="benefit">
+                            <div
+                                class="b-ic"
+                                aria-hidden="true"
+                            >💾</div><strong
+                                data-en="Your data, portable"
+                                data-pl="Dane w Twoich rękach"
+                            >Your data, portable</strong><span
+                                data-en="Back up to a file or Google Drive"
+                                data-pl="Kopia do pliku lub Google Drive"
+                            >Back up to a file or Google Drive</span>
+                        </div>
+                        <div class="benefit">
+                            <div
+                                class="b-ic"
+                                aria-hidden="true"
+                            >🌍</div><strong
+                                data-en="English & Polish"
+                                data-pl="Angielski i polski"
+                            >English &amp; Polish</strong><span
+                                data-en="Phone & tablet"
+                                data-pl="Telefon i tablet"
+                            >Phone &amp; tablet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- Comparison ---------- -->
+        <section
+            class="block"
+            id="compare"
+        >
+            <div class="wrap">
+                <div class="section-head">
+                    <span
+                        class="eyebrow"
+                        data-en="Compare"
+                        data-pl="Porównanie"
+                    >Compare</span>
+                    <h2
+                        data-en="Better than a spreadsheet?"
+                        data-pl="Lepsze niż arkusz kalkulacyjny?"
+                    >Better than a spreadsheet?</h2>
+                    <p
+                        data-en="Most makers start with a spreadsheet and a card reader. Here's honestly where each one wins — including where Made2Sell doesn't."
+                        data-pl="Większość twórców zaczyna od arkusza i terminala. Oto uczciwie, gdzie każde rozwiązanie wygrywa — łącznie z tym, gdzie Made2Sell przegrywa."
+                    >Most makers start with a spreadsheet and a card reader. Here's honestly where each one wins —
+                        including where Made2Sell doesn't.</p>
+                </div>
+
+                <p
+                    class="scroll-hint"
+                    data-en="Swipe the table sideways to compare →"
+                    data-pl="Przesuń tabelę w bok, aby porównać →"
+                >Swipe the table sideways to compare →</p>
+
+                <div class="compare-scroll">
+                    <table class="compare">
+                        <thead>
+                            <tr>
+                                <th scope="col"><span
+                                        data-en="What you need"
+                                        data-pl="Czego potrzebujesz"
+                                    >What you need</span></th>
+                                <th
+                                    scope="col"
+                                    class="own"
+                                >Made2Sell</th>
+                                <th
+                                    scope="col"
+                                    data-en="A spreadsheet"
+                                    data-pl="Arkusz kalkulacyjny"
+                                >A spreadsheet</th>
+                                <th
+                                    scope="col"
+                                    data-en="A card-reader app"
+                                    data-pl="Aplikacja terminala"
+                                >A card-reader app</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Cost of each product, from materials and labour"
+                                    data-pl="Koszt produktu z materiałów i pracy"
+                                >Cost of each product, from materials and labour</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="Built in"
+                                    data-pl="Wbudowane"
+                                >Built in</td>
+                                <td
+                                    class="c-part"
+                                    data-en="You build the formulas"
+                                    data-pl="Własne formuły"
+                                >You build the formulas</td>
+                                <td
+                                    class="c-no"
+                                    data-en="Not its job"
+                                    data-pl="Nie do tego służy"
+                                >Not its job</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Stock that updates itself when you sell"
+                                    data-pl="Stan, który sam się zmienia po sprzedaży"
+                                >Stock that updates itself when you sell</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="Automatic"
+                                    data-pl="Automatycznie"
+                                >Automatic</td>
+                                <td
+                                    class="c-part"
+                                    data-en="Manual edits"
+                                    data-pl="Ręczne poprawki"
+                                >Manual edits</td>
+                                <td
+                                    class="c-part"
+                                    data-en="Finished products only"
+                                    data-pl="Tylko gotowe produkty"
+                                >Finished products only</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Raw materials, with recipes that draw down stock"
+                                    data-pl="Materiały i receptury, które zdejmują stan"
+                                >Raw materials, with recipes that draw down stock</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="Built in"
+                                    data-pl="Wbudowane"
+                                >Built in</td>
+                                <td
+                                    class="c-part"
+                                    data-en="Hand-rolled, and fragile"
+                                    data-pl="Ręcznie i zawodnie"
+                                >Hand-rolled, and fragile</td>
+                                <td
+                                    class="c-no"
+                                    data-en="No"
+                                    data-pl="Nie"
+                                >No</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Craft-fair workflow: plan → pack → sell → results"
+                                    data-pl="Cykl targu: plan → pakowanie → sprzedaż → wyniki"
+                                >Craft-fair workflow: plan → pack → sell → results</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="The whole loop"
+                                    data-pl="Cały cykl"
+                                >The whole loop</td>
+                                <td
+                                    class="c-no"
+                                    data-en="Not really"
+                                    data-pl="Raczej nie"
+                                >Not really</td>
+                                <td
+                                    class="c-no"
+                                    data-en="No"
+                                    data-pl="Nie"
+                                >No</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Net profit of one single fair"
+                                    data-pl="Zysk netto z pojedynczego targu"
+                                >Net profit of one single fair</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="One tap"
+                                    data-pl="Jednym dotknięciem"
+                                >One tap</td>
+                                <td
+                                    class="c-part"
+                                    data-en="Only if you built it"
+                                    data-pl="Tylko jeśli to zbudujesz"
+                                >Only if you built it</td>
+                                <td
+                                    class="c-part"
+                                    data-en="Takings, but not costs"
+                                    data-pl="Utarg, ale bez kosztów"
+                                >Takings, but not costs</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Works with no signal at all"
+                                    data-pl="Działa całkowicie bez zasięgu"
+                                >Works with no signal at all</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="Fully offline"
+                                    data-pl="W pełni offline"
+                                >Fully offline</td>
+                                <td
+                                    class="c-part"
+                                    data-en="Awkward on a phone"
+                                    data-pl="Niewygodne na telefonie"
+                                >Awkward on a phone</td>
+                                <td
+                                    class="c-part"
+                                    data-en="Limited"
+                                    data-pl="Ograniczone"
+                                >Limited</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Usable one-handed at a busy stall"
+                                    data-pl="Obsługa jedną ręką na ruchliwym stoisku"
+                                >Usable one-handed at a busy stall</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="Made for it"
+                                    data-pl="Stworzone do tego"
+                                >Made for it</td>
+                                <td
+                                    class="c-no"
+                                    data-en="Painful"
+                                    data-pl="Męczarnia"
+                                >Painful</td>
+                                <td
+                                    class="c-yes"
+                                    data-en="Yes"
+                                    data-pl="Tak"
+                                >Yes</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Takes card payments"
+                                    data-pl="Przyjmuje płatności kartą"
+                                >Takes card payments</th>
+                                <td
+                                    class="own c-no"
+                                    data-en="No — keep your reader"
+                                    data-pl="Nie — zostań przy terminalu"
+                                >No — keep your reader</td>
+                                <td
+                                    class="c-no"
+                                    data-en="No"
+                                    data-pl="Nie"
+                                >No</td>
+                                <td
+                                    class="c-yes"
+                                    data-en="That's the whole point"
+                                    data-pl="Do tego właśnie służy"
+                                >That's the whole point</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="What it costs you"
+                                    data-pl="Ile Cię kosztuje"
+                                >What it costs you</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="Free, no ads"
+                                    data-pl="Za darmo, bez reklam"
+                                >Free, no ads</td>
+                                <td
+                                    class="c-yes"
+                                    data-en="Free"
+                                    data-pl="Za darmo"
+                                >Free</td>
+                                <td
+                                    class="c-part"
+                                    data-en="A cut of every sale"
+                                    data-pl="Prowizja od każdej sprzedaży"
+                                >A cut of every sale</td>
+                            </tr>
+                            <tr>
+                                <th
+                                    scope="row"
+                                    data-en="Where your data lives"
+                                    data-pl="Gdzie są Twoje dane"
+                                >Where your data lives</th>
+                                <td
+                                    class="own c-yes"
+                                    data-en="On your phone, no account"
+                                    data-pl="W telefonie, bez konta"
+                                >On your phone, no account</td>
+                                <td
+                                    class="c-part"
+                                    data-en="Someone else's cloud"
+                                    data-pl="W czyjejś chmurze"
+                                >Someone else's cloud</td>
+                                <td
+                                    class="c-no"
+                                    data-en="On their servers"
+                                    data-pl="Na ich serwerach"
+                                >On their servers</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p
+                    class="compare-note"
+                    data-en="Made2Sell doesn't take payments — it keeps the books. Use it next to whichever card reader you already have."
+                    data-pl="Made2Sell nie przyjmuje płatności — pilnuje liczb. Działa obok terminala, który już masz."
+                >Made2Sell doesn't take payments — it keeps the books. Use it next to whichever card reader you already
+                    have.</p>
+            </div>
+        </section>
+
+        <!-- ---------- Pricing ---------- -->
+        <section
+            class="block"
+            id="pricing"
+        >
+            <div class="wrap">
+                <div class="section-head">
+                    <span
+                        class="eyebrow"
+                        data-en="Pricing"
+                        data-pl="Cennik"
+                    >Pricing</span>
+                    <h2
+                        data-en="Free. No ads. No catch."
+                        data-pl="Za darmo. Bez reklam. Bez haczyków."
+                    >Free. No ads. No catch.</h2>
+                </div>
+                <div class="pricing">
+                    <div
+                        class="price-tag"
+                        data-en="Free"
+                        data-pl="Za darmo"
+                    >Free</div>
+                    <p
+                        class="price-sub"
+                        data-en="The app you see here is free to use, with no advertising."
+                        data-pl="Aplikacja, którą tu widzisz, jest darmowa i bez reklam."
+                    >The app you see here is free to use, with no advertising.</p>
+                    <ul class="price-list">
+                        <li
+                            data-en="Every feature above, completely free"
+                            data-pl="Wszystkie powyższe funkcje, całkowicie za darmo"
+                        >Every feature above, completely free</li>
+                        <li
+                            data-en="No ads — not now, not later"
+                            data-pl="Bez reklam — ani teraz, ani później"
+                        >No ads — not now, not later</li>
+                        <li
+                            class="later"
+                            data-en="Donations welcome to keep it going (coming later)"
+                            data-pl="Wsparcie mile widziane, żeby projekt żył dalej (wkrótce)"
+                        >Donations welcome to keep it going (coming later)</li>
+                        <li
+                            class="later"
+                            data-en="Optional paid integrations with online retailers may come in future — the core app stays free"
+                            data-pl="Opcjonalne płatne integracje ze sklepami internetowymi mogą pojawić się w przyszłości — podstawowa aplikacja zostaje darmowa"
+                        >Optional paid integrations with online retailers may come in future — the core app stays free
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- FAQ ---------- -->
+        <section
+            class="block"
+            id="faq"
+        >
+            <div class="wrap">
+                <div class="section-head">
+                    <span
+                        class="eyebrow"
+                        data-en="Questions"
+                        data-pl="Pytania"
+                    >Questions</span>
+                    <h2
+                        data-en="Frequently asked"
+                        data-pl="Często zadawane"
+                    >Frequently asked</h2>
+                </div>
+                <div class="faq">
+                    <details open>
+                        <summary
+                            data-en="When can I use Made2Sell?"
+                            data-pl="Kiedy mogę korzystać z Made2Sell?"
+                        >When can I use Made2Sell?</summary>
+                        <p
+                            data-en="Made2Sell is in closed alpha — the screens above are the real, working app. We're refining it with a small group of testers and will open up broader testing as it matures. Email us to be notified."
+                            data-pl="Made2Sell jest w zamkniętej alfie — ekrany powyżej to prawdziwa, działająca aplikacja. Dopracowujemy ją z małą grupą testerów, a szersze testy otworzymy, gdy dojrzeje. Napisz do nas, a damy Ci znać."
+                        >Made2Sell is in closed alpha — the screens above are the real, working app. We're refining it
+                            with a small group of testers and will open up broader testing as it matures. Email us to be
+                            notified.</p>
+                    </details>
+                    <details>
+                        <summary
+                            data-en="Which platforms are supported?"
+                            data-pl="Jakie platformy są obsługiwane?"
+                        >Which platforms are supported?</summary>
+                        <p
+                            data-en="Android phones and tablets today. An iOS version is planned for later."
+                            data-pl="Telefony i tablety z Androidem. Wersja na iOS w planach na później."
+                        >Android phones and tablets today. An iOS version is planned for later.</p>
+                    </details>
+                    <details>
+                        <summary
+                            data-en="Does it need an internet connection?"
+                            data-pl="Czy wymaga połączenia z internetem?"
+                        >Does it need an internet connection?</summary>
+                        <p
+                            data-en="No. Everything works offline — perfect for a busy market stall — and your data stays on your device."
+                            data-pl="Nie. Wszystko działa offline — idealnie na ruchliwe stoisko — a dane zostają na Twoim urządzeniu."
+                        >No. Everything works offline — perfect for a busy market stall — and your data stays on your
+                            device.</p>
+                    </details>
+                    <details>
+                        <summary
+                            data-en="What does it cost?"
+                            data-pl="Ile to kosztuje?"
+                        >What does it cost?</summary>
+                        <p
+                            data-en="It's free, with no ads. Donations will be welcome in future to help keep it going, and there may one day be optional paid integrations with online retailers — but the core app stays free."
+                            data-pl="Jest darmowa i bez reklam. Kiedyś dojdzie możliwość dobrowolnego wsparcia, a może i opcjonalne płatne integracje ze sklepami internetowymi — ale podstawowa aplikacja zostaje darmowa."
+                        >It's free, with no ads. Donations will be welcome in future to help keep it going, and there
+                            may one day be optional paid integrations with online retailers — but the core app stays
+                            free.</p>
+                    </details>
+                    <details>
+                        <summary
+                            data-en="Is my data private?"
+                            data-pl="Czy moje dane są prywatne?"
+                        >Is my data private?</summary>
+                        <p
+                            data-en="Yes. There's no account and no third-party servers — your data lives on your phone. Back it up and restore it from a file, or opt in to Google Drive backup, which uploads only to your own Drive's private app folder. Nothing is ever sent to us."
+                            data-pl="Tak. Nie ma konta ani cudzych serwerów — dane siedzą na Twoim telefonie. Kopię zrobisz i przywrócisz z pliku albo włączysz kopię w Google Drive, która ląduje wyłącznie w prywatnym folderze aplikacji na Twoim Dysku. Do nas nie trafia nic."
+                        >Yes. There's no account and no third-party servers — your data lives on your phone. Back it up
+                            and restore it from a file, or opt in to Google Drive backup, which uploads only to your own
+                            Drive's private app folder. Nothing is ever sent to us.</p>
+                    </details>
+                    <details>
+                        <summary
+                            data-en="Can I back up to the cloud?"
+                            data-pl="Czy mogę robić kopię w chmurze?"
+                        >Can I back up to the cloud?</summary>
+                        <p
+                            data-en="Yes, optionally. Alongside file backups, you can turn on Google Drive backup to automatically save a copy to your own Google Drive on a schedule you set — and restore it on any device you sign in on. It uses your Drive's private app folder, so only you can see it."
+                            data-pl="Tak, opcjonalnie. Oprócz kopii do pliku możesz włączyć kopię w Google Drive — zapisze się sama na Twoim Dysku według ustawionego harmonogramu, a przywrócisz ją na dowolnym urządzeniu po zalogowaniu. Leży w prywatnym folderze aplikacji, więc widzisz ją tylko Ty."
+                        >Yes, optionally. Alongside file backups, you can turn on Google Drive backup to automatically
+                            save a copy to your own Google Drive on a schedule you set — and restore it on any device
+                            you sign in on. It uses your Drive's private app folder, so only you can see it.</p>
+                    </details>
+                    <details>
+                        <summary
+                            data-en="What if I find bugs?"
+                            data-pl="Co jeśli znajdę błędy?"
+                        >What if I find bugs?</summary>
+                        <p
+                            data-en="Bugs are expected in an alpha — that's what testing is for. Testers report issues directly and help shape what gets fixed next."
+                            data-pl="W alfie błędy są normalne — po to są testy. Testerzy zgłaszają problemy wprost do nas i pomagają decydować, co naprawiamy w pierwszej kolejności."
+                        >Bugs are expected in an alpha — that's what testing is for. Testers report issues directly and
+                            help shape what gets fixed next.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- Final CTA ---------- -->
+        <section class="block">
+            <div class="wrap">
+                <div class="final-cta">
+                    <span
+                        class="eyebrow"
+                        data-en="Closed alpha"
+                        data-pl="Zamknięta alfa"
+                    >Closed alpha</span>
+                    <h2
+                        data-en="Want to help shape it?"
+                        data-pl="Chcesz ją współtworzyć?"
+                    >Want to help shape it?</h2>
+                    <p
+                        data-en="We're testing with a small group of makers. Drop us a line to join the next round — and be first to know when it opens up."
+                        data-pl="Testujemy z małą grupą twórców. Napisz do nas, żeby dołączyć do kolejnej tury — damy Ci znać, gdy ruszą szersze testy."
+                    >We're testing with a small group of makers. Drop us a line to join the next round — and be first to
+                        know when it opens up.</p>
+                    <a
+                        class="btn btn-primary"
+                        href="mailto:made2sell@foffni.mozmail.com?subject=Made2Sell%20testing"
+                        data-en="Email us to join testing"
+                        data-pl="Napisz i dołącz do testów"
+                    >Email us to join testing</a>
+                    <div
+                        class="alert"
+                        style="max-width:32rem;margin:1.5rem auto 0;"
+                        data-en="Android only for now. iOS support is planned for a later release."
+                        data-pl="Na razie tylko Android. iOS pojawi się w późniejszym wydaniu."
+                    >Android only for now. iOS support is planned for a later release.</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
             <div class="brand">
-                <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#4b7a43"/><path d="M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z" fill="#cfe7c8"/><path d="M32 40a18 18 0 0 1 36 0" fill="none" stroke="#cfe7c8" stroke-width="7" stroke-linecap="round"/></svg>
+                <svg
+                    class="mark"
+                    viewBox="0 0 100 100"
+                    aria-hidden="true"
+                >
+                    <rect
+                        width="100"
+                        height="100"
+                        rx="24"
+                        fill="#4b7a43"
+                    />
+                    <path
+                        d="M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z"
+                        fill="#cfe7c8"
+                    />
+                    <path
+                        d="M32 40a18 18 0 0 1 36 0"
+                        fill="none"
+                        stroke="#cfe7c8"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                    />
+                </svg>
                 <span>Made2Sell</span>
-                <span class="badge" data-en="Closed alpha" data-pl="Zamknięta alfa">Closed alpha</span>
             </div>
-            <div class="nav-right">
-                <nav class="nav-links">
-                    <a href="#features" data-en="Features" data-pl="Funkcje">Features</a>
-                    <a href="#compare" data-en="Compare" data-pl="Porównanie">Compare</a>
-                    <a href="#pricing" data-en="Pricing" data-pl="Cennik">Pricing</a>
-                    <a href="#faq" data-en="FAQ" data-pl="FAQ">FAQ</a>
-                </nav>
-                <button class="lang-toggle" id="langToggle" type="button" onclick="toggleLanguage()" lang="pl" aria-label="Zmień język na polski"><span id="langBtn">Polski</span></button>
-            </div>
-        </div>
-    </header>
+            <p><span
+                    data-en="For craft fair sellers & hobby makers"
+                    data-pl="Dla sprzedawców na targach i rękodzielników"
+                >For craft fair sellers &amp; hobby makers</span> · Adam Grabski · <a
+                    href="mailto:made2sell@foffni.mozmail.com"
+                >made2sell@foffni.mozmail.com</a></p>
+        </footer>
 
-    <!-- ---------- Hero ---------- -->
-    <section class="hero">
-        <div class="wrap hero-grid">
-            <div class="hero-text">
-                <span class="eyebrow" data-en="For hobby crafters & makers" data-pl="Dla twórców i rękodzielników">For hobby crafters &amp; makers</span>
-                <h1 data-en="Your craft business, in your pocket." data-pl="Twój biznes rękodzielniczy w kieszeni.">Your craft business, in your pocket.</h1>
-                <p class="lede" data-en="Made2Sell helps you track stock, know the true cost and profit of everything you make, and sell with confidence at fairs — all offline, all on your phone." data-pl="Made2Sell pomaga pilnować stanów, poznać prawdziwy koszt i zysk każdego produktu oraz pewnie sprzedawać na targach — wszystko offline, w telefonie.">Made2Sell helps you track stock, know the true cost and profit of everything you make, and sell with confidence at fairs — all offline, all on your phone.</p>
-                <div class="cta-row">
-                    <a class="btn btn-primary" href="mailto:made2sell@foffni.mozmail.com?subject=Made2Sell%20testing" data-en="Get notified" data-pl="Powiadom mnie">Get notified</a>
-                    <a class="btn btn-ghost" href="#features" data-en="See the features" data-pl="Zobacz funkcje">See the features</a>
-                </div>
-                <div class="platform-note">
-                    <span aria-hidden="true">🤖</span>
-                    <span data-en="Android phone & tablet · iOS planned later" data-pl="Telefon i tablet z Androidem · iOS w planach">Android phone &amp; tablet · iOS planned later</span>
-                </div>
-            </div>
-            <div class="hero-phone">
-                <div class="phone"><img class="shot" width="1032" height="2064" decoding="async" fetchpriority="high" data-shot="01_dashboard.webp" src="images/en/01_dashboard.webp" alt="Made2Sell dashboard showing monthly balance, income, expenses and profit"></div>
-            </div>
-        </div>
-    </section>
+        <script>
+            const SUPPORTED = ['en', 'pl'];
+            const STORAGE_KEY = 'made2sell.lang';
 
-    <!-- ---------- Value pillars ---------- -->
-    <section class="block">
-        <div class="wrap">
-            <div class="pillars">
-                <div class="pillar">
-                    <div class="ic" aria-hidden="true">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <h3 data-en="Know your real profit" data-pl="Sprawdź, ile naprawdę zarabiasz">Know your real profit</h3>
-                    <p data-en="Cost every product from materials and labour. See the margin on each item — and the net profit of every fair." data-pl="Policz koszt każdego produktu z materiałów i pracy. Zobacz marżę na każdej sztuce — i zysk netto z całego targu.">Cost every product from materials and labour. See the margin on each item — and the net profit of every fair.</p>
-                </div>
-                <div class="pillar">
-                    <div class="ic" aria-hidden="true">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
-                    </div>
-                    <h3 data-en="Built for fairs" data-pl="Stworzone na targi">Built for fairs</h3>
-                    <p data-en="Plan what to bring, pack against targets, sell from a fast till, then review how the day really went." data-pl="Zaplanuj, co zabrać, spakuj według planu, sprzedawaj na szybkiej kasie, a potem sprawdź, jak naprawdę poszło.">Plan what to bring, pack against targets, sell from a fast till, then review how the day really went.</p>
-                </div>
-                <div class="pillar">
-                    <div class="ic" aria-hidden="true">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3 data-en="Offline & private" data-pl="Offline i prywatnie">Offline &amp; private</h3>
-                    <p data-en="No account, no ads, no signal needed to run. Your data lives on your device — and you can back it up to a file or your own Google Drive, only if you want to." data-pl="Bez konta, bez reklam, działa bez zasięgu. Dane zostają na Twoim telefonie — kopię zapasową zrobisz do pliku albo na własny Google Drive, ale tylko jeśli chcesz.">No account, no ads, no signal needed to run. Your data lives on your device — and you can back it up to a file or your own Google Drive, only if you want to.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ---------- Feature tour ---------- -->
-    <section class="block" id="features">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="eyebrow" data-en="A guided tour" data-pl="Przewodnik">A guided tour</span>
-                <h2 data-en="Everything you need to sell what you make" data-pl="Wszystko, czego potrzebujesz, żeby sprzedawać rękodzieło">Everything you need to sell what you make</h2>
-                <p data-en="These are real screens from the app. Here's what each part does." data-pl="To prawdziwe ekrany aplikacji. Zobacz, do czego służy każdy z nich.">These are real screens from the app. Here's what each part does.</p>
-            </div>
-
-            <div class="features">
-
-                <!-- Dashboard -->
-                <div class="feature">
-                    <div class="feature-media"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="01_dashboard.webp" src="images/en/01_dashboard.webp" alt="Dashboard"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Dashboard" data-pl="Pulpit">Dashboard</span>
-                        <h3 data-en="See how the month is going at a glance" data-pl="Jednym spojrzeniem sprawdzisz, jak idzie miesiąc">See how the month is going at a glance</h3>
-                        <p data-en="Balance, income, expenses and profit for this month, last month or any custom range — plus your top products and a production timer to time your makes." data-pl="Saldo, dochód, wydatki i zysk za ten miesiąc, poprzedni albo dowolny zakres — a do tego najlepsze produkty i stoper produkcji, który mierzy czas pracy.">Balance, income, expenses and profit for this month, last month or any custom range — plus your top products and a production timer to time your makes.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Monthly balance" data-pl="Saldo miesiąca">Monthly balance</span>
-                            <span class="chip" data-en="Profit tracking" data-pl="Zysk pod kontrolą">Profit tracking</span>
-                            <span class="chip" data-en="Production timer" data-pl="Stoper produkcji">Production timer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Charts -->
-                <div class="feature reverse">
-                    <div class="feature-media"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="02_charts.webp" src="images/en/02_charts.webp" alt="Financial trend chart"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Trends" data-pl="Trendy">Trends</span>
-                        <h3 data-en="Watch your business grow" data-pl="Obserwuj, jak rośnie Twój biznes">Watch your business grow</h3>
-                        <p data-en="A six-month income-versus-expenses trend turns a pile of sales into a picture you can actually read — so you know which months pay off." data-pl="Wykres dochodów i wydatków z sześciu miesięcy zamienia stertę sprzedaży w czytelny obraz — od razu widać, które miesiące naprawdę się opłacają.">A six-month income-versus-expenses trend turns a pile of sales into a picture you can actually read — so you know which months pay off.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Income vs. expenses" data-pl="Dochód a wydatki">Income vs. expenses</span>
-                            <span class="chip" data-en="6-month view" data-pl="Widok 6 miesięcy">6-month view</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Products -->
-                <div class="feature">
-                    <div class="feature-media"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="03_products.webp" src="images/en/03_products.webp" alt="Product catalogue"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Products" data-pl="Produkty">Products</span>
-                        <h3 data-en="A catalogue that knows its numbers" data-pl="Katalog, który zna swoje liczby">A catalogue that knows its numbers</h3>
-                        <p data-en="Every product shows price, cost, margin and stock at a glance. Add photos, tags, variants and sizes — or create a product straight from a photo." data-pl="Każdy produkt od razu pokazuje cenę, koszt, marżę i stan magazynowy. Dodawaj zdjęcia, tagi, warianty i rozmiary — albo utwórz produkt wprost ze zdjęcia.">Every product shows price, cost, margin and stock at a glance. Add photos, tags, variants and sizes — or create a product straight from a photo.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Price · cost · margin" data-pl="Cena · koszt · marża">Price · cost · margin</span>
-                            <span class="chip" data-en="Variants & sizes" data-pl="Warianty i rozmiary">Variants &amp; sizes</span>
-                            <span class="chip" data-en="Search & sort" data-pl="Wyszukiwanie i sortowanie">Search &amp; sort</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product costing -->
-                <div class="feature reverse">
-                    <div class="feature-media"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="04_product_detail.webp" src="images/en/04_product_detail.webp" alt="Product cost breakdown"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Pricing" data-pl="Wycena">Pricing</span>
-                        <h3 data-en="Price with confidence, not guesswork" data-pl="Wyceniaj pewnie, bez zgadywania">Price with confidence, not guesswork</h3>
-                        <p data-en="Break each product's cost into materials and labour, see its margin and profit per unit, and get a suggested price you can apply in one tap." data-pl="Rozbij koszt produktu na materiały i pracę, zobacz marżę i zysk ze sztuki, a aplikacja podpowie cenę, którą ustawisz jednym dotknięciem.">Break each product's cost into materials and labour, see its margin and profit per unit, and get a suggested price you can apply in one tap.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Materials + labour" data-pl="Materiały + praca">Materials + labour</span>
-                            <span class="chip" data-en="Suggested price" data-pl="Sugerowana cena">Suggested price</span>
-                            <span class="chip" data-en="Multiple photos" data-pl="Wiele zdjęć">Multiple photos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Materials -->
-                <div class="feature">
-                    <div class="feature-media duo"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="05_materials.webp" src="images/en/05_materials.webp" alt="Materials inventory"></div><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="12_material_types.webp" src="images/en/12_material_types.webp" alt="Material types with custom fields"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Materials" data-pl="Materiały">Materials</span>
-                        <h3 data-en="Track what you make things from" data-pl="Śledź to, z czego tworzysz">Track what you make things from</h3>
-                        <p data-en="Keep raw materials in stock and group them into your own types — each with the custom fields you define. Link materials to products, so making one automatically draws down the other, and buying supplies tops it back up." data-pl="Trzymaj materiały na stanie i grupuj je we własne typy — każdy z polami, które ustawisz po swojemu. Powiąż materiały z produktami: gdy coś zrobisz, materiał sam zejdzie ze stanu, a gdy dokupisz zapas, stan sam się uzupełni.">Keep raw materials in stock and group them into your own types — each with the custom fields you define. Link materials to products, so making one automatically draws down the other, and buying supplies tops it back up.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Your own material types" data-pl="Własne typy materiałów">Your own material types</span>
-                            <span class="chip" data-en="Live stock levels" data-pl="Stany na bieżąco">Live stock levels</span>
-                            <span class="chip" data-en="Linked to products" data-pl="Powiązane z produktami">Linked to products</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fairs -->
-                <div class="feature reverse">
-                    <div class="feature-media duo"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="06_fairs.webp" src="images/en/06_fairs.webp" alt="Fairs list showing planning, active and closed markets"></div><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="07_fair_detail.webp" src="images/en/07_fair_detail.webp" alt="Fair results: revenue, cost of goods and net profit"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Fairs" data-pl="Targi">Fairs</span>
-                        <h3 data-en="Plan → Pack → Sell → Results" data-pl="Plan → Pakowanie → Sprzedaż → Wyniki">Plan → Pack → Sell → Results</h3>
-                        <p data-en="Every market, start to finish: build a prep list of what to make, pack against your targets, sell live on the day, then see revenue, cost of goods and net profit — plus planned vs. packed vs. sold for each product." data-pl="Każdy targ od początku do końca: ułóż listę tego, co trzeba zrobić, spakuj według planu, sprzedawaj na stoisku, a na koniec zobacz przychód, koszt wytworzenia i zysk netto — oraz cel, spakowane i sprzedane sztuki każdego produktu.">Every market, start to finish: build a prep list of what to make, pack against your targets, sell live on the day, then see revenue, cost of goods and net profit — plus planned vs. packed vs. sold for each product.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Prep lists" data-pl="Listy przygotowań">Prep lists</span>
-                            <span class="chip" data-en="Net profit per fair" data-pl="Zysk netto z targu">Net profit per fair</span>
-                            <span class="chip" data-en="Planned vs. sold" data-pl="Planowane a sprzedane">Planned vs. sold</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sale mode -->
-                <div class="feature">
-                    <div class="feature-media"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="08_sale_mode.webp" src="images/en/08_sale_mode.webp" alt="Sale mode till"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Sale mode" data-pl="Tryb sprzedaży">Sale mode</span>
-                        <h3 data-en="A fast till for your stall" data-pl="Szybka kasa na stoisko">A fast till for your stall</h3>
-                        <p data-en="Tap products to build a sale, adjust quantities, apply per-item or whole-order discounts, and assign a customer. Stock and takings update instantly — no internet required." data-pl="Dodawaj produkty jednym dotknięciem, zmieniaj ilości, dawaj rabat na pojedynczą pozycję albo na całe zamówienie i przypisz klienta. Stany i utarg aktualizują się od razu — bez internetu.">Tap products to build a sale, adjust quantities, apply per-item or whole-order discounts, and assign a customer. Stock and takings update instantly — no internet required.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="One-tap items" data-pl="Pozycje jednym dotknięciem">One-tap items</span>
-                            <span class="chip" data-en="Discounts" data-pl="Rabaty">Discounts</span>
-                            <span class="chip" data-en="Works offline" data-pl="Działa offline">Works offline</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Orders & customers -->
-                <div class="feature reverse">
-                    <div class="feature-media duo"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="09_orders.webp" src="images/en/09_orders.webp" alt="Custom orders list"></div><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="11_customers.webp" src="images/en/11_customers.webp" alt="Customer list"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Orders & customers" data-pl="Zamówienia i klienci">Orders &amp; customers</span>
-                        <h3 data-en="Custom orders, tracked end to end" data-pl="Zamówienia na miarę, śledzone od A do Z">Custom orders, tracked end to end</h3>
-                        <p data-en="Take bespoke orders through every stage — pending, advance paid, in progress, sent, completed — record advance payments and notes, and keep a customer list that remembers who ordered what." data-pl="Prowadź zamówienia na miarę przez każdy etap — oczekujące, zaliczka wpłacona, w toku, wysłane, zakończone — zapisuj zaliczki i notatki, a lista klientów zapamięta, kto co zamawiał.">Take bespoke orders through every stage — pending, advance paid, in progress, sent, completed — record advance payments and notes, and keep a customer list that remembers who ordered what.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Order lifecycle" data-pl="Etapy zamówienia">Order lifecycle</span>
-                            <span class="chip" data-en="Advance payments" data-pl="Zaliczki">Advance payments</span>
-                            <span class="chip" data-en="Customer list" data-pl="Lista klientów">Customer list</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Expenses -->
-                <div class="feature">
-                    <div class="feature-media"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="10_expenses.webp" src="images/en/10_expenses.webp" alt="Expenses list"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Expenses" data-pl="Wydatki">Expenses</span>
-                        <h3 data-en="Every cost in one place" data-pl="Wszystkie koszty w jednym miejscu">Every cost in one place</h3>
-                        <p data-en="Log supplies, marketplace fees and restocks with a monthly total. Link a purchase to a material and it tops your stock back up automatically." data-pl="Zapisuj zakupy materiałów, prowizje platform sprzedażowych i uzupełnianie towaru — z podsumowaniem na koniec miesiąca. Powiąż zakup z materiałem, a jego stan uzupełni się sam.">Log supplies, marketplace fees and restocks with a monthly total. Link a purchase to a material and it tops your stock back up automatically.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Monthly totals" data-pl="Sumy miesięczne">Monthly totals</span>
-                            <span class="chip" data-en="Restocks materials" data-pl="Uzupełnia materiały">Restocks materials</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reports -->
-                <div class="feature reverse">
-                    <div class="feature-media"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="14_reports.webp" src="images/en/14_reports.webp" alt="Product performance report ranking best sellers"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Reports" data-pl="Raporty">Reports</span>
-                        <h3 data-en="See exactly what sells" data-pl="Zobacz dokładnie, co się sprzedaje">See exactly what sells</h3>
-                        <p data-en="Rank every product by revenue, units sold or profit over any period — and spot the ones that aren't moving — so you can make more of what works." data-pl="Ustaw produkty według przychodu, liczby sprzedanych sztuk albo zysku w dowolnym okresie — i wyłap te, które nie schodzą — żeby robić więcej tego, co naprawdę działa.">Rank every product by revenue, units sold or profit over any period — and spot the ones that aren't moving — so you can make more of what works.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Best & worst sellers" data-pl="Najlepsze i najsłabsze">Best &amp; worst sellers</span>
-                            <span class="chip" data-en="Revenue · units · profit" data-pl="Przychód · sztuki · zysk">Revenue · units · profit</span>
-                            <span class="chip" data-en="Any date range" data-pl="Dowolny zakres dat">Any date range</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Brand & data -->
-                <div class="feature">
-                    <div class="feature-media duo"><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="15_profile.webp" src="images/en/15_profile.webp" alt="Seller profile with studio name and branding"></div><div class="phone"><img class="shot" width="1032" height="2064" decoding="async" loading="lazy" data-shot="16_settings.webp" src="images/en/16_settings.webp" alt="Settings: theme, language and data backup"></div></div>
-                    <div class="feature-text">
-                        <span class="kicker" data-en="Your brand & your data" data-pl="Twoja marka i Twoje dane">Your brand &amp; your data</span>
-                        <h3 data-en="Make it yours — and keep your data safe" data-pl="Dopasuj ją do siebie — i zadbaj o dane">Make it yours — and keep your data safe</h3>
-                        <p data-en="Add your studio name, bio and social links, and pick a theme colour and language. Your data lives on your phone — back it up to a file, or turn on optional Google Drive backup to save a copy to your own Drive automatically, on a schedule you choose. There's no account, and nothing is ever sent to us." data-pl="Dodaj nazwę pracowni, opis i linki do mediów społecznościowych, wybierz kolor motywu i język. Dane zostają na telefonie — zrób kopię do pliku albo włącz opcjonalną kopię w Google Drive, żeby sama trafiała na Twój Dysk tak często, jak zechcesz. Nie ma konta, a do nas nic nie trafia.">Add your studio name, bio and social links, and pick a theme colour and language. Your data lives on your phone — back it up to a file, or turn on optional Google Drive backup to save a copy to your own Drive automatically, on a schedule you choose. There's no account, and nothing is ever sent to us.</p>
-                        <div class="chips">
-                            <span class="chip" data-en="Your branding" data-pl="Twój branding">Your branding</span>
-                            <span class="chip" data-en="Themes & language" data-pl="Motywy i język">Themes &amp; language</span>
-                            <span class="chip" data-en="File & Google Drive backup" data-pl="Kopia do pliku i Google Drive">File &amp; Google Drive backup</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ---------- Fair week timeline ---------- -->
-    <section class="block" id="fair-week">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="eyebrow" data-en="A week at a fair" data-pl="Targowy tydzień">A week at a fair</span>
-                <h2 data-en="What a fair actually looks like" data-pl="Jak naprawdę wygląda targ">What a fair actually looks like</h2>
-                <p data-en="Every market runs the same loop. Made2Sell follows it from the first prep list to the final profit." data-pl="Każdy targ to ten sam cykl. Made2Sell prowadzi Cię od pierwszej listy przygotowań po końcowy zysk.">Every market runs the same loop. Made2Sell follows it from the first prep list to the final profit.</p>
-            </div>
-
-            <div class="timeline">
-
-                <div class="tl-step">
-                    <div class="tl-when" data-en="Two weeks before" data-pl="Dwa tygodnie wcześniej">Two weeks before</div>
-                    <div class="tl-body">
-                        <h3 data-en="Plan the stall" data-pl="Zaplanuj stoisko">Plan the stall</h3>
-                        <p class="tl-you" data-en="You add the fair and build a prep list — 20 candles, 15 soaps, 10 of the new bath bombs." data-pl="Dodajesz targ i układasz listę przygotowań — 20 świec, 15 mydeł, 10 nowych kul do kąpieli.">You add the fair and build a prep list — 20 candles, 15 soaps, 10 of the new bath bombs.</p>
-                        <p class="tl-app" data-en="Works out the materials you'll need, and tells you what you're short of before you order." data-pl="Wylicza potrzebne materiały i pokazuje, czego Ci brakuje, zanim złożysz zamówienie.">Works out the materials you'll need, and tells you what you're short of before you order.</p>
-                    </div>
-                </div>
-
-                <div class="tl-step">
-                    <div class="tl-when" data-en="The week before" data-pl="Tydzień wcześniej">The week before</div>
-                    <div class="tl-body">
-                        <h3 data-en="Produce the stock" data-pl="Zrób towar">Produce the stock</h3>
-                        <p class="tl-you" data-en="You work down the list batch by batch — a tray of soap on Monday, candles across Wednesday evening." data-pl="Realizujesz listę partia po partii — taca mydeł w poniedziałek, świece w środowy wieczór.">You work down the list batch by batch — a tray of soap on Monday, candles across Wednesday evening.</p>
-                        <p class="tl-app" data-en="The production timer records how long a batch really takes, and materials come off your stock as you make. That's where your true labour cost comes from." data-pl="Stoper produkcji zapisuje, ile naprawdę zajmuje jedna partia, a materiały schodzą ze stanu w trakcie pracy. Stąd bierze się prawdziwy koszt Twojej pracy.">The production timer records how long a batch really takes, and materials come off your stock as you make. That's where your true labour cost comes from.</p>
-                    </div>
-                </div>
-
-                <div class="tl-step">
-                    <div class="tl-when" data-en="Friday night" data-pl="W piątek wieczorem">Friday night</div>
-                    <div class="tl-body">
-                        <h3 data-en="Pack the crate" data-pl="Spakuj skrzynię">Pack the crate</h3>
-                        <p class="tl-you" data-en="You tick things off against your targets as they go into the box." data-pl="Odhaczasz produkty z listy, wkładając je do pudła.">You tick things off against your targets as they go into the box.</p>
-                        <p class="tl-app" data-en="Planned vs. packed, product by product — so you drive off knowing exactly what's in the van." data-pl="Planowane a spakowane, produkt po produkcie — wyjeżdżasz, wiedząc dokładnie, co masz w aucie.">Planned vs. packed, product by product — so you drive off knowing exactly what's in the van.</p>
-                    </div>
-                </div>
-
-                <div class="tl-step">
-                    <div class="tl-when" data-en="Saturday, 9am" data-pl="W sobotę o 9:00">Saturday, 9am</div>
-                    <div class="tl-body">
-                        <h3 data-en="Sell all day" data-pl="Sprzedawaj cały dzień">Sell all day</h3>
-                        <p class="tl-you" data-en="Tap, tap, done. Someone pays, you're already serving the next person." data-pl="Stuk, stuk, gotowe. Ktoś płaci, a Ty obsługujesz już kolejną osobę.">Tap, tap, done. Someone pays, you're already serving the next person.</p>
-                        <p class="tl-app" data-en="Sale mode updates stock and takings on every sale — in a field, in a hall, with no signal at all." data-pl="Tryb sprzedaży aktualizuje stany i utarg przy każdej sprzedaży — w plenerze, w hali, całkiem bez zasięgu.">Sale mode updates stock and takings on every sale — in a field, in a hall, with no signal at all.</p>
-                    </div>
-                </div>
-
-                <div class="tl-step">
-                    <div class="tl-when" data-en="Saturday, 6pm" data-pl="W sobotę o 18:00">Saturday, 6pm</div>
-                    <div class="tl-body">
-                        <h3 data-en="See how it really went" data-pl="Zobacz, jak naprawdę poszło">See how it really went</h3>
-                        <p class="tl-you" data-en="You're still folding up the table." data-pl="Jeszcze składasz stolik.">You're still folding up the table.</p>
-                        <p class="tl-app" data-en="Revenue, cost of goods, the stall fee and your net profit — before the crate is back in the car." data-pl="Przychód, koszt wytworzenia, opłata za stoisko i zysk netto — zanim skrzynia wróci do auta.">Revenue, cost of goods, the stall fee and your net profit — before the crate is back in the car.</p>
-                    </div>
-                </div>
-
-                <div class="tl-step">
-                    <div class="tl-when" data-en="Next time" data-pl="Następnym razem">Next time</div>
-                    <div class="tl-body">
-                        <h3 data-en="Do it better" data-pl="Zrób to lepiej">Do it better</h3>
-                        <p class="tl-you" data-en="The bath bombs sold out by noon. The soap barely moved." data-pl="Kule do kąpieli rozeszły się do południa. Mydło prawie nie schodziło.">The bath bombs sold out by noon. The soap barely moved.</p>
-                        <p class="tl-app" data-en="Planned vs. packed vs. sold for every product — so the next prep list almost writes itself." data-pl="Cel, spakowane i sprzedane dla każdego produktu — następna lista przygotowań układa się niemal sama.">Planned vs. packed vs. sold for every product — so the next prep list almost writes itself.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ---------- Benefits strip ---------- -->
-    <section class="block">
-        <div class="wrap">
-            <div class="benefits">
-                <h2 data-en="Made for makers, not accountants" data-pl="Dla twórców, nie księgowych">Made for makers, not accountants</h2>
-                <div class="benefit-grid">
-                    <div class="benefit"><div class="b-ic" aria-hidden="true">📴</div><strong data-en="Works offline" data-pl="Działa offline">Works offline</strong><span data-en="No signal needed" data-pl="Bez zasięgu">No signal needed</span></div>
-                    <div class="benefit"><div class="b-ic" aria-hidden="true">🔒</div><strong data-en="Private by design" data-pl="Prywatne z założenia">Private by design</strong><span data-en="No account, data on device" data-pl="Bez konta, dane na urządzeniu">No account, data on device</span></div>
-                    <div class="benefit"><div class="b-ic" aria-hidden="true">🚫</div><strong data-en="No ads" data-pl="Bez reklam">No ads</strong><span data-en="Never, not once" data-pl="Nigdy, ani razu">Never, not once</span></div>
-                    <div class="benefit"><div class="b-ic" aria-hidden="true">💾</div><strong data-en="Your data, portable" data-pl="Dane w Twoich rękach">Your data, portable</strong><span data-en="Back up to a file or Google Drive" data-pl="Kopia do pliku lub Google Drive">Back up to a file or Google Drive</span></div>
-                    <div class="benefit"><div class="b-ic" aria-hidden="true">🌍</div><strong data-en="English & Polish" data-pl="Angielski i polski">English &amp; Polish</strong><span data-en="Phone & tablet" data-pl="Telefon i tablet">Phone &amp; tablet</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ---------- Comparison ---------- -->
-    <section class="block" id="compare">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="eyebrow" data-en="Compare" data-pl="Porównanie">Compare</span>
-                <h2 data-en="Better than a spreadsheet?" data-pl="Lepsze niż arkusz kalkulacyjny?">Better than a spreadsheet?</h2>
-                <p data-en="Most makers start with a spreadsheet and a card reader. Here's honestly where each one wins — including where Made2Sell doesn't." data-pl="Większość twórców zaczyna od arkusza i terminala. Oto uczciwie, gdzie każde rozwiązanie wygrywa — łącznie z tym, gdzie Made2Sell przegrywa.">Most makers start with a spreadsheet and a card reader. Here's honestly where each one wins — including where Made2Sell doesn't.</p>
-            </div>
-
-            <p class="scroll-hint" data-en="Swipe the table sideways to compare →" data-pl="Przesuń tabelę w bok, aby porównać →">Swipe the table sideways to compare →</p>
-
-            <div class="compare-scroll">
-                <table class="compare">
-                    <thead>
-                        <tr>
-                            <th scope="col"><span data-en="What you need" data-pl="Czego potrzebujesz">What you need</span></th>
-                            <th scope="col" class="own">Made2Sell</th>
-                            <th scope="col" data-en="A spreadsheet" data-pl="Arkusz kalkulacyjny">A spreadsheet</th>
-                            <th scope="col" data-en="A card-reader app" data-pl="Aplikacja terminala">A card-reader app</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row" data-en="Cost of each product, from materials and labour" data-pl="Koszt produktu z materiałów i pracy">Cost of each product, from materials and labour</th>
-                            <td class="own c-yes" data-en="Built in" data-pl="Wbudowane">Built in</td>
-                            <td class="c-part" data-en="You build the formulas" data-pl="Własne formuły">You build the formulas</td>
-                            <td class="c-no" data-en="Not its job" data-pl="Nie do tego służy">Not its job</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="Stock that updates itself when you sell" data-pl="Stan, który sam się zmienia po sprzedaży">Stock that updates itself when you sell</th>
-                            <td class="own c-yes" data-en="Automatic" data-pl="Automatycznie">Automatic</td>
-                            <td class="c-part" data-en="Manual edits" data-pl="Ręczne poprawki">Manual edits</td>
-                            <td class="c-part" data-en="Finished products only" data-pl="Tylko gotowe produkty">Finished products only</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="Raw materials, with recipes that draw down stock" data-pl="Materiały i receptury, które zdejmują stan">Raw materials, with recipes that draw down stock</th>
-                            <td class="own c-yes" data-en="Built in" data-pl="Wbudowane">Built in</td>
-                            <td class="c-part" data-en="Hand-rolled, and fragile" data-pl="Ręcznie i zawodnie">Hand-rolled, and fragile</td>
-                            <td class="c-no" data-en="No" data-pl="Nie">No</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="Craft-fair workflow: plan → pack → sell → results" data-pl="Cykl targu: plan → pakowanie → sprzedaż → wyniki">Craft-fair workflow: plan → pack → sell → results</th>
-                            <td class="own c-yes" data-en="The whole loop" data-pl="Cały cykl">The whole loop</td>
-                            <td class="c-no" data-en="Not really" data-pl="Raczej nie">Not really</td>
-                            <td class="c-no" data-en="No" data-pl="Nie">No</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="Net profit of one single fair" data-pl="Zysk netto z pojedynczego targu">Net profit of one single fair</th>
-                            <td class="own c-yes" data-en="One tap" data-pl="Jednym dotknięciem">One tap</td>
-                            <td class="c-part" data-en="Only if you built it" data-pl="Tylko jeśli to zbudujesz">Only if you built it</td>
-                            <td class="c-part" data-en="Takings, but not costs" data-pl="Utarg, ale bez kosztów">Takings, but not costs</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="Works with no signal at all" data-pl="Działa całkowicie bez zasięgu">Works with no signal at all</th>
-                            <td class="own c-yes" data-en="Fully offline" data-pl="W pełni offline">Fully offline</td>
-                            <td class="c-part" data-en="Awkward on a phone" data-pl="Niewygodne na telefonie">Awkward on a phone</td>
-                            <td class="c-part" data-en="Limited" data-pl="Ograniczone">Limited</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="Usable one-handed at a busy stall" data-pl="Obsługa jedną ręką na ruchliwym stoisku">Usable one-handed at a busy stall</th>
-                            <td class="own c-yes" data-en="Made for it" data-pl="Stworzone do tego">Made for it</td>
-                            <td class="c-no" data-en="Painful" data-pl="Męczarnia">Painful</td>
-                            <td class="c-yes" data-en="Yes" data-pl="Tak">Yes</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="Takes card payments" data-pl="Przyjmuje płatności kartą">Takes card payments</th>
-                            <td class="own c-no" data-en="No — keep your reader" data-pl="Nie — zostań przy terminalu">No — keep your reader</td>
-                            <td class="c-no" data-en="No" data-pl="Nie">No</td>
-                            <td class="c-yes" data-en="That's the whole point" data-pl="Do tego właśnie służy">That's the whole point</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="What it costs you" data-pl="Ile Cię kosztuje">What it costs you</th>
-                            <td class="own c-yes" data-en="Free, no ads" data-pl="Za darmo, bez reklam">Free, no ads</td>
-                            <td class="c-yes" data-en="Free" data-pl="Za darmo">Free</td>
-                            <td class="c-part" data-en="A cut of every sale" data-pl="Prowizja od każdej sprzedaży">A cut of every sale</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" data-en="Where your data lives" data-pl="Gdzie są Twoje dane">Where your data lives</th>
-                            <td class="own c-yes" data-en="On your phone, no account" data-pl="W telefonie, bez konta">On your phone, no account</td>
-                            <td class="c-part" data-en="Someone else's cloud" data-pl="W czyjejś chmurze">Someone else's cloud</td>
-                            <td class="c-no" data-en="On their servers" data-pl="Na ich serwerach">On their servers</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="compare-note" data-en="Made2Sell doesn't take payments — it keeps the books. Use it next to whichever card reader you already have." data-pl="Made2Sell nie przyjmuje płatności — pilnuje liczb. Działa obok terminala, który już masz.">Made2Sell doesn't take payments — it keeps the books. Use it next to whichever card reader you already have.</p>
-        </div>
-    </section>
-
-    <!-- ---------- Pricing ---------- -->
-    <section class="block" id="pricing">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="eyebrow" data-en="Pricing" data-pl="Cennik">Pricing</span>
-                <h2 data-en="Free. No ads. No catch." data-pl="Za darmo. Bez reklam. Bez haczyków.">Free. No ads. No catch.</h2>
-            </div>
-            <div class="pricing">
-                <div class="price-tag" data-en="Free" data-pl="Za darmo">Free</div>
-                <p class="price-sub" data-en="The app you see here is free to use, with no advertising." data-pl="Aplikacja, którą tu widzisz, jest darmowa i bez reklam.">The app you see here is free to use, with no advertising.</p>
-                <ul class="price-list">
-                    <li data-en="Every feature above, completely free" data-pl="Wszystkie powyższe funkcje, całkowicie za darmo">Every feature above, completely free</li>
-                    <li data-en="No ads — not now, not later" data-pl="Bez reklam — ani teraz, ani później">No ads — not now, not later</li>
-                    <li class="later" data-en="Donations welcome to keep it going (coming later)" data-pl="Wsparcie mile widziane, żeby projekt żył dalej (wkrótce)">Donations welcome to keep it going (coming later)</li>
-                    <li class="later" data-en="Optional paid integrations with online retailers may come in future — the core app stays free" data-pl="Opcjonalne płatne integracje ze sklepami internetowymi mogą pojawić się w przyszłości — podstawowa aplikacja zostaje darmowa">Optional paid integrations with online retailers may come in future — the core app stays free</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ---------- FAQ ---------- -->
-    <section class="block" id="faq">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="eyebrow" data-en="Questions" data-pl="Pytania">Questions</span>
-                <h2 data-en="Frequently asked" data-pl="Często zadawane">Frequently asked</h2>
-            </div>
-            <div class="faq">
-                <details open>
-                    <summary data-en="When can I use Made2Sell?" data-pl="Kiedy mogę korzystać z Made2Sell?">When can I use Made2Sell?</summary>
-                    <p data-en="Made2Sell is in closed alpha — the screens above are the real, working app. We're refining it with a small group of testers and will open up broader testing as it matures. Email us to be notified." data-pl="Made2Sell jest w zamkniętej alfie — ekrany powyżej to prawdziwa, działająca aplikacja. Dopracowujemy ją z małą grupą testerów, a szersze testy otworzymy, gdy dojrzeje. Napisz do nas, a damy Ci znać.">Made2Sell is in closed alpha — the screens above are the real, working app. We're refining it with a small group of testers and will open up broader testing as it matures. Email us to be notified.</p>
-                </details>
-                <details>
-                    <summary data-en="Which platforms are supported?" data-pl="Jakie platformy są obsługiwane?">Which platforms are supported?</summary>
-                    <p data-en="Android phones and tablets today. An iOS version is planned for later." data-pl="Telefony i tablety z Androidem. Wersja na iOS w planach na później.">Android phones and tablets today. An iOS version is planned for later.</p>
-                </details>
-                <details>
-                    <summary data-en="Does it need an internet connection?" data-pl="Czy wymaga połączenia z internetem?">Does it need an internet connection?</summary>
-                    <p data-en="No. Everything works offline — perfect for a busy market stall — and your data stays on your device." data-pl="Nie. Wszystko działa offline — idealnie na ruchliwe stoisko — a dane zostają na Twoim urządzeniu.">No. Everything works offline — perfect for a busy market stall — and your data stays on your device.</p>
-                </details>
-                <details>
-                    <summary data-en="What does it cost?" data-pl="Ile to kosztuje?">What does it cost?</summary>
-                    <p data-en="It's free, with no ads. Donations will be welcome in future to help keep it going, and there may one day be optional paid integrations with online retailers — but the core app stays free." data-pl="Jest darmowa i bez reklam. Kiedyś dojdzie możliwość dobrowolnego wsparcia, a może i opcjonalne płatne integracje ze sklepami internetowymi — ale podstawowa aplikacja zostaje darmowa.">It's free, with no ads. Donations will be welcome in future to help keep it going, and there may one day be optional paid integrations with online retailers — but the core app stays free.</p>
-                </details>
-                <details>
-                    <summary data-en="Is my data private?" data-pl="Czy moje dane są prywatne?">Is my data private?</summary>
-                    <p data-en="Yes. There's no account and no third-party servers — your data lives on your phone. Back it up and restore it from a file, or opt in to Google Drive backup, which uploads only to your own Drive's private app folder. Nothing is ever sent to us." data-pl="Tak. Nie ma konta ani cudzych serwerów — dane siedzą na Twoim telefonie. Kopię zrobisz i przywrócisz z pliku albo włączysz kopię w Google Drive, która ląduje wyłącznie w prywatnym folderze aplikacji na Twoim Dysku. Do nas nie trafia nic.">Yes. There's no account and no third-party servers — your data lives on your phone. Back it up and restore it from a file, or opt in to Google Drive backup, which uploads only to your own Drive's private app folder. Nothing is ever sent to us.</p>
-                </details>
-                <details>
-                    <summary data-en="Can I back up to the cloud?" data-pl="Czy mogę robić kopię w chmurze?">Can I back up to the cloud?</summary>
-                    <p data-en="Yes, optionally. Alongside file backups, you can turn on Google Drive backup to automatically save a copy to your own Google Drive on a schedule you set — and restore it on any device you sign in on. It uses your Drive's private app folder, so only you can see it." data-pl="Tak, opcjonalnie. Oprócz kopii do pliku możesz włączyć kopię w Google Drive — zapisze się sama na Twoim Dysku według ustawionego harmonogramu, a przywrócisz ją na dowolnym urządzeniu po zalogowaniu. Leży w prywatnym folderze aplikacji, więc widzisz ją tylko Ty.">Yes, optionally. Alongside file backups, you can turn on Google Drive backup to automatically save a copy to your own Google Drive on a schedule you set — and restore it on any device you sign in on. It uses your Drive's private app folder, so only you can see it.</p>
-                </details>
-                <details>
-                    <summary data-en="What if I find bugs?" data-pl="Co jeśli znajdę błędy?">What if I find bugs?</summary>
-                    <p data-en="Bugs are expected in an alpha — that's what testing is for. Testers report issues directly and help shape what gets fixed next." data-pl="W alfie błędy są normalne — po to są testy. Testerzy zgłaszają problemy wprost do nas i pomagają decydować, co naprawiamy w pierwszej kolejności.">Bugs are expected in an alpha — that's what testing is for. Testers report issues directly and help shape what gets fixed next.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- ---------- Final CTA ---------- -->
-    <section class="block">
-        <div class="wrap">
-            <div class="final-cta">
-                <span class="eyebrow" data-en="Closed alpha" data-pl="Zamknięta alfa">Closed alpha</span>
-                <h2 data-en="Want to help shape it?" data-pl="Chcesz ją współtworzyć?">Want to help shape it?</h2>
-                <p data-en="We're testing with a small group of makers. Drop us a line to join the next round — and be first to know when it opens up." data-pl="Testujemy z małą grupą twórców. Napisz do nas, żeby dołączyć do kolejnej tury — damy Ci znać, gdy ruszą szersze testy.">We're testing with a small group of makers. Drop us a line to join the next round — and be first to know when it opens up.</p>
-                <a class="btn btn-primary" href="mailto:made2sell@foffni.mozmail.com?subject=Made2Sell%20testing" data-en="Email us to join testing" data-pl="Napisz i dołącz do testów">Email us to join testing</a>
-                <div class="alert" style="max-width:32rem;margin:1.5rem auto 0;" data-en="Android only for now. iOS support is planned for a later release." data-pl="Na razie tylko Android. iOS pojawi się w późniejszym wydaniu.">Android only for now. iOS support is planned for a later release.</div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="brand">
-            <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#4b7a43"/><path d="M26 40h48l-5 30a6 6 0 0 1-6 5H37a6 6 0 0 1-6-5z" fill="#cfe7c8"/><path d="M32 40a18 18 0 0 1 36 0" fill="none" stroke="#cfe7c8" stroke-width="7" stroke-linecap="round"/></svg>
-            <span>Made2Sell</span>
-        </div>
-        <p><span data-en="For craft fair sellers & hobby makers" data-pl="Dla sprzedawców na targach i rękodzielników">For craft fair sellers &amp; hobby makers</span> · Adam Grabski · <a href="mailto:made2sell@foffni.mozmail.com">made2sell@foffni.mozmail.com</a></p>
-    </footer>
-
-    <script>
-        const SUPPORTED = ['en', 'pl'];
-        const STORAGE_KEY = 'made2sell.lang';
-
-        // Reading/writing localStorage throws in some privacy modes — never let that
-        // break the page, the language just falls back to detection.
-        function readStored() {
-            try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
-        }
-        function writeStored(lang) {
-            try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
-        }
-
-        // Priority: explicit ?lang= in the URL, then a previous choice, then the
-        // browser's own languages, then English.
-        function detectLanguage() {
-            const fromUrl = new URLSearchParams(location.search).get('lang');
-            if (SUPPORTED.includes(fromUrl)) return fromUrl;
-
-            const stored = readStored();
-            if (SUPPORTED.includes(stored)) return stored;
-
-            const prefs = navigator.languages || [navigator.language || ''];
-            for (const pref of prefs) {
-                const base = pref.toLowerCase().split('-')[0];
-                if (SUPPORTED.includes(base)) return base;
+            // Reading/writing localStorage throws in some privacy modes — never let that
+            // break the page, the language just falls back to detection.
+            function readStored() {
+                try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
             }
-            return 'en';
-        }
+            function writeStored(lang) {
+                try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
+            }
 
-        let currentLang = detectLanguage();
+            // Priority: explicit ?lang= in the URL, then a previous choice, then the
+            // browser's own languages, then English.
+            function detectLanguage() {
+                const fromUrl = new URLSearchParams(location.search).get('lang');
+                if (SUPPORTED.includes(fromUrl)) return fromUrl;
 
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'pl' : 'en';
-            writeStored(currentLang);
+                const stored = readStored();
+                if (SUPPORTED.includes(stored)) return stored;
 
-            // Keep ?lang= in sync so the URL stays shareable in the chosen language.
-            const url = new URL(location.href);
-            url.searchParams.set('lang', currentLang);
-            history.replaceState(null, '', url);
+                const prefs = navigator.languages || [navigator.language || ''];
+                for (const pref of prefs) {
+                    const base = pref.toLowerCase().split('-')[0];
+                    if (SUPPORTED.includes(base)) return base;
+                }
+                return 'en';
+            }
+
+            let currentLang = detectLanguage();
+
+            function toggleLanguage() {
+                currentLang = currentLang === 'en' ? 'pl' : 'en';
+                writeStored(currentLang);
+
+                // Keep ?lang= in sync so the URL stays shareable in the chosen language.
+                const url = new URL(location.href);
+                url.searchParams.set('lang', currentLang);
+                history.replaceState(null, '', url);
+
+                applyLanguage();
+            }
+
+            function applyLanguage() {
+                document.documentElement.lang = currentLang;
+
+                // Swap all translatable text nodes.
+                document.querySelectorAll('[data-en]').forEach(el => {
+                    const val = el.getAttribute('data-' + currentLang);
+                    if (val === null) return;
+                    if (el.tagName === 'TITLE') {
+                        el.textContent = val;
+                    } else if (el.tagName === 'META') {
+                        el.setAttribute('content', val);
+                    } else {
+                        el.textContent = val;
+                    }
+                });
+
+                // Swap screenshots to the matching language set.
+                document.querySelectorAll('img.shot').forEach(img => {
+                    img.src = 'images/' + currentLang + '/' + img.getAttribute('data-shot');
+                });
+
+                // Update the toggle (it names the language you can switch TO, so it is
+                // always written in that language).
+                const toggle = document.getElementById('langToggle');
+                const other = currentLang === 'en' ? 'pl' : 'en';
+                document.getElementById('langBtn').textContent = other === 'pl' ? 'Polski' : 'English';
+                toggle.lang = other;
+                toggle.setAttribute('aria-label', other === 'pl' ? 'Zmień język na polski' : 'Switch language to English');
+            }
 
             applyLanguage();
-        }
+        </script>
+    </body>
 
-        function applyLanguage() {
-            document.documentElement.lang = currentLang;
-
-            // Swap all translatable text nodes.
-            document.querySelectorAll('[data-en]').forEach(el => {
-                const val = el.getAttribute('data-' + currentLang);
-                if (val === null) return;
-                if (el.tagName === 'TITLE') {
-                    el.textContent = val;
-                } else if (el.tagName === 'META') {
-                    el.setAttribute('content', val);
-                } else {
-                    el.textContent = val;
-                }
-            });
-
-            // Swap screenshots to the matching language set.
-            document.querySelectorAll('img.shot').forEach(img => {
-                img.src = 'images/' + currentLang + '/' + img.getAttribute('data-shot');
-            });
-
-            // Update the toggle (it names the language you can switch TO, so it is
-            // always written in that language).
-            const toggle = document.getElementById('langToggle');
-            const other = currentLang === 'en' ? 'pl' : 'en';
-            document.getElementById('langBtn').textContent = other === 'pl' ? 'Polski' : 'English';
-            toggle.lang = other;
-            toggle.setAttribute('aria-label', other === 'pl' ? 'Zmień język na polski' : 'Switch language to English');
-        }
-
-        applyLanguage();
-    </script>
-</body>
 </html>
